@@ -1,0 +1,6 @@
+framework module Pods_BookdeAdmin {
+  umbrella header "Pods-BookdeAdmin-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>FIREBASE_ANALYTICS_COLLECTION_ENABLED</key>
+    <string>NO</string>
+    <key>FIREBASE_ANALYTICS_COLLECTION_DEACTIVATED</key>
+    <string>YES</string>
+    <key>FirebaseScreenReportingEnabled</key>
+    <false/>
+	<key>CLIENT_ID</key>
+	<string>49092760265-vtfd43k6a5k94o1ppqoljjkauvsoupnc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.49092760265-vtfd43k6a5k94o1ppqoljjkauvsoupnc</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCotNvG-01BJHKygkXk2cAExBOD4_T3dss</string>
+	<key>GCM_SENDER_ID</key>
+	<string>49092760265</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>kienphamdev.com.Bookde</string>
+	<key>PROJECT_ID</key>
+	<string>bookde-1551840324700</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bookde-1551840324700.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:49092760265:ios:e82f012ceb1815f1</string>
+	<key>DATABASE_URL</key>
+	<string>https://bookde-1551840324700.firebaseio.com</string>
+</dict>
+</plist>

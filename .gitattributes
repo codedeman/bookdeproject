@@ -1,0 +1,4 @@
+*.bin filter=lfs diff=lfs merge=lfs -text
+*.tiff filter=lfs diff=lfs merge=lfs -text
+*.xcworkspace filter=lfs diff=lfs merge=lfs -text
+*.xib filter=lfs diff=lfs merge=lfs -text
