@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kK8-WY-sf9">
-    <device id="retina5_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kK8-WY-sf9">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,14 +20,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food4" translatesAutoresizingMaskIntoConstraints="NO" id="fqB-1M-RY8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background2" translatesAutoresizingMaskIntoConstraints="NO" id="fqB-1M-RY8">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="334"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="334" id="r86-hC-vZv"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bookde" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03q-j3-xzG">
-                                <rect key="frame" x="65" y="50" width="284" height="28"/>
+                                <rect key="frame" x="65" y="30" width="284" height="28"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
@@ -129,17 +127,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="OIJ-98-jcz">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Eg-uc-6ku">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5P6-j3-ecP">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="R4M-gm-IyQ">
-                                                <rect key="frame" x="57" y="96" width="300" height="524"/>
+                                                <rect key="frame" x="57" y="106" width="300" height="524"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wellcome Back!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKp-QD-Pll">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="34.333333333333336"/>
@@ -162,7 +160,6 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="2sN-tA-Jil"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -171,7 +168,6 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="HTb-3q-Hde"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
@@ -253,21 +249,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HNg-t0-Rlw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1410" y="121"/>
+            <point key="canvasLocation" x="1264" y="124"/>
         </scene>
         <!--UserVC-->
         <scene sceneID="3u5-Rt-FdR">
             <objects>
                 <viewController id="oh4-0E-CFe" customClass="UserVC" customModule="Bookde" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sTY-vQ-UWP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iStock-588993546-1024x685" translatesAutoresizingMaskIntoConstraints="NO" id="c6y-At-gJq">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                             </imageView>
                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JSy-3K-cqr">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lco-Vf-zUA">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
@@ -290,7 +286,6 @@ How should we address you?</string>
                                                             <constraint firstAttribute="height" constant="40" id="TRQ-Uo-NVt"/>
                                                             <constraint firstAttribute="width" constant="300" id="Vty-13-7Q1"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -300,7 +295,6 @@ How should we address you?</string>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="ldS-Ov-8tL"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -329,7 +323,7 @@ How should we address you?</string>
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHc-SR-RWm">
-                                                <rect key="frame" x="20" y="16" width="16" height="22"/>
+                                                <rect key="frame" x="20" y="16" width="24" height="44"/>
                                                 <state key="normal" image="backIcon"/>
                                                 <connections>
                                                     <action selector="backBtnWasPressed:" destination="oh4-0E-CFe" eventType="touchUpInside" id="3Te-ff-XMm"/>
@@ -392,16 +386,16 @@ How should we address you?</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background2" translatesAutoresizingMaskIntoConstraints="NO" id="Mgs-oA-pnJ">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Tj-f3-Mah">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8KX-t1-XAR">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="WZg-H6-V9M">
-                                                <rect key="frame" x="57" y="234" width="300" height="248.33333333333337"/>
+                                                <rect key="frame" x="57" y="244" width="300" height="248.33333333333337"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pass word" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MRE-qw-VtV">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
@@ -410,7 +404,6 @@ How should we address you?</string>
                                                             <constraint firstAttribute="width" constant="300" id="9LX-lX-aHa"/>
                                                             <constraint firstAttribute="height" constant="40" id="HAj-Lc-wml"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -420,7 +413,6 @@ How should we address you?</string>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="RU9-27-yYr"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -466,7 +458,7 @@ password</string>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfC-V8-VE0">
-                                        <rect key="frame" x="20" y="20" width="12" height="22"/>
+                                        <rect key="frame" x="20" y="20" width="24" height="44"/>
                                         <state key="normal" image="backIcon"/>
                                         <connections>
                                             <action selector="backBtnWasPressed:" destination="0M8-3L-V7d" eventType="touchUpInside" id="flu-Um-qi2"/>
@@ -516,16 +508,16 @@ password</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background2" translatesAutoresizingMaskIntoConstraints="NO" id="X0P-tp-Mrr">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1L-uu-Ax7">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QdJ-qK-5os">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="abu-Qc-q53">
-                                                <rect key="frame" x="57" y="263.66666666666669" width="300" height="189"/>
+                                                <rect key="frame" x="57" y="273.66666666666669" width="300" height="189"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MPd-9S-Mh6">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
@@ -534,7 +526,6 @@ password</string>
                                                             <constraint firstAttribute="height" constant="40" id="DcR-q5-pic"/>
                                                             <constraint firstAttribute="width" constant="300" id="Qt8-wV-35g"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" textContentType="tel"/>
                                                     </textField>
@@ -575,7 +566,7 @@ password</string>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ajl-D0-KnV">
-                                        <rect key="frame" x="20" y="20" width="12" height="22"/>
+                                        <rect key="frame" x="20" y="20" width="24" height="44"/>
                                         <state key="normal" image="backIcon"/>
                                         <connections>
                                             <action selector="backBtnWasPressed:" destination="XiJ-dm-ja6" eventType="touchUpInside" id="jT3-r0-EUV"/>
@@ -621,7 +612,6 @@ password</string>
         <image name="background" width="246" height="533"/>
         <image name="background2" width="302" height="533"/>
         <image name="emailIcon" width="16" height="16"/>
-        <image name="food4" width="250" height="244.66667175292969"/>
         <image name="iStock-588993546-1024x685" width="316" height="685"/>
     </resources>
 </document>
