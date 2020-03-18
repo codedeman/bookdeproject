@@ -8,13 +8,42 @@
 
 import UIKit
 import Firebase
-
+import SnapKit
 class LoginVC: UIViewController {
     
-
-    @IBOutlet weak var emailTxt: UITextField!
+    let titleLabel:UILabel = {
+      let label = UILabel()
+      label.text = "Wellcome Back!"
+      label.font = .boldSystemFont(ofSize: 20.5)
+      label.tintColor = .white
+      return label
+    }()
+  
+  let messageLabel:UILabel = {
     
-    @IBOutlet weak var passwordTxt: UITextField!
+    let label = UILabel()
+    label.text = "Login to continue Bookde"
+    label.tintColor = .white
+    return label
+    
+    
+  }()
+    
+    let emailTxt: UITextField = {
+      let txt = UITextField()
+      txt.placeholder = "Email Adress"
+      txt.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+      return txt
+    }()
+    
+    let passwordTxt: UITextField = {
+      let txt = UITextField()
+      txt.placeholder = "Pass world"
+      txt.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+      return txt
+      
+    }()
+  
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
@@ -56,12 +85,31 @@ class LoginVC: UIViewController {
         
         
     }
+  
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      creatView()
         // Do any additional setup after loading the view.
     }
+  
+  
+  func creatView(){
+    navigationController?.setToolbarHidden(true, animated: true)
+    self.view.backgroundColor = .gray
+    self.view.addSubview(titleLabel)
+    self.view.addSubview(messageLabel)
+    
+    titleLabel.snp.makeConstraints { (make) in
+      make.top.equalTo(self.view).inset(40)
+      make.leading.equalTo(view).inset(20)
+      make.trailing.equalTo(view).inset(20)
+      make.height.equalTo(100)
+      
+    }
+    
+  }
     
 
     /*

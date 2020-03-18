@@ -17,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+      
+      let navigation = UINavigationController(rootViewController: LoginVC())
+      navigation.setNavigationBarHidden(true, animated: true)
+      window?.rootViewController = navigation
 
         // Override point for customization after application launch.
         return true
