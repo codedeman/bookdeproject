@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kK8-WY-sf9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kK8-WY-sf9">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -137,16 +137,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="R4M-gm-IyQ">
-                                                <rect key="frame" x="57" y="106" width="300" height="524"/>
+                                                <rect key="frame" x="57" y="139.66666666666666" width="300" height="456.66666666666674"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wellcome Back!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKp-QD-Pll">
-                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="34.333333333333336"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
-                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login to continue Bookde" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pS-ND-DGs">
-                                                        <rect key="frame" x="0.0" y="67.333333333333343" width="300" height="41.666666666666657"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="41.666666666666664"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="300" id="njI-L8-cCa"/>
                                                             <constraint firstAttribute="width" secondItem="8pS-ND-DGs" secondAttribute="height" multiplier="194:27" id="twU-uq-F3Y"/>
@@ -156,7 +150,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yt7-cK-fSi">
-                                                        <rect key="frame" x="0.0" y="142" width="300" height="40"/>
+                                                        <rect key="frame" x="0.0" y="74.666666666666686" width="300" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="2sN-tA-Jil"/>
                                                         </constraints>
@@ -164,7 +158,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SoT-JH-zV4">
-                                                        <rect key="frame" x="0.0" y="215" width="300" height="40"/>
+                                                        <rect key="frame" x="0.0" y="147.66666666666666" width="300" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="HTb-3q-Hde"/>
                                                         </constraints>
@@ -172,7 +166,7 @@
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBl-k5-J6q" customClass="RoundedButton" customModule="Bookde" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="288" width="300" height="40"/>
+                                                        <rect key="frame" x="0.0" y="220.66666666666666" width="300" height="39.999999999999972"/>
                                                         <color key="backgroundColor" red="0.94901960784313721" green="0.63921568627450975" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="Pbb-th-bEQ"/>
@@ -186,10 +180,10 @@
                                                         </connections>
                                                     </button>
                                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="keU-p8-58A">
-                                                        <rect key="frame" x="0.0" y="361" width="300" height="37"/>
+                                                        <rect key="frame" x="0.0" y="293.66666666666663" width="300" height="37"/>
                                                     </activityIndicatorView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbG-AA-YZg">
-                                                        <rect key="frame" x="0.0" y="431" width="300" height="30"/>
+                                                        <rect key="frame" x="0.0" y="363.66666666666663" width="300" height="30"/>
                                                         <state key="normal" title="Forgot password?">
                                                             <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -198,7 +192,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zjh-uL-Iyi">
-                                                        <rect key="frame" x="0.0" y="494" width="300" height="30"/>
+                                                        <rect key="frame" x="0.0" y="426.66666666666674" width="300" height="30"/>
                                                         <state key="normal" title="New user? Sign up">
                                                             <color key="titleColor" red="1" green="0.75153417280000001" blue="0.22750585340000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
@@ -208,10 +202,17 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Wellcome Back!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKp-QD-Pll">
+                                                <rect key="frame" x="66" y="57" width="300" height="34.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="R4M-gm-IyQ" firstAttribute="centerX" secondItem="5P6-j3-ecP" secondAttribute="centerX" id="7AU-JB-4Yu"/>
+                                            <constraint firstItem="kKp-QD-Pll" firstAttribute="centerX" secondItem="5P6-j3-ecP" secondAttribute="centerX" id="Ql4-gs-Liz"/>
                                             <constraint firstItem="R4M-gm-IyQ" firstAttribute="centerY" secondItem="5P6-j3-ecP" secondAttribute="centerY" id="Wpe-lf-wsi"/>
                                         </constraints>
                                     </view>
@@ -458,7 +459,7 @@ password</string>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfC-V8-VE0">
-                                        <rect key="frame" x="20" y="20" width="24" height="44"/>
+                                        <rect key="frame" x="20" y="20" width="12" height="22"/>
                                         <state key="normal" image="backIcon"/>
                                         <connections>
                                             <action selector="backBtnWasPressed:" destination="0M8-3L-V7d" eventType="touchUpInside" id="flu-Um-qi2"/>
@@ -566,7 +567,7 @@ password</string>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ajl-D0-KnV">
-                                        <rect key="frame" x="20" y="20" width="24" height="44"/>
+                                        <rect key="frame" x="20" y="20" width="12" height="22"/>
                                         <state key="normal" image="backIcon"/>
                                         <connections>
                                             <action selector="backBtnWasPressed:" destination="XiJ-dm-ja6" eventType="touchUpInside" id="jT3-r0-EUV"/>

@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import SnapKit
+@available(iOS 13.0, *)
 class LoginVC: UIViewController {
     
     let titleLabel:UILabel = {
@@ -18,6 +19,22 @@ class LoginVC: UIViewController {
       label.tintColor = .white
       return label
     }()
+  
+  let imageBackGround:UIImageView = {
+    let image = UIImageView()
+    image.image = UIImage(named: "background.jpg")
+    image.contentMode = .scaleAspectFill
+    return image
+  
+  }()
+  
+  let viewBackGround:UIView = {
+    let view = UIView()
+    view.alpha = 0.9
+    view.backgroundColor = #colorLiteral(red: 0.3703024387, green: 0.3008799851, blue: 0.2160971463, alpha: 1)
+    return view
+    
+  }()
   
   let messageLabel:UILabel = {
     
@@ -31,18 +48,27 @@ class LoginVC: UIViewController {
     
     let emailTxt: UITextField = {
       let txt = UITextField()
+      txt.backgroundColor = .gray
       txt.placeholder = "Email Adress"
-      txt.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
       return txt
     }()
     
     let passwordTxt: UITextField = {
       let txt = UITextField()
       txt.placeholder = "Pass world"
-      txt.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
       return txt
       
     }()
+  
+  let loginButton:UIButton = {
+  
+    let btn = UIButton()
+    
+    btn.setTitle("Login", for: .selected)
+    btn.backgroundColor = #colorLiteral(red: 1, green: 0.7943956852, blue: 0, alpha: 1)
+    btn.tintColor = .white
+    return btn
+  }()
   
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -97,17 +123,68 @@ class LoginVC: UIViewController {
   
   func creatView(){
     navigationController?.setToolbarHidden(true, animated: true)
-    self.view.backgroundColor = .gray
-    self.view.addSubview(titleLabel)
-    self.view.addSubview(messageLabel)
     
-    titleLabel.snp.makeConstraints { (make) in
-      make.top.equalTo(self.view).inset(40)
-      make.leading.equalTo(view).inset(20)
-      make.trailing.equalTo(view).inset(20)
-      make.height.equalTo(100)
+    self.view.addSubview(imageBackGround)
+    imageBackGround.addSubview(viewBackGround)
+    viewBackGround.addSubview(titleLabel)
+    viewBackGround.addSubview(messageLabel)
+    viewBackGround.addSubview(emailTxt)
+    viewBackGround.addSubview(passwordTxt)
+    viewBackGround.addSubview(loginButton)
+    imageBackGround.snp.makeConstraints { (make) in
+      make.trailing.equalTo(self.view).inset(0)
+      make.leading.equalTo(self.view).inset(0)
+      make.top.equalTo(self.view).inset(0)
+      make.bottom.equalTo(self.view).inset(0)
+    }
+    
+    viewBackGround.snp.makeConstraints { (make) in
+      make.trailing.equalTo(self.view).inset(0)
+      make.leading.equalTo(self.view).inset(0)
+      make.top.equalTo(self.view).inset(0)
+      make.bottom.equalTo(self.view).inset(0)
       
     }
+//    self.view.backgroundColor = .gray
+//    self.view.addSubview(titleLabel)
+//    self.view.addSubview(messageLabel)
+//    self.view.addSubview(emailTxt)
+    titleLabel.snp.makeConstraints { (make) in
+      make.top.equalTo(self.viewBackGround).inset(50)
+      make.centerX.equalTo(self.viewBackGround)
+
+    }
+    
+
+    messageLabel.snp.makeConstraints { (make) in
+          make.top.equalTo(self.titleLabel).inset(50)
+          make.centerX.equalTo(self.viewBackGround)
+
+    }
+//
+      emailTxt.snp.makeConstraints { (make) in
+          make.top.equalTo(messageLabel).inset(50)
+          make.leading.equalTo(self.viewBackGround).inset(20)
+          make.trailing.equalTo(self.viewBackGround).inset(20)
+          make.height.equalTo(50)
+        }
+    
+    passwordTxt.snp.makeConstraints { (make) in
+      make.top.equalTo(emailTxt).inset(30)
+      make.leading.equalTo(self.viewBackGround).inset(20)
+      make.trailing.equalTo(self.viewBackGround).inset(20)
+      make.height.equalTo(50)
+    }
+    
+    loginButton.snp.makeConstraints { (make) in
+      make.top.equalTo(passwordTxt).offset(30)
+      make.leading.equalTo(self.passwordTxt)
+      make.trailing.equalTo(self.passwordTxt)
+      make.height.equalTo(50)
+      
+    }
+
+  
     
   }
     
