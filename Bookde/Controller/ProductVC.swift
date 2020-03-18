@@ -42,7 +42,7 @@ class ProductVC: UIViewController {
     
     func setupQuery()  {
         
-        let collectionReference =  db.collection("products")
+      let collectionReference =  db.collection("products")
 
         
         listener = collectionReference.addSnapshotListener({ (query, error) in

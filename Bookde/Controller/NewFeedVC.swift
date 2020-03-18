@@ -8,15 +8,23 @@
 
 import UIKit
 import Firebase
+import SnapKit
 
 class NewFeedVC: UIViewController {
-//Outlets
     
     
     @IBOutlet weak var loginOutBtn: UIBarButtonItem!
     
     @IBOutlet weak var foodColectionView: UICollectionView!
-    
+  
+    let newFeedScrollView:UIScrollView = {
+      let scrollView = UIScrollView()
+      scrollView.backgroundColor = .white
+      return scrollView
+    }()
+  
+    let contentView = UIView()
+      
     @IBOutlet weak var popularFoodCollectionView: UICollectionView!
     // variable
     var categories = [Category]()
@@ -45,31 +53,15 @@ class NewFeedVC: UIViewController {
         super.viewDidLoad()
         
             db = Firestore.firestore()
-        
             setupCollectionView()
 
     }
     // Called before view is removed
     override func viewWillDisappear(_ animated: Bool) {
-        
-       
-
-     
         listener.remove()
         categories.removeAll()
         foodColectionView.reloadData()
     }
-    
-    
-    
-    
-    
-   
-    
-    
-
-    
-    
     
     func setupInitialAnonymousUser() {
         if Auth.auth().currentUser == nil {
@@ -84,20 +76,48 @@ class NewFeedVC: UIViewController {
     
     func setupCollectionView()
     {
-        self.foodColectionView.showsHorizontalScrollIndicator = false
+      
+      self.view.addSubview(newFeedScrollView)
+      self.newFeedScrollView.addSubview(contentView)
+      self.contentView.addSubview(foodColectionView)
+      newFeedScrollView.snp.makeConstraints { (make)  in
         
+        make.centerX.equalTo(view.center)
+        make.width.equalTo(self.view)
+        make.top.equalTo(self.view)
+        make.bottom.equalTo(self.view)
+      }
+      
+      contentView.snp.makeConstraints { (make) in
+        
+        make.centerX.equalTo(newFeedScrollView)
+        make.width.equalTo(newFeedScrollView)
+        make.top.equalTo(newFeedScrollView)
+        make.bottom.equalTo(newFeedScrollView)
+      }
+      
+      foodColectionView.snp.makeConstraints { (make) in
+        make.top.equalTo(contentView).inset(0)
+        make.leading.equalTo(contentView).inset(0)
+        make.trailing.equalTo(contentView).inset(0)
+        make.height.equalTo(300)
+        
+      }
+      
+//        self.foodColectionView.showsHorizontalScrollIndicator = false
+//
         foodColectionView.register(UINib.init(nibName: "NewFeedCell", bundle: nil), forCellWithReuseIdentifier: Identifiers.NewFeedCell)
-        
+//
         popularFoodCollectionView.register(UINib.init(nibName: "PopularCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
-        
-        // layout for collection view
+//
+//        // layout for collection view
         let width = (view.frame.width)/3
-        
+//
         let floawLayout1 = popularFoodCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         floawLayout1.itemSize = CGSize(width: UIScreen.main.bounds.size.width , height: width)
         floawLayout1.scrollDirection = .horizontal
-        
-        
+
+
         let floawLayout = UPCarouselFlowLayout()
         floawLayout.itemSize = CGSize(width: UIScreen.main.bounds.size.width - 60.0, height: foodColectionView.frame.size.height)
         floawLayout.scrollDirection = .horizontal
@@ -105,9 +125,9 @@ class NewFeedVC: UIViewController {
         floawLayout.sideItemAlpha = 1.0
         floawLayout.spacingMode = .fixed(spacing: 5.0)
         foodColectionView.collectionViewLayout = floawLayout
-        
+
         setupInitialAnonymousUser()
-        
+
         
         
     }
@@ -214,7 +234,7 @@ class NewFeedVC: UIViewController {
     }
     
     private func fetchCollection(){
-        let collectionReference =  db.collection("categories")
+      let collectionReference =  db.collection("categories")
         
        listener = collectionReference.addSnapshotListener { (snap, error) in
             guard let document =  snap?.documents else  {return}

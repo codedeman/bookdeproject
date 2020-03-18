@@ -126,6 +126,7 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - Protobuf (3.7.0)
+  - SnapKit (5.0.1)
   - Stripe (15.0.1)
 
 DEPENDENCIES:
@@ -138,10 +139,11 @@ DEPENDENCIES:
   - Firebase/Storage
   - IQKeyboardManagerSwift (= 6.2.1)
   - Kingfisher (~> 4.0)
+  - SnapKit (~> 5.0.0)
   - Stripe (= 15.0.1)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - BoringSSL-GRPC
     - Firebase
@@ -165,6 +167,8 @@ SPEC REPOS:
     - nanopb
     - Protobuf
     - Stripe
+  trunk:
+    - SnapKit
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -189,8 +193,9 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 7a877b7f3e5964e3fce995e2eb323dbc6831bb5a
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Stripe: 2c4d0a88817361a102886315ff452d90f65e898b
 
-PODFILE CHECKSUM: e590304dcb6739e92fb7852a6332e4a3a66badf5
+PODFILE CHECKSUM: 8a525078f26a0dd8f56c23cccf249522c80d90e2
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.8.4

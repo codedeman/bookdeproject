@@ -12,6 +12,8 @@ def shared_pods
     pod 'Firebase/Functions'
     pod 'IQKeyboardManagerSwift', '6.2.1'
     pod 'Kingfisher', '~> 4.0'
+    pod 'SnapKit', '~> 5.0.0'
+
 
 end
 
