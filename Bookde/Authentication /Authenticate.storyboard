@@ -261,7 +261,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iStock-588993546-1024x685" translatesAutoresizingMaskIntoConstraints="NO" id="c6y-At-gJq">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="716.00000000000011"/>
                             </imageView>
                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JSy-3K-cqr">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
@@ -324,7 +324,7 @@ How should we address you?</string>
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHc-SR-RWm">
-                                                <rect key="frame" x="20" y="16" width="24" height="44"/>
+                                                <rect key="frame" x="20" y="16" width="12" height="22"/>
                                                 <state key="normal" image="backIcon"/>
                                                 <connections>
                                                     <action selector="backBtnWasPressed:" destination="oh4-0E-CFe" eventType="touchUpInside" id="3Te-ff-XMm"/>

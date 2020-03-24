@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -51,6 +51,7 @@
 		189996B322C6258C00DF8718 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1881DD58227C386D001DB742 /* Photo.swift */; };
 		189996B922C629F500DF8718 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 180C9C7922C1B08F0099467C /* GoogleService-Info.plist */; };
 		18A3EC0122CA046300C0EB82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1849B350227C2CA900CA9678 /* Assets.xcassets */; };
+		18AE0CD3242A5A9B000F9523 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE0CD2242A5A9B000F9523 /* SignInViewController.swift */; };
 		18BC3B0422B11EB300DEC723 /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC3B0322B11EB200DEC723 /* UserVC.swift */; };
 		18BC3B0622B11ECE00DEC723 /* PasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC3B0522B11ECE00DEC723 /* PasswordVC.swift */; };
 		18BC3B0822B11F1200DEC723 /* MobilePhoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC3B0722B11F1200DEC723 /* MobilePhoneVC.swift */; };
@@ -156,6 +157,7 @@
 		1881DD5B227C3E3C001DB742 /* AnnotatedPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotatedPhotoCell.swift; sourceTree = "<group>"; };
 		1881DD61227C44C7001DB742 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		188D69C422B6078200964EB6 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		18AE0CD2242A5A9B000F9523 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		18BC3B0322B11EB200DEC723 /* UserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
 		18BC3B0522B11ECE00DEC723 /* PasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PasswordVC.swift; path = ../PasswordVC.swift; sourceTree = "<group>"; };
 		18BC3B0722B11F1200DEC723 /* MobilePhoneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MobilePhoneVC.swift; path = ../MobilePhoneVC.swift; sourceTree = "<group>"; };
@@ -429,6 +431,7 @@
 				18302D2522A74D5D0023C374 /* ProductVC.swift */,
 				18302DAD22AECE5D0023C374 /* LoginVC.swift */,
 				18BC3B0E22B2490D00DEC723 /* Register */,
+				18AE0CD2242A5A9B000F9523 /* SignInViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -834,6 +837,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18AE0CD3242A5A9B000F9523 /* SignInViewController.swift in Sources */,
 				1827A9DA22B3F5E70001A6C1 /* Extensions.swift in Sources */,
 				18302D2922A75B630023C374 /* CartCell.swift in Sources */,
 				1881DD59227C386D001DB742 /* Photo.swift in Sources */,

@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import UIKit
 extension String {
     var isNotEmpty : Bool {
         return !isEmpty
@@ -48,4 +49,9 @@ extension UIViewController {
         
     }
 
+}
+
+extension UIView{
+  
+  
 }

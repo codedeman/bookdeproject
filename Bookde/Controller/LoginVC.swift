@@ -11,10 +11,12 @@ import Firebase
 import SnapKit
 @available(iOS 13.0, *)
 class LoginVC: UIViewController {
-    
+    var gradientLayer: CAGradientLayer!
+  
     let titleLabel:UILabel = {
       let label = UILabel()
       label.text = "Wellcome Back!"
+      label.textColor = .white
       label.font = .boldSystemFont(ofSize: 20.5)
       label.tintColor = .white
       return label
@@ -30,8 +32,8 @@ class LoginVC: UIViewController {
   
   let viewBackGround:UIView = {
     let view = UIView()
-    view.alpha = 0.9
-    view.backgroundColor = #colorLiteral(red: 0.3703024387, green: 0.3008799851, blue: 0.2160971463, alpha: 1)
+    view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    view.alpha = 0.8
     return view
     
   }()
@@ -39,6 +41,7 @@ class LoginVC: UIViewController {
   let messageLabel:UILabel = {
     
     let label = UILabel()
+    label.textColor = .white
     label.text = "Login to continue Bookde"
     label.tintColor = .white
     return label
@@ -48,13 +51,17 @@ class LoginVC: UIViewController {
     
     let emailTxt: UITextField = {
       let txt = UITextField()
-      txt.backgroundColor = .gray
+      txt.backgroundColor = .white
+      txt.borderStyle = .roundedRect
       txt.placeholder = "Email Adress"
       return txt
     }()
     
     let passwordTxt: UITextField = {
-      let txt = UITextField()
+     let txt = UITextField()
+      txt.backgroundColor = .white
+      txt.isSecureTextEntry = true
+      txt.borderStyle = .roundedRect
       txt.placeholder = "Pass world"
       return txt
       
@@ -63,30 +70,46 @@ class LoginVC: UIViewController {
   let loginButton:UIButton = {
   
     let btn = UIButton()
-    
-    btn.setTitle("Login", for: .selected)
-    btn.backgroundColor = #colorLiteral(red: 1, green: 0.7943956852, blue: 0, alpha: 1)
+    btn.setTitle("Login", for: .normal)
+    btn.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
     btn.tintColor = .white
     return btn
   }()
   
+  let forgotPassWorldButton:UIButton = {
     
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    let btn = UIButton()
+    btn.setTitle("Forgot passworld ", for: .normal)
+//    btn.backgroundColor = .clear
+    btn.tintColor = .yellow
+    return btn
+  }()
+  
     
-    @IBAction func forgotPassWordClicked(_ sender: Any) {
-        let vc  = ForgotPasswordVC()
-        vc.modalTransitionStyle = .crossDissolve
-        vc.modalPresentationStyle = .overCurrentContext
-//        presentationController
-        present(vc, animated: true, completion: nil)
-
-        
-        
+    let activityIndicator: UIActivityIndicatorView = {
+  
+      let activity = UIActivityIndicatorView()
+      activity.color = .red
+      
+      return activity
+    }()
+    
+ 
+  
+    func createGradientLayer() {
+        gradientLayer = CAGradientLayer()
+     
+        gradientLayer.frame = self.viewBackGround.bounds
+     
+      gradientLayer.colors = [UIColor.orange.cgColor,UIColor.red.cgColor]
+     
+        self.viewBackGround.layer.addSublayer(gradientLayer)
     }
+  
+  @objc func loginBtnWasPressed(){
     
-    @IBAction func loginClicked(_ sender: Any) {
-        
-        guard let email = emailTxt.text , email.isNotEmpty ,
+    
+    guard let email = emailTxt.text , email.isNotEmpty ,
             let password = passwordTxt.text , password.isNotEmpty else {
                 simpleAlert(title: "Error", msg: "Please fill out all fields.")
                 return
@@ -108,95 +131,114 @@ class LoginVC: UIViewController {
             
         }
     
-        
-        
-    }
+  
+  }
+    
+ 
   
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      creatView()
+      initUI()
+//        gradientLayer = CAGradientLayer()
+//        gradientLayer.frame = imageBackGround.bounds
+//        gradientLayer.colors = [UIColor.orange.cgColor,UIColor.red.cgColor]
+//        imageBackGround.layer.addSublayer(gradientLayer)
+      
+      viewBackGround.backgroundColor = #colorLiteral(red: 0.4030454755, green: 0.2138568461, blue: 0, alpha: 1)
+      
+      
+      loginButton.addTarget(self, action: #selector(loginBtnWasPressed), for: .allEvents)
+      forgotPassWorldButton.addTarget(self, action: #selector(passworldBtnWasPressed), for: .allEvents)
         // Do any additional setup after loading the view.
     }
   
   
-  func creatView(){
+  @objc func passworldBtnWasPressed(){
+    
+    let vc  = ForgotPasswordVC()
+    vc.modalTransitionStyle = .crossDissolve
+    vc.modalPresentationStyle = .overCurrentContext
+    present(vc, animated: true, completion: nil)
+
+  
+  }
+  
+  
+  func initUI(){
     navigationController?.setToolbarHidden(true, animated: true)
     
     self.view.addSubview(imageBackGround)
     imageBackGround.addSubview(viewBackGround)
-    viewBackGround.addSubview(titleLabel)
-    viewBackGround.addSubview(messageLabel)
-    viewBackGround.addSubview(emailTxt)
-    viewBackGround.addSubview(passwordTxt)
-    viewBackGround.addSubview(loginButton)
+    imageBackGround.addSubview(titleLabel)
+    imageBackGround.addSubview(messageLabel)
+    view.addSubview(emailTxt)
+    view.addSubview(passwordTxt)
+    view.addSubview(loginButton)
+    viewBackGround.addSubview(activityIndicator)
+    view.addSubview(forgotPassWorldButton)
     imageBackGround.snp.makeConstraints { (make) in
       make.trailing.equalTo(self.view).inset(0)
       make.leading.equalTo(self.view).inset(0)
       make.top.equalTo(self.view).inset(0)
       make.bottom.equalTo(self.view).inset(0)
     }
-    
+
     viewBackGround.snp.makeConstraints { (make) in
-      make.trailing.equalTo(self.view).inset(0)
-      make.leading.equalTo(self.view).inset(0)
-      make.top.equalTo(self.view).inset(0)
-      make.bottom.equalTo(self.view).inset(0)
-      
+      make.trailing.equalTo(self.imageBackGround).inset(0)
+      make.leading.equalTo(self.imageBackGround).inset(0)
+      make.top.equalTo(self.imageBackGround).inset(0)
+      make.bottom.equalTo(self.imageBackGround).inset(0)
     }
-//    self.view.backgroundColor = .gray
-//    self.view.addSubview(titleLabel)
-//    self.view.addSubview(messageLabel)
-//    self.view.addSubview(emailTxt)
+
     titleLabel.snp.makeConstraints { (make) in
-      make.top.equalTo(self.viewBackGround).inset(50)
-      make.centerX.equalTo(self.viewBackGround)
+      make.top.equalTo(self.imageBackGround).inset(50)
+      make.centerX.equalTo(self.imageBackGround)
 
     }
     
 
     messageLabel.snp.makeConstraints { (make) in
           make.top.equalTo(self.titleLabel).inset(50)
-          make.centerX.equalTo(self.viewBackGround)
+          make.centerX.equalTo(self.imageBackGround)
 
     }
-//
-      emailTxt.snp.makeConstraints { (make) in
-          make.top.equalTo(messageLabel).inset(50)
-          make.leading.equalTo(self.viewBackGround).inset(20)
-          make.trailing.equalTo(self.viewBackGround).inset(20)
+    emailTxt.snp.makeConstraints { (make) in
+          make.top.equalTo(messageLabel).inset(30)
+          make.centerX.equalTo(self.view)
+          make.leading.equalTo(self.view).offset(20)
+          make.trailing.equalTo(self.view).offset(-20)
           make.height.equalTo(50)
-        }
-    
-    passwordTxt.snp.makeConstraints { (make) in
-      make.top.equalTo(emailTxt).inset(30)
-      make.leading.equalTo(self.viewBackGround).inset(20)
-      make.trailing.equalTo(self.viewBackGround).inset(20)
-      make.height.equalTo(50)
-    }
-    
-    loginButton.snp.makeConstraints { (make) in
-      make.top.equalTo(passwordTxt).offset(30)
-      make.leading.equalTo(self.passwordTxt)
-      make.trailing.equalTo(self.passwordTxt)
-      make.height.equalTo(50)
-      
     }
 
-  
+      passwordTxt.snp.makeConstraints { (make) in
+        make.top.equalTo(emailTxt).inset(70)
+        make.leading.equalTo(self.view).offset(20)
+        make.trailing.equalTo(self.view).offset(-20)
+        make.height.equalTo(50)
+      }
+      loginButton.snp.makeConstraints { (make) in
+         make.centerX.equalTo(self.view)
+        make.top.equalTo(passwordTxt).offset(80)
+        make.width.equalTo(passwordTxt)
+        make.height.equalTo(50)
+
+      }
     
+    activityIndicator.snp.makeConstraints { (make) in
+      
+      make.centerY.equalTo(self.view)
+      make.centerX.equalTo(self.view)
+    }
+    
+    forgotPassWorldButton.snp.makeConstraints { (make) in
+      
+      make.top.equalTo(self.loginButton).inset(5)
+      make.trailing.equalTo(self.loginButton).inset(10)
+      make.bottom.equalTo(self.viewBackGround).inset(100)
+    }
+
   }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
