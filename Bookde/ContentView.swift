@@ -8,19 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
+        // MARK: - Propertiers
+        @StateObject private var modelData = ModelData()
+        @State private var selection: Tab = .featured
+
+            enum Tab {
+                case featured
+                case list
+            }
+
+            // MARK: - View
+            var body: some View {
+                TabView(selection: $selection) {
+                    NewFeedScreen().environmentObject(modelData).tabItem {
+                        Label("Featured", systemImage: "star")
+                    }.tag(Tab.featured)
+                
+                    
+                }
+            }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(ModelData())
+        
     }
 }

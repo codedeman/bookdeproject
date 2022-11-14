@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
-
+import Onboarding
 @main
 struct BookdeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+           OnboardingView()
+//            NewFeedScreen().environmentObject(modelData)
         }
     }
 }

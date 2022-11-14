@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "2BD089EC-7A44-4B52-BC45-08CEA1EF2154"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D391B29A-A66F-4B88-9903-BFC137FA10B1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bookde/Screens/NewFeed/NewFeedScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "D391B29A-A66F-4B88-9903-BFC137FA10B1 - 73c2fa610417bf7d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Bookde.Landmark) -&gt; SwiftUI.TupleView&lt;(Bookde.NewFeedView, &lt;&lt;opaque return type of SwiftUI.View.hidden() -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ForEach&lt;Swift.Array&lt;Bookde.Landmark&gt;, Swift.Int, SwiftUI.TupleView&lt;(Bookde.NewFeedView, &lt;&lt;opaque return type of SwiftUI.View.hidden() -&gt; some&gt;&gt;.0)&gt;&gt;, SwiftUI.ForEach&lt;Swift.Array&lt;Bookde.User&gt;, Swift.Int, SwiftUI.HStack&lt;SwiftUI.Text&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in Bookde.NewFeedScreen.body.getter : some"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Screens/NewFeed/NewFeedScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "940">
+               </Location>
+               <Location
+                  uuid = "D391B29A-A66F-4B88-9903-BFC137FA10B1 - b6de70b5cc3c458c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.EmptyView in closure #1 (Bookde.Landmark) -&gt; SwiftUI.TupleView&lt;(Bookde.NewFeedView, &lt;&lt;opaque return type of SwiftUI.View.hidden() -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ForEach&lt;Swift.Array&lt;Bookde.Landmark&gt;, Swift.Int, SwiftUI.TupleView&lt;(Bookde.NewFeedView, &lt;&lt;opaque return type of SwiftUI.View.hidden() -&gt; some&gt;&gt;.0)&gt;&gt;, SwiftUI.ForEach&lt;Swift.Array&lt;Bookde.User&gt;, Swift.Int, SwiftUI.HStack&lt;SwiftUI.Text&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in Bookde.NewFeedScreen.body.getter : some"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Screens/NewFeed/NewFeedScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "D391B29A-A66F-4B88-9903-BFC137FA10B1 - 73c2fa610417bf7d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Bookde.Landmark) -&gt; SwiftUI.TupleView&lt;(Bookde.NewFeedView, &lt;&lt;opaque return type of SwiftUI.View.hidden() -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ForEach&lt;Swift.Array&lt;Bookde.Landmark&gt;, Swift.Int, SwiftUI.TupleView&lt;(Bookde.NewFeedView, &lt;&lt;opaque return type of SwiftUI.View.hidden() -&gt; some&gt;&gt;.0)&gt;&gt;, SwiftUI.ForEach&lt;Swift.Array&lt;Bookde.User&gt;, Swift.Int, SwiftUI.HStack&lt;SwiftUI.Text&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in Bookde.NewFeedScreen.body.getter : some"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Screens/NewFeed/NewFeedScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "952">
+               </Location>
+               <Location
+                  uuid = "D391B29A-A66F-4B88-9903-BFC137FA10B1 - 237a5853d1160c5a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Bookde.Landmark) -&gt; SwiftUI.TupleView&lt;(Bookde.NewFeedView, &lt;&lt;opaque return type of SwiftUI.View.hidden() -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.shadow(color: SwiftUI.Color, radius: CoreGraphics.CGFloat, x: CoreGraphics.CGFloat, y: CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, SwiftUI.ForEach&lt;Swift.Array&lt;Bookde.Landmark&gt;, Swift.Int, SwiftUI.TupleView&lt;(Bookde.NewFeedView, &lt;&lt;opaque return type of SwiftUI.View.hidden() -&gt; some&gt;&gt;.0)&gt;&gt;, SwiftUI.ForEach&lt;Swift.Array&lt;Bookde.User&gt;, Swift.Int, SwiftUI.HStack&lt;SwiftUI.Text&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in Bookde.NewFeedScreen.body.getter : some"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Screens/NewFeed/NewFeedScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "952">
+               </Location>
+               <Location
+                  uuid = "D391B29A-A66F-4B88-9903-BFC137FA10B1 - f1579f8a283a3e43"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.EmptyView in closure #1 (Bookde.Landmark) -&gt; SwiftUI.TupleView&lt;(Bookde.NewFeedView, &lt;&lt;opaque return type of SwiftUI.View.hidden() -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.shadow(color: SwiftUI.Color, radius: CoreGraphics.CGFloat, x: CoreGraphics.CGFloat, y: CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, SwiftUI.ForEach&lt;Swift.Array&lt;Bookde.Landmark&gt;, Swift.Int, SwiftUI.TupleView&lt;(Bookde.NewFeedView, &lt;&lt;opaque return type of SwiftUI.View.hidden() -&gt; some&gt;&gt;.0)&gt;&gt;, SwiftUI.ForEach&lt;Swift.Array&lt;Bookde.User&gt;, Swift.Int, SwiftUI.HStack&lt;SwiftUI.Text&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in Bookde.NewFeedScreen.body.getter : some"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Screens/NewFeed/NewFeedScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "74E8C5B7-05FC-47C8-BCA5-91432588047F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bookde/Screens/NewFeed/NewFeedScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "74E8C5B7-05FC-47C8-BCA5-91432588047F - 73c2fa610417bf7d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Bookde.Landmark) -&gt; SwiftUI.TupleView&lt;(Bookde.NewFeedView, &lt;&lt;opaque return type of SwiftUI.View.hidden() -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ForEach&lt;Swift.Array&lt;Bookde.Landmark&gt;, Swift.Int, SwiftUI.TupleView&lt;(Bookde.NewFeedView, &lt;&lt;opaque return type of SwiftUI.View.hidden() -&gt; some&gt;&gt;.0)&gt;&gt;, SwiftUI.ForEach&lt;Swift.Array&lt;Bookde.User&gt;, Swift.Int, SwiftUI.HStack&lt;SwiftUI.Text&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in Bookde.NewFeedScreen.body.getter : some"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Screens/NewFeed/NewFeedScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "940">
+               </Location>
+               <Location
+                  uuid = "74E8C5B7-05FC-47C8-BCA5-91432588047F - b6de70b5cc3c458c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.EmptyView in closure #1 (Bookde.Landmark) -&gt; SwiftUI.TupleView&lt;(Bookde.NewFeedView, &lt;&lt;opaque return type of SwiftUI.View.hidden() -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ForEach&lt;Swift.Array&lt;Bookde.Landmark&gt;, Swift.Int, SwiftUI.TupleView&lt;(Bookde.NewFeedView, &lt;&lt;opaque return type of SwiftUI.View.hidden() -&gt; some&gt;&gt;.0)&gt;&gt;, SwiftUI.ForEach&lt;Swift.Array&lt;Bookde.User&gt;, Swift.Int, SwiftUI.HStack&lt;SwiftUI.Text&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in Bookde.NewFeedScreen.body.getter : some"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Screens/NewFeed/NewFeedScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "74E8C5B7-05FC-47C8-BCA5-91432588047F - 73c2fa610417bf7d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Bookde.Landmark) -&gt; SwiftUI.TupleView&lt;(Bookde.NewFeedView, &lt;&lt;opaque return type of SwiftUI.View.hidden() -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ForEach&lt;Swift.Array&lt;Bookde.Landmark&gt;, Swift.Int, SwiftUI.TupleView&lt;(Bookde.NewFeedView, &lt;&lt;opaque return type of SwiftUI.View.hidden() -&gt; some&gt;&gt;.0)&gt;&gt;, SwiftUI.ForEach&lt;Swift.Array&lt;Bookde.User&gt;, Swift.Int, SwiftUI.HStack&lt;SwiftUI.Text&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in Bookde.NewFeedScreen.body.getter : some"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Screens/NewFeed/NewFeedScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "952">
+               </Location>
+               <Location
+                  uuid = "74E8C5B7-05FC-47C8-BCA5-91432588047F - 237a5853d1160c5a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Bookde.Landmark) -&gt; SwiftUI.TupleView&lt;(Bookde.NewFeedView, &lt;&lt;opaque return type of SwiftUI.View.hidden() -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.shadow(color: SwiftUI.Color, radius: CoreGraphics.CGFloat, x: CoreGraphics.CGFloat, y: CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, SwiftUI.ForEach&lt;Swift.Array&lt;Bookde.Landmark&gt;, Swift.Int, SwiftUI.TupleView&lt;(Bookde.NewFeedView, &lt;&lt;opaque return type of SwiftUI.View.hidden() -&gt; some&gt;&gt;.0)&gt;&gt;, SwiftUI.ForEach&lt;Swift.Array&lt;Bookde.User&gt;, Swift.Int, SwiftUI.HStack&lt;SwiftUI.Text&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in Bookde.NewFeedScreen.body.getter : some"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Screens/NewFeed/NewFeedScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "952">
+               </Location>
+               <Location
+                  uuid = "74E8C5B7-05FC-47C8-BCA5-91432588047F - f1579f8a283a3e43"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.EmptyView in closure #1 (Bookde.Landmark) -&gt; SwiftUI.TupleView&lt;(Bookde.NewFeedView, &lt;&lt;opaque return type of SwiftUI.View.hidden() -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.shadow(color: SwiftUI.Color, radius: CoreGraphics.CGFloat, x: CoreGraphics.CGFloat, y: CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, SwiftUI.ForEach&lt;Swift.Array&lt;Bookde.Landmark&gt;, Swift.Int, SwiftUI.TupleView&lt;(Bookde.NewFeedView, &lt;&lt;opaque return type of SwiftUI.View.hidden() -&gt; some&gt;&gt;.0)&gt;&gt;, SwiftUI.ForEach&lt;Swift.Array&lt;Bookde.User&gt;, Swift.Int, SwiftUI.HStack&lt;SwiftUI.Text&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in Bookde.NewFeedScreen.body.getter : some"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Screens/NewFeed/NewFeedScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "41867AC2-7D65-41B3-9928-0968A11C28DA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Home/Sources/Home/Test.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "load(_:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F2BC32AF-9986-4504-A04B-D24ECBEBB450"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Home/Sources/Home/Test.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "load(_:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
