@@ -49,7 +49,7 @@ struct pages: View {
            }
            .edgesIgnoringSafeArea(.top)
            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-            NavigationLink(destination: HomeView().environmentObject(modelData)) {
+            NavigationLink(destination: TabBar().environmentObject(modelData)) {
                 Text("Start")
                     .font(.headline)
                     .frame(width: 200, height: 40, alignment: .center)

@@ -15,7 +15,7 @@ struct AppartmentView: View {
             rentingData
                 .image
                 .resizable()
-                .aspectRatio( contentMode: .fit )
+                .aspectRatio( contentMode: .fill)
                 .cornerRadius(10)
         }
 

@@ -15,7 +15,8 @@ let package = Package(
             targets: ["Home"]),
     ],
     dependencies: [
-
+        .package(path: "../Authenticate"),
+        .package(path: "./DBService")
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
     ],
@@ -24,7 +25,8 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "Home",
-            dependencies: []),
+            dependencies: ["Authenticate",
+                           "DBService"]),
         .testTarget(
             name: "HomeTests",
             dependencies: ["Home"]),

@@ -6,46 +6,44 @@
 //
 
 import SwiftUI
-//
+
 public struct HomeView: View {
-    @EnvironmentObject var modelData: DBHome
+    @ObservedObject var viewModel: HomeViewModel
+    @State private var isLoading = true
 
-    public init() {
-
+    public init(viewModel: HomeViewModel) {
+        self.viewModel = viewModel
     }
 
     public var body: some View {
-        NavigationView {
-            ScrollView(showsIndicators: false) {
-                SearchNewFeedView(txtSearch: "")
-                    .padding([.all],20)
-                    .shadow(radius: 0.5)
-                    ForEach(modelData.landmarks) { object in
-                        HomeFeedView(landmark: object)
 
-                        NavigationLink(destination:  AppartmentView(rentingData: object.subList.first!)) {
-    //
-                        }.buttonStyle(.plain).frame(width: 0,height: 0).hidden()
+        List {
 
+//                HStack{
+                    ForEach((viewModel.movie?.listFilms ?? []), id: \.self) { film in
+                        MoviekRow(movie: film)
                     }
-//                    ForEach(modelData.users) { user in
-//                        HStack(alignment:.top) {
-//                            Text("\(user.email)")
-//                        }
-//                    }
 //                }
-            }.onAppear {
-//                modelData.getUsers()
-            }
-
-        }.navigationTitle("OMG")
-
+        }.task {
+            await viewModel.onAppearAction()
+        }
     }
-
 }
 
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
+struct MoviekRow: View {
+    var movie: Movies
+
+
+    var body: some View {
+        HStack {
+            AsyncImage(url: URL.init(string: movie.filmUrl))
+                .frame(width: 50,height: 50)
+                .scaledToFit().padding(.leading,16)
+            Spacer()
+
+            Text(movie.name)
+                            .padding(.leading, 16)
+            Spacer()
+        }
     }
 }

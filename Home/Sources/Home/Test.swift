@@ -10,7 +10,7 @@ import Foundation
 public class DBHome: ObservableObject {
     @Published var landmarks: [HomeModel] = load("landmarkData.json")
     public init(landmarks: [HomeModel]) {
-        self.landmarks = landmarks
+        self.landmarks = load("landmarkData.json")
     }
 
 }

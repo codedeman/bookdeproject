@@ -7,12 +7,15 @@
 
 import SwiftUI
 import Onboarding
+import Home
 @main
 struct BookdeApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     var body: some Scene {
         WindowGroup {
-           OnboardingView()
-//            NewFeedScreen().environmentObject(modelData)
+
         }
     }
 }
+
