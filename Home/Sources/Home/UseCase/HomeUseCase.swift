@@ -29,7 +29,6 @@ public final class HomeUseCaseImpl: HomeUseCase {
         case let .failure(getMovieError):
             return .failure(.jsonParsingFailure)
         }
-
     }
 
 }

@@ -53,8 +53,8 @@
 
 /* Begin PBXFileReference section */
 		0A00553A2924E5CE00802F40 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0A44E4E72AAC7637002FF450 /* DBCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DBCore; sourceTree = "<group>"; };
 		0A47A2002A3C6EB600E9A4B1 /* Authenticate */ = {isa = PBXFileReference; lastKnownFileType = text; path = Authenticate; sourceTree = SOURCE_ROOT; };
-		0A47A2022A3C735200E9A4B1 /* FireBase */ = {isa = PBXFileReference; lastKnownFileType = text; path = FireBase; sourceTree = SOURCE_ROOT; };
 		0A4A44372A839E7A00D0AA82 /* DBService */ = {isa = PBXFileReference; lastKnownFileType = text; path = DBService; sourceTree = SOURCE_ROOT; };
 		0A5785C62921E83000E92026 /* Bookde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookde.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A5785C92921E83000E92026 /* BookdeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookdeApp.swift; sourceTree = "<group>"; };
@@ -115,7 +115,6 @@
 		0A47A2012A3C730200E9A4B1 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				0A47A2022A3C735200E9A4B1 /* FireBase */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -272,6 +271,7 @@
 		0AE5CA752A39CAD800685FFE /* Cores */ = {
 			isa = PBXGroup;
 			children = (
+				0A44E4E72AAC7637002FF450 /* DBCore */,
 				0A4A44372A839E7A00D0AA82 /* DBService */,
 				0AE5CA762A39CB6F00685FFE /* DBLocalNetwork.swift */,
 			);
@@ -369,6 +369,8 @@
 				Base,
 			);
 			mainGroup = 0A5785BD2921E83000E92026;
+			packageReferences = (
+			);
 			productRefGroup = 0A5785C72921E83000E92026 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -520,6 +522,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -573,6 +576,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";

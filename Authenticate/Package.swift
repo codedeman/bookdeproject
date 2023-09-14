@@ -15,6 +15,8 @@ let package = Package(
             targets: ["Authenticate"]),
     ],
     dependencies: [
+        .package(path: "./Cores/DBCore")
+
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
     ],

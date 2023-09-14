@@ -18,6 +18,15 @@ public final class HomeViewModel: ObservableObject {
 
     }
 
+    
+    struct Input {
+
+    }
+
+    struct Ouput {
+
+    }
+
     func onAppearAction() async  {
         await getMovie()
     }

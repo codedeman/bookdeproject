@@ -21,7 +21,7 @@ public struct SignUpView: View {
                 .cornerRadius(20)
 
             Button("Sign In") {
-
+                
             }
         }.padding([.leading,.trailing], 27.5)
             .background(

@@ -7,6 +7,8 @@
 
 import SwiftUI
 import Home
+import DBCore
+
 
 class AppDelegate: NSObject, UIApplicationDelegate {
 
@@ -21,6 +23,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         window = UIWindow()
         appCoordinator = AppCoordinator(navigation: navigation, appFactory: appFactory, window: window)
         appCoordinator.start()
+        FirebaseApp.configure()
         return true
     }
 
