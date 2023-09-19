@@ -10,12 +10,11 @@ import UIKit
 import Home
 import DBService
 import SwiftUI
-
+import Authenticate
 protocol HomeFactory {
     func makeModule() -> UIViewController
+    func makeAuthenticate() -> UIViewController
 }
-
-
 
 public struct HomeFactoryImp: HomeFactory {
     @MainActor
@@ -27,6 +26,11 @@ public struct HomeFactoryImp: HomeFactory {
         return UIHostingController(rootView: HomeView(viewModel: homeViewModel))
     }
 
+    func makeAuthenticate() -> UIViewController {
+        let signUpUseCase = SignUpUseCaseImpl()
+        let vc = SignUpView(viewModel: .init(useCase: signUpUseCase))
+        return UIHostingController(rootView: vc)
+    }
 }
 
 

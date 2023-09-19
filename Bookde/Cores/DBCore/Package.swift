@@ -6,21 +6,18 @@ import PackageDescription
 let package = Package(
     name: "DBCore",
     platforms: [
-        .iOS(.v15)
+        .iOS(.v15),
+        .macOS(.v11)
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "DBCore",
             targets: ["DBCore"]),
+
     ],
     dependencies: [
-        .package(
-          name: "Firebase",
-          url: "https://github.com/firebase/firebase-ios-sdk.git",
-          .upToNextMajor(from: "10.4.0")
-        ),
-
+     
         
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),

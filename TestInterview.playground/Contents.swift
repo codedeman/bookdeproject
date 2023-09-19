@@ -503,10 +503,13 @@ func maxProfit(price: [Int]) -> Int {
 let tree = BinaryTree<Int>(value: 10)
 
 tree.insertNode(value: 5)
-tree.insertNode(value: 15)
+tree.insertNode(value: 10)
 tree.insertNode(value: 4)
-tree.insertNode(value: 20)
-tree.search(value: 15)?.value
-tree.deleteNode(root: tree, key: 10)
+tree.insertNode(value: 25)
+
+//tree.deleteNode(root: tree, key: 10)
+//tree.deleteNode(root: tree, key: 25)
 
 //tree.printTree()
+tree.preOrderTraversal(node: tree)
+

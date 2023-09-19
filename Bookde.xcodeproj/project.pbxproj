@@ -22,6 +22,8 @@
 		0A5786012922229E00E92026 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5786002922229E00E92026 /* ModelData.swift */; };
 		0A5786052922233000E92026 /* LandMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5786042922233000E92026 /* LandMark.swift */; };
 		0A578608292272D700E92026 /* DetailRentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A578607292272D700E92026 /* DetailRentScreen.swift */; };
+		0A5D96FB2AB5B7EF0095D193 /* DBCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0A5D96FA2AB5B7EF0095D193 /* DBCore */; };
+		0A82F2332AB8AB9400E8C64F /* Onboarding in Frameworks */ = {isa = PBXBuildFile; productRef = 0A82F2322AB8AB9400E8C64F /* Onboarding */; };
 		0A91E18829232FA10070EB69 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A91E18729232FA10070EB69 /* PageView.swift */; };
 		0ADD642E2A8BDF2C00C7BB60 /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD642D2A8BDF2C00C7BB60 /* AppFactory.swift */; };
 		0ADD64302A8BDF6D00C7BB60 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD642F2A8BDF6D00C7BB60 /* Coordinator.swift */; };
@@ -30,7 +32,6 @@
 		0ADD64362A8CD31A00C7BB60 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD64352A8CD31A00C7BB60 /* AppCoordinator.swift */; };
 		0ADD64382A8CD9F200C7BB60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD64372A8CD9F200C7BB60 /* AppDelegate.swift */; };
 		0ADD643A2A8CDBFE00C7BB60 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD64392A8CDBFE00C7BB60 /* HomeCoordinator.swift */; };
-		0AE5CA722A3736A900685FFE /* Onboarding in Frameworks */ = {isa = PBXBuildFile; productRef = 0AE5CA712A3736A900685FFE /* Onboarding */; };
 		0AE5CA772A39CB6F00685FFE /* DBLocalNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5CA762A39CB6F00685FFE /* DBLocalNetwork.swift */; };
 /* End PBXBuildFile section */
 
@@ -91,7 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AE5CA722A3736A900685FFE /* Onboarding in Frameworks */,
+				0A5D96FB2AB5B7EF0095D193 /* DBCore in Frameworks */,
+				0A82F2332AB8AB9400E8C64F /* Onboarding in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +297,8 @@
 			);
 			name = Bookde;
 			packageProductDependencies = (
-				0AE5CA712A3736A900685FFE /* Onboarding */,
+				0A5D96FA2AB5B7EF0095D193 /* DBCore */,
+				0A82F2322AB8AB9400E8C64F /* Onboarding */,
 			);
 			productName = Bookde;
 			productReference = 0A5785C62921E83000E92026 /* Bookde.app */;
@@ -760,7 +763,11 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0AE5CA712A3736A900685FFE /* Onboarding */ = {
+		0A5D96FA2AB5B7EF0095D193 /* DBCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DBCore;
+		};
+		0A82F2322AB8AB9400E8C64F /* Onboarding */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Onboarding;
 		};

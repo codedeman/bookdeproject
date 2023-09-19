@@ -6,12 +6,12 @@
 //
 
 import Foundation
-//import Fire
-final class SignUpViewModel: ObservableObject {
+
+public final class SignUpViewModel: ObservableObject {
 
     private var useCase: SignUpUseCase!
 
-    init(useCase: SignUpUseCase) {
+    public init(useCase: SignUpUseCase) {
         self.useCase = useCase
     }
 
@@ -19,4 +19,9 @@ final class SignUpViewModel: ObservableObject {
 
     }
 
+    func signIn(_ email: String,
+                passworld: String
+    ) async {
+        await useCase.signUp(email: email, passworld: passworld)
+    }
 }

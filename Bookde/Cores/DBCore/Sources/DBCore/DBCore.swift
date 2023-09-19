@@ -4,3 +4,8 @@ public struct DBCore {
     public init() {
     }
 }
+
+public func testing() {
+
+    
+}

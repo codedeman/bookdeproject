@@ -31,10 +31,10 @@ public struct TabBar: View {
 
             Text("Login").tabItem {
                 VStack {
-                    SignUpView().tabItem {
-                        Image(systemName: "person.fill")
-                                        Text("Profile")
-                    }
+                    //                    SignUpView(viewModel: <#SignUpViewModel#>).tabItem {
+//                        Image(systemName: "person.fill")
+//                                        Text("Profile")
+//                    }
                 }
 
             }.tag(3)

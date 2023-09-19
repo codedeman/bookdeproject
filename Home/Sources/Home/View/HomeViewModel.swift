@@ -15,7 +15,6 @@ public final class HomeViewModel: ObservableObject {
 
     public init(useCase: HomeUseCase) {
         self.useCase = useCase
-
     }
 
     

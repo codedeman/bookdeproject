@@ -6,19 +6,28 @@
 //
 
 import UIKit
-import FileProvider
+import FirebaseAuth
 
-protocol SignUpUseCase {
+
+public protocol SignUpUseCase {
     func signUp(email: String, passworld: String) async -> Bool
-
 }
 
-final class SignUpUseCaseImpl: SignUpUseCase {
+public final class SignUpUseCaseImpl: SignUpUseCase {
 
-    func signUp(
+    public init() {
+        
+    }
+    public func signUp(
         email: String,
         passworld: String
     ) async -> Bool {
+        do {
+            let user = try await Auth.auth().signIn(withEmail: email, password: passworld)
+            print("---> user \(user.user.email)")
+        } catch {
+            return false
+        }
         return true
     }
 }

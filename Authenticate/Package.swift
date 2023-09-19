@@ -15,7 +15,13 @@ let package = Package(
             targets: ["Authenticate"]),
     ],
     dependencies: [
-        .package(path: "./Cores/DBCore")
+        .package(path: "./Cores/DBCore"),
+        .package(
+          url: "https://github.com/firebase/firebase-ios-sdk.git",
+
+          .upToNextMajor(from: "10.4.0")
+        ),
+
 
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
@@ -25,7 +31,9 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "Authenticate",
-            dependencies: []),
+            dependencies: [
+                .product(name: "FirebaseAuth", package: "firebase-ios-sdk"),
+            ]),
         .testTarget(
             name: "AuthenticateTests",
             dependencies: ["Authenticate"]),

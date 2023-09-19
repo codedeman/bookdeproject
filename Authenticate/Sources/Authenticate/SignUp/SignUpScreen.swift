@@ -4,9 +4,11 @@ import SwiftUI
 public struct SignUpView: View {
     @State private var email = ""
     @State private var passworld = ""
+    @ObservedObject var viewModel: SignUpViewModel
 
-    public init() {
-        
+
+    public init(viewModel: SignUpViewModel) {
+        self.viewModel = viewModel
     }
     public var body: some View {
         VStack {
@@ -21,7 +23,10 @@ public struct SignUpView: View {
                 .cornerRadius(20)
 
             Button("Sign In") {
-                
+
+//                viewModel.signIn(email, passworld: passworld)
+            }.task {
+                await viewModel.signIn(email, passworld: passworld)
             }
         }.padding([.leading,.trailing], 27.5)
             .background(
@@ -33,8 +38,8 @@ public struct SignUpView: View {
     }
 }
 
-struct SignUpView_Preview: PreviewProvider {
-    static var previews: some View {
-        SignUpView()
-    }
-}
+//struct SignUpView_Preview: PreviewProvider {
+//    static var previews: some View {
+////        SignUpView(viewModel: SignUpViewModel)
+//    }
+//}
