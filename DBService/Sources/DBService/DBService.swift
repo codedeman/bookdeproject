@@ -4,3 +4,12 @@ public struct DBService {
     public init() {
     }
 }
+
+
+public struct DBFireBaseService {
+    public private(set) var text = "Hello, World!"
+
+    public init() {
+    }
+
+}

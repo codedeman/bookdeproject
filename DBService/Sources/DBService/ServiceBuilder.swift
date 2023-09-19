@@ -7,7 +7,6 @@
 
 import Foundation
 
-@available(iOS 15.0, *)
 public enum ServiceBuilder {
     public struct Output {
         public let dbClientService: DBServiceProtocol

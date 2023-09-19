@@ -147,6 +147,21 @@ public class Solution {
         return root
     }
 
+    public func isPalindrome(_ x: Int) -> Bool {
+        var num = x
+        var reveNum = 0
+        while num != 0 {
+            reveNum = x * 10
+            reveNum = reveNum + num % 10
+            num = x/10
+        }
+
+        if x == reveNum {
+            return true
+        }
+        return false
+    }
+
 }
 
 //func deleteNode( root: TreeNode?,  key: Int) -> TreeNode? {

@@ -11,7 +11,6 @@ import DBCore
 import Authenticate
 import Firebase
 
-
 class AppDelegate: NSObject, UIApplicationDelegate {
 
     var window: UIWindow?

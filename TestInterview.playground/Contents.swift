@@ -513,3 +513,310 @@ tree.insertNode(value: 25)
 //tree.printTree()
 tree.preOrderTraversal(node: tree)
 
+//class BinarySearch {
+//
+//    public init() { }
+//
+//    public func search(arr: [Int], target: Int) -> Int {
+//        var lelft = 0
+//        var right = arr.count-1
+//
+//        while lelft <= right {
+//
+//            let midle = (lelft+right) / 2
+//            print("midle ===> \(midle)")
+//            if arr[midle] == target {
+//                return midle
+//            } else if arr[midle] < target {
+//                lelft = midle+1
+//                print("lelft ===> \(right)")
+//
+//            } else  {
+//                print("right ===> \(right)")
+//                right = midle-1
+//            }
+//        }
+//        return 1
+//    }
+//}
+let binarySearh = BinarySearch()
+//binarySearh.search(arr: [1,2,3,6,7,8,9], target: 3)
+
+//print(binarySearh.search(arr: [1,2,3,6,7,8,9], target: 3))
+//
+//let soluton = Solution()
+//
+//soluton.isPalindrome(-121)
+
+func isPalindromeInt(_ x: Int) -> Bool {
+    if x < 0 {
+        return false
+    }
+  var num = x
+  var reveNum = 0
+
+  while num != 0 {
+      reveNum = reveNum * 10 + num % 10
+      num /= 10
+  }
+
+  if x == reveNum {
+      return true
+  }
+  return false
+}
+
+isPalindromeInt(-121)
+
+binarySearh.selectionSort(array: [0,3,2,1,5])
+
+func romanToInt(_ s: String) -> Int {
+    let numTable  = ["I": 1,
+                                       "V": 5,
+                                       "X": 10,
+                                       "L": 50,
+                                       "C": 100,
+                                       "D": 500,
+                                       "M": 1000
+    ]
+    let validate = ["I","V", "X", "L", "C", "D", "M"]
+
+    var result = 0
+    var previous = 0
+    for character in s {
+
+        if let num = numTable["\(character)"] {
+            result += num
+            if num > previous {
+//                print("num ==> \(num)")
+                let testing = result - 2*previous
+                print("num ==> \(num) \(result) \(previous)")
+            }
+            previous = num
+
+        }
+
+    }
+    return result
+}
+
+func findMax(arr: [Int])  {
+    var max = arr[0]
+    var arrMax: [Int] = []
+    for i in 0..<arr.count {
+
+    }
+
+    var index = 0
+    while index < arr.count  {
+        
+    }
+
+    for obj in arrMax {
+        print("max ==> \(obj)")
+    }
+}
+
+func removeDuplicates(_ nums: inout [Int]) ->Int {
+    var left = nums.count
+    var index = 0
+    for r in nums where r != nums[index] {
+        nums[index] = r
+        index += 1
+        print("r",r)
+
+    }
+    return left
+}
+var nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
+removeDuplicates(&nums)
+
+
+
+//findMax(arr: [0,1,2,3,5,6,7,7])
+enum ButtonConfig {
+
+    case primary
+    case second
+}
+
+enum CVPFormatter {
+
+    case title(content: String)
+    case subTitle(content: String)
+    struct Content {
+        var buttonConfig: ButtonConfig
+    }
+}
+
+extension CVPFormatter: Equatable {
+
+}
+
+
+//romanToInt("LVIII")
+
+//romanToInt("IV")
+//romanToInt("XC")
+
+/*
+ hash = ["I": 1,
+ "V": 5,
+ "X": 10,
+ "L": 50,
+ "C": 100,
+ "D": 500,
+ "M": 1000
+]
+
+previous = 0
+ - hash value exist
+ => result += currentNum
+ - current > previous
+ => result -= 2*previous
+
+
+
+ */
+//binarySearh.merged(arr: [4,0,2,1])
+
+//let arr: [Int] = [0,2,3,4,5]
+//
+//print(arr[0..<3])
+
+binarySearh.mergeWithouRecursive(array:  [4,0,2,1])
+
+//func factorial(num: Int) -> Int {
+//    if num == 1 {
+//        return 1
+//    }
+//    return num * factorial(num: num - 1)
+//}
+//
+//factorial(num: 4)
+
+//= 50
+//= -5
+//= - 1
+//= +1
+//= +1
+
+//Explanation: L = 50, V= 5, III = 3.
+
+
+func revert(num: Int) -> Int {
+
+    if num == 0 {
+        return 0
+    } else {
+        return revert(num: num%10) + 10 * revert(num: num/10)
+    }
+}
+
+
+
+
+print("runing ===> \(reversNum(num: 123))")
+
+print("finding ===> \(findGCD(numA: 54, numB: 24))")
+
+
+
+func isValid(_ s: String) -> Bool {
+    var stack: [Character] = []
+    if s.count <= 1 {
+        return false
+    }
+
+    for str in s {
+        switch str {
+        case "{":
+            stack.append("}")
+        case "}":
+            stack.popLast()
+        case "(":
+            stack.append(")")
+        case ")":
+            stack.popLast()
+        case "[":
+            stack.append("]")
+        case "]":
+            if stack.last == "]" {
+                stack.popLast()
+            }
+        default:
+            stack.popLast()
+        }
+    }
+
+    return stack.isEmpty
+}
+
+isValid("({{{{}}}))")
+//print("executing ==>",digitToWords(num: 3))
+protocol AbtractCache {
+    associatedtype T
+    func save(object: T)
+}
+
+final class Cache<T:Encodable>: AbtractCache {
+
+    func save(object: T) {
+
+    }
+
+
+}
+
+final class UseCase<Cache> where Cache: AbtractCache {
+    var cache: Cache
+
+    init(cache: Cache) {
+        self.cache = cache
+    }
+}
+
+func longestCommonPrefix(_ strs: [String]) -> String {
+    guard let firstStr = strs.first else { return "" }
+    var commonPrefix = ""
+    var charIndex = firstStr.startIndex
+    print("start index \(charIndex.hashValue)")
+
+    while charIndex < firstStr.endIndex {
+        let char = firstStr[charIndex]
+        print("char \(char)")
+        for index in 1..<strs.count {
+            if charIndex >= strs[index].endIndex || strs[index][charIndex] != char {
+                return commonPrefix
+            }
+        }
+
+        commonPrefix.append(char)
+        charIndex = firstStr.index(after: charIndex)
+    }
+
+    return commonPrefix
+}
+
+longestCommonPrefix(["flower","flow","flight"])
+
+
+func maxProfit(_ prices: [Int]) -> Int {
+        if prices.isEmpty {
+            return 0
+        }
+        var entryPoint: Int = prices[0]
+        var sellPoint: Int = prices[0]
+
+        for index in 0..<prices.count {
+            if prices[index] < entryPoint {
+                entryPoint = prices[index]
+            } else {
+                print("price",prices[index])
+            }
+        }
+
+    return entryPoint
+}
+
+maxProfit([7,1,5,3,6,4])

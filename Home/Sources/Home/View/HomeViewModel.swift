@@ -6,12 +6,12 @@
 //
 
 import Foundation
-@MainActor
 
 public final class HomeViewModel: ObservableObject {
     @Published var movie: ListFilm?
 
     private var useCase: HomeUseCase
+//    private var userProfile: UserProfile
 
     public init(useCase: HomeUseCase) {
         self.useCase = useCase

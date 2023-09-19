@@ -10,7 +10,7 @@ import UIKit
 import Home
 import DBService
 import SwiftUI
-import Authenticate
+import AppFlow
 protocol HomeFactory {
     func makeModule() -> UIViewController
     func makeAuthenticate() -> UIViewController
@@ -27,9 +27,9 @@ public struct HomeFactoryImp: HomeFactory {
     }
 
     func makeAuthenticate() -> UIViewController {
-        let signUpUseCase = SignUpUseCaseImpl()
-        let vc = SignUpView(viewModel: .init(useCase: signUpUseCase))
-        return UIHostingController(rootView: vc)
+        let autView =  AppView(flow: AppFlow())
+        return UIHostingController(rootView: autView)
+
     }
 }
 

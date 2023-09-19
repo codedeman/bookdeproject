@@ -8,25 +8,25 @@
 import Foundation
 
 public enum ApiError: Error {
- case requestFailed(description: String)
- case invalidData
- case responseUnsuccessful(description: String)
- case jsonConversionFailure(description: String)
- case jsonParsingFailure
- case failedSerialization
- case noInternet
+    case requestFailed(description: String)
+    case invalidData
+    case responseUnsuccessful(description: String)
+    case jsonConversionFailure(description: String)
+    case jsonParsingFailure
+    case failedSerialization
+    case noInternet
 
- var customDescription: String {
-  switch self {
-  case let .requestFailed(description): return "Request Failed: \(description)"
-  case .invalidData: return "Invalid Data)"
-  case let .responseUnsuccessful(description): return "Unsuccessful: \(description)"
-  case let .jsonConversionFailure(description): return "JSON Conversion Failure: \(description)"
-  case .jsonParsingFailure: return "JSON Parsing Failure"
-  case .failedSerialization: return "Serialization failed."
-  case .noInternet: return "No internet connection"
-  }
- }
+    var customDescription: String {
+        switch self {
+        case let .requestFailed(description): return "Request Failed: \(description)"
+        case .invalidData: return "Invalid Data)"
+        case let .responseUnsuccessful(description): return "Unsuccessful: \(description)"
+        case let .jsonConversionFailure(description): return "JSON Conversion Failure: \(description)"
+        case .jsonParsingFailure: return "JSON Parsing Failure"
+        case .failedSerialization: return "Serialization failed."
+        case .noInternet: return "No internet connection"
+        }
+    }
 }
 
 public protocol DBResponse {
@@ -35,7 +35,6 @@ public protocol DBResponse {
 }
 
 public protocol DBServiceProtocol {
-    @available(iOS 13.0.0, *)
     func request<T: Codable>(_ apiRoutable: APIRoutable) async -> Result<T, ApiError>
 
     func request(apiRoutable: APIRoutable,completion: @escaping (Result<DBResponse, ApiError>) -> Void)
@@ -43,7 +42,6 @@ public protocol DBServiceProtocol {
 
 public extension DBServiceProtocol {
 
-    @available(iOS 15.0, *)
     func request<T: Codable>(_ apiRoutable: APIRoutable, type: T.Type) async -> Result<T, ApiError> {
         let urlRequest = URLRequest(url: apiRoutable.baseURl)
         do {
@@ -66,7 +64,6 @@ public extension DBServiceProtocol {
 }
 
 
-@available(iOS 15.0, *)
 public final class DBServiceImpl:  DBServiceProtocol {
     public func request(apiRoutable: APIRoutable, completion: @escaping (Result<DBResponse, ApiError>) -> Void) {
 
@@ -126,8 +123,6 @@ public final class DBServiceImpl:  DBServiceProtocol {
     }
 
 }
-
-@available(iOS 15.0, *)
 
 extension DBService {
 

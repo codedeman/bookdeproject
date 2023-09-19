@@ -19,8 +19,8 @@ final class HomeCoordinator: Coordinator {
 
     func start() {
         let controller = homeFactory.makeAuthenticate()
-        navigation.navigationBar.prefersLargeTitles = true
-        navigation.pushViewController(controller, animated: true)
+        controller.modalPresentationStyle = .fullScreen
+        navigation.present(controller, animated: true)
     }
 }
 

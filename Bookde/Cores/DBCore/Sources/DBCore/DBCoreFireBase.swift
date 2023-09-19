@@ -6,20 +6,16 @@
 //
 
 import Foundation
-import DBService
 
-//public protocol DBFireBaseCoreProtocol {
-//    
-//}
-//final class DBCoreFireBase {
-//
-//    func signIn() {
-//
-//        Auth.auth().signIn(withEmail: "", password: "") { <#AuthDataResult?#>, <#Error?#> in
-//            <#code#>
-//        }
-//    }
-//
-//
-//
-//}
+public struct AppError: Error, CustomDebugStringConvertible, Equatable {
+    public var debugDescription: String
+
+    public init(_ description: String) {
+        self.debugDescription = description
+    }
+
+}
+
+public extension AppError {
+    static let genericError = AppError("The operation die at the moment")
+}

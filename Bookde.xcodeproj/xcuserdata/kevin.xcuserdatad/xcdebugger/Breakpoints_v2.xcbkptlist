@@ -232,88 +232,8 @@
             filePath = "Bookde/AppDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5643917C-311A-46D2-96D3-0B7044D87FF4"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Bookde/AppDelegate.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "AppDelegate"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DD602F19-EB23-4112-827B-B95669A1E0B2"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Bookde/AppDelegate.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "AppDelegate"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D0B404CD-17D7-46AF-9B98-C24B54B93DC6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Bookde/AppDelegate.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "D0B404CD-17D7-46AF-9B98-C24B54B93DC6 - c9ada18257a83686"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Bookde.AppDelegate.application(_: __C.UIApplication, didFinishLaunchingWithOptions: Swift.Optional&lt;Swift.Dictionary&lt;__C.UIApplicationLaunchOptionsKey, Any&gt;&gt;) -&gt; Swift.Bool"
-                  moduleName = "Bookde"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kevin/project/Bookde/Bookde/AppDelegate.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "420">
-               </Location>
-               <Location
-                  uuid = "D0B404CD-17D7-46AF-9B98-C24B54B93DC6 - c9ada18257a83686"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Bookde.AppDelegate.application(_: __C.UIApplication, didFinishLaunchingWithOptions: Swift.Optional&lt;Swift.Dictionary&lt;__C.UIApplicationLaunchOptionsKey, Any&gt;&gt;) -&gt; Swift.Bool"
-                  moduleName = "Bookde"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kevin/project/Bookde/Bookde/AppDelegate.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "404">
-               </Location>
-            </Locations>
+            endingLineNumber = "38">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -360,6 +280,241 @@
                   startingLineNumber = "26"
                   endingLineNumber = "26"
                   offsetFromSymbolStart = "260">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5123A600-B532-4CA9-BD8F-E5C10B8B57A6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookdeTests/BookdeTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "tearDownWithError()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "68A4DB61-7030-4DA7-82AF-2FE3C1D51D44"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Authenticate/Sources/Authenticate/Screens/AuthenticateFlow.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "68A4DB61-7030-4DA7-82AF-2FE3C1D51D44 - f8e9169c4916ade6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Authenticate.AuthenticateFlow.startSignUp() -&gt; Authenticate.SignUpView"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/AuthenticateFlow.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "68A4DB61-7030-4DA7-82AF-2FE3C1D51D44 - 8be2d34f044f2406"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Authenticate.UserProfile) -&gt; () in Authenticate.AuthenticateFlow.startSignUp() -&gt; Authenticate.SignUpView"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/AuthenticateFlow.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "68A4DB61-7030-4DA7-82AF-2FE3C1D51D44 - 8be2d34f044f2406"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Authenticate.UserProfile) -&gt; () in Authenticate.AuthenticateFlow.startSignUp() -&gt; Authenticate.SignUpView"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/AuthenticateFlow.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "68A4DB61-7030-4DA7-82AF-2FE3C1D51D44 - f8e9169c4916adc7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Authenticate.AuthenticateFlow.startSignUp() -&gt; Authenticate.SignUpView"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/AuthenticateFlow.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "68A4DB61-7030-4DA7-82AF-2FE3C1D51D44 - f8e9169c4916ac62"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Authenticate.AuthenticateFlow.startSignUp() -&gt; Authenticate.SignUpView"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/AuthenticateFlow.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "68A4DB61-7030-4DA7-82AF-2FE3C1D51D44 - f8e9169c4916ada4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Authenticate.AuthenticateFlow.startSignUp() -&gt; Authenticate.SignUpView"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/AuthenticateFlow.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "68A4DB61-7030-4DA7-82AF-2FE3C1D51D44 - f8e9169c4916ada4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Authenticate.AuthenticateFlow.startSignUp() -&gt; Authenticate.SignUpView"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/AuthenticateFlow.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "164">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B293DE1F-4DD0-4861-AF4C-BF2DF9E120FA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Authenticate/Sources/Authenticate/Screens/AuthenticateFlow.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "B293DE1F-4DD0-4861-AF4C-BF2DF9E120FA - c6c4f4324979752b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Authenticate.AuthenticateFlow.dissmissViewModel(user: Authenticate.UserProfile) -&gt; ()"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/AuthenticateFlow.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "B293DE1F-4DD0-4861-AF4C-BF2DF9E120FA - c6c4f43249797671"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Authenticate.AuthenticateFlow.dissmissViewModel(user: Authenticate.UserProfile) -&gt; ()"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/AuthenticateFlow.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B9EC20EA-8967-4D31-9838-41616D4145F1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Authenticate/Sources/Authenticate/Screens/AuthenticateFlow.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "B9EC20EA-8967-4D31-9838-41616D4145F1 - c6c4f4324979752b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Authenticate.AuthenticateFlow.dissmissViewModel(user: Authenticate.UserProfile) -&gt; ()"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/AuthenticateFlow.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "B9EC20EA-8967-4D31-9838-41616D4145F1 - c6c4f43249797671"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Authenticate.AuthenticateFlow.dissmissViewModel(user: Authenticate.UserProfile) -&gt; ()"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/AuthenticateFlow.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "20">
                </Location>
             </Locations>
          </BreakpointContent>
