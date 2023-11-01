@@ -14,22 +14,36 @@ import Combine
 
 public protocol SignUpUseCase {
     func signIn(email: String, passworld: String) async -> Result<UserProfile, AppError>
-    func signUp(email: String, passworld: String) async -> AnyPublisher<Result<UserProfile, AppError>, Never>
+    func signUp(email: String, passworld: String, imageData: Data?) async -> AnyPublisher<Result<UserProfile, AppError>, Never>
 
 }
 
 public final class SignUpUseCaseImpl: SignUpUseCase {
 
-    public func signUp(email: String, passworld: String) async -> AnyPublisher<Result<UserProfile, AppError>, Never> {
-        let data = await firebaseRespository.signUpWithEmail(email: email, passworld: passworld)
+     public func signUp(email: String, passworld: String, imageData: Data?) async -> AnyPublisher<Result<UserProfile, AppError>, Never> {
+
+        let data = await firebaseRespository
+            .signUpWithEmail(
+                email: email,
+                passworld: passworld,
+                imageProfile: imageData
+            )
+
         switch data {
         case .success(let user):
-            let userProfile = UserProfile(providerID: user.providerID, displayName: user.displayName)
+            let userProfile = UserProfile(
+                providerID: user.providerID,
+                uid: user.uid,
+                displayName: user.displayName
+            )
             return Just(Result.success(userProfile)).eraseToAnyPublisher()
         case .failure(_):
             return Just(Result.failure(AppError.genericError)).eraseToAnyPublisher()
         }
     }
+
+
+
 
     private var firebaseRespository: FireRepository
 

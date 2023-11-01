@@ -19,28 +19,29 @@ public final class SignUpViewModel: ObservableObject {
         self.useCase = useCase
     }
 
-    struct Input {
-
-    }
-
     func signUp(
         _ email: String,
-        password: String
+        password: String,
+        passworlConfirm: String,
+        imageProfile: Data?
     ) async {
-        
-        let user = await useCase.signUp(email: email, passworld: password)
-        // Store a reference to the AnyCancellable object that is returned by the sink() operator.
-        let cancellable = user.sink { [self] result in
+
+        let user = await useCase.signUp(
+            email: email,
+            passworld: password,
+            imageData: imageProfile
+        )
+
+       user.sink { [self] result in
             switch result {
-            case .success(_):
-                state = .finished
+            case .success(let user):
+                print("user id: \(user.uid)")
             case .failure(let error):
-                state = .finished
+                print("error *** \(error)")
+//                state = .finished
             }
         }
 
-        // Cancel the subscription when the function deinitializes.
-        defer { cancellable.cancel() }
     }
 
     func didTabHaveAccount() {
