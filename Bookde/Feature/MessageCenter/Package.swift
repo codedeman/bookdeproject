@@ -15,6 +15,8 @@ let package = Package(
             targets: ["MessageCenter"]),
     ],
     dependencies: [
+        .package(path: "./Cores/DBService"),
+
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
     ],
@@ -23,7 +25,10 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "MessageCenter",
-            dependencies: []),
+            dependencies: [
+                .product(name: "DBService", package: "DBService"),
+                .product(name: "DBFireBaseService", package: "DBService"),
+            ]),
         .testTarget(
             name: "MessageCenterTests",
             dependencies: ["MessageCenter"]),

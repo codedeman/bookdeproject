@@ -9,8 +9,8 @@ import SwiftUI
 import DBCore
 
 public struct SignInView: View {
-    @State private var email = "kevin12@gmail.com"
-    @State private var passworld = "123456"
+    @State private var email = "China@gmail.com"
+    @State private var passworld = "02111997"
     @ObservedObject var viewModel: SignInViewModel
 
     public init(viewModel: SignInViewModel) {
@@ -34,9 +34,6 @@ public struct SignInView: View {
               .background(Color.themeTextField)
               .cornerRadius(20.0)
 
-            Button("Sign up now?") {
-                viewModel.didTapSignUp()
-            }
 
             Button(action: {
                 Task {
@@ -50,6 +47,10 @@ public struct SignInView: View {
                 .frame(width: 300, height: 50)
                 .background(Color.blue)
                 .cornerRadius(15.0)
+            }
+
+            Button("Sign up now?") {
+                viewModel.didTapSignUp()
             }
 
         }

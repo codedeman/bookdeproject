@@ -11,4 +11,5 @@ import DBCore
 public enum AuthenticateState: StateManager {
     case startSignUp
     case finished
+
 }

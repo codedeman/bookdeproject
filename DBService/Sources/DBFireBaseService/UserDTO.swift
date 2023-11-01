@@ -10,7 +10,6 @@ import FirebaseAuth
 
 public struct UserDTO {
 
-
     public var providerID: String?
 
     public var uid: String = ""
@@ -25,13 +24,14 @@ public struct UserDTO {
 
     public var description: String?
 
-    public init(providerID: String? = nil,
-                uid: String,
-                displayName: String? = nil,
-                photoURL: URL? = nil,
-                email: String? = nil,
-                phoneNumber: String? = nil,
-                description: String? = nil
+    public init(
+        providerID: String? = nil,
+        uid: String,
+        displayName: String? = nil,
+        photoURL: URL? = nil,
+        email: String? = nil,
+        phoneNumber: String? = nil,
+        description: String? = nil
     ) {
         self.providerID = providerID
         self.uid = uid

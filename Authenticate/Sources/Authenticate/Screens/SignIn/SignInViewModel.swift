@@ -7,7 +7,6 @@
 
 import Foundation
 import Combine
-
 public final class SignInViewModel: ObservableObject {
 
     private let useCase: SignUpUseCase
