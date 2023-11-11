@@ -9,6 +9,7 @@ import UIKit
 import FirebaseStorage
 
 public struct DocumentDTO {
+
     public var email: String
     public var profileUrl: String
     public var uiid: String

@@ -22,10 +22,11 @@ final public class MessageNewFeedViewModel: ObservableObject {
         self.state = .loading
         Task {
             await fetch()
+
         }
     }
 
-    enum SectionType: Equatable, Identifiable {
+    enum HeaderSection: Equatable, Identifiable {
         var id: UUID {
             return UUID()
         }
@@ -33,19 +34,34 @@ final public class MessageNewFeedViewModel: ObservableObject {
         case currentUser(User)
     }
 
+    enum BodySection: Equatable, Identifiable {
+
+        var id: UUID {
+            return UUID()
+        }
+
+        case general([User])
+    }
+
     enum State {
         case loading
-        case display(displaytype: SectionType)
+        case body(_ users: [User])
     }
 
     private func fetch() async {
         state = .loading
-        await useCase.fetchCurrentUser()
-            .receive(on: DispatchQueue.main)
-            .sink(receiveValue: {  [weak self] user in
-                self?.state = .display(displaytype: .currentUser(user))
-            })
-            .store(in: &subscribers)
+//        await useCase.fetchCurrentUser()
+//            .receive(on: DispatchQueue.main)
+//            .sink(receiveValue: {  [weak self] user in
+//                
+//            })
+//            .store(in: &subscribers)
+//        await useCase.fetchAllUser()
+//            .receive(on: DispatchQueue.main)
+//            .sink(receiveValue: {  [weak self] user in
+//                self?.state = .body(user)
+//            })
+//            .store(in: &subscribers)
     }
 
     func signOut() async {

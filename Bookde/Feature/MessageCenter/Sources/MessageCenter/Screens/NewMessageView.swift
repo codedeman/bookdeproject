@@ -7,12 +7,15 @@
 
 import SwiftUI
 
-struct SwiftUIView: View {
+struct NewMessageView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            
+        }
+        Text("Hello, World!")
     }
 }
 
 #Preview {
-    SwiftUIView()
+    NewMessageView()
 }

@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0A00553B2924E5CF00802F40 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A00553A2924E5CE00802F40 /* User.swift */; };
-		0A14ED002AF6AAF300326670 /* MessageCenter in Frameworks */ = {isa = PBXBuildFile; productRef = 0A14ECFF2AF6AAF300326670 /* MessageCenter */; };
-		0A14ED022AF6AC3400326670 /* Authenticate in Frameworks */ = {isa = PBXBuildFile; productRef = 0A14ED012AF6AC3400326670 /* Authenticate */; };
-		0A14ED042AF73F7A00326670 /* DBFireBaseService in Frameworks */ = {isa = PBXBuildFile; productRef = 0A14ED032AF73F7A00326670 /* DBFireBaseService */; };
-		0A14ED062AF7404800326670 /* DBService in Frameworks */ = {isa = PBXBuildFile; productRef = 0A14ED052AF7404800326670 /* DBService */; };
 		0A3184AA2AB9704F00C4A9D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A3184A92AB9704F00C4A9D1 /* GoogleService-Info.plist */; };
 		0A5785CA2921E83000E92026 /* BookdeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5785C92921E83000E92026 /* BookdeApp.swift */; };
 		0A5785CE2921E83100E92026 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A5785CD2921E83100E92026 /* Assets.xcassets */; };
@@ -92,10 +88,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A9157272AF0FB7A0058D938 /* AppFlow in Frameworks */,
-				0A14ED042AF73F7A00326670 /* DBFireBaseService in Frameworks */,
-				0A14ED022AF6AC3400326670 /* Authenticate in Frameworks */,
-				0A14ED002AF6AAF300326670 /* MessageCenter in Frameworks */,
-				0A14ED062AF7404800326670 /* DBService in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,10 +292,6 @@
 			name = Bookde;
 			packageProductDependencies = (
 				0A9157262AF0FB7A0058D938 /* AppFlow */,
-				0A14ECFF2AF6AAF300326670 /* MessageCenter */,
-				0A14ED012AF6AC3400326670 /* Authenticate */,
-				0A14ED032AF73F7A00326670 /* DBFireBaseService */,
-				0A14ED052AF7404800326670 /* DBService */,
 			);
 			productName = Bookde;
 			productReference = 0A5785C62921E83000E92026 /* Bookde.app */;
@@ -766,22 +754,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0A14ECFF2AF6AAF300326670 /* MessageCenter */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = MessageCenter;
-		};
-		0A14ED012AF6AC3400326670 /* Authenticate */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Authenticate;
-		};
-		0A14ED032AF73F7A00326670 /* DBFireBaseService */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DBFireBaseService;
-		};
-		0A14ED052AF7404800326670 /* DBService */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DBService;
-		};
 		0A9157262AF0FB7A0058D938 /* AppFlow */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppFlow;

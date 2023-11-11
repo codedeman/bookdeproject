@@ -18,6 +18,7 @@ public protocol FireRepository {
     func signInWithEmail(email: String, passworld: String) async -> Result<UserDTO,Error>
     func signUpWithEmail(email: String, passworld: String, imageProfile: Data?) async -> Result<UserDTO,Error>
     func fetchCurrentUser() async -> Result<DocumentDTO, Error>
+    func fetchAllUsers() async -> Result<[DocumentDTO], Error>
     func signOut() async  -> Bool
 }
 
@@ -115,13 +116,32 @@ public final class ImplFireRepository: FireRepository {
 
     public func signOut() async -> Bool {
         do {
-            try await Auth.auth().signOut()
+            try  Auth.auth().signOut()
             return true
         } catch {
             print("Error signing out: \(error)")
             return false
         }
     }
+
+    public func fetchAllUsers() async -> Result<[DocumentDTO], Error> {
+        var users: [DocumentDTO] = []
+        do {
+            let snapshot = try await Firestore.firestore()
+                .collection("users")
+                .getDocuments()
+
+            snapshot.documents.forEach { document in
+                let data = document.data()
+                let documentDTO = DocumentDTO(dic: data)
+                users.append(documentDTO)
+            }
+            return .success(users)
+        } catch {
+            return .failure(error)
+        }
+    }
+
 
     public init () {}
 

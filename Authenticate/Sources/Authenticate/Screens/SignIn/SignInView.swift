@@ -11,6 +11,7 @@ import DBCore
 public struct SignInView: View {
     @State private var email = "China@gmail.com"
     @State private var passworld = "02111997"
+    @EnvironmentObject var state: MyAuthenticateState
     @ObservedObject var viewModel: SignInViewModel
 
     public init(viewModel: SignInViewModel) {
@@ -36,9 +37,12 @@ public struct SignInView: View {
 
 
             Button(action: {
-                Task {
-                    await viewModel.signUp(email: email, passworld: passworld)
-                }
+                state.id = "Kevin ---> ec"
+//                state.
+//                Task {
+//                    state.didSelectBack = true
+//                    await viewModel.signUp(email: email, passworld: passworld)
+//                }
             }) {
               Text("Sign In")
                 .font(.headline)
@@ -50,7 +54,8 @@ public struct SignInView: View {
             }
 
             Button("Sign up now?") {
-                viewModel.didTapSignUp()
+                state.didSelectBack = true
+                state.id = "123"
             }
 
         }

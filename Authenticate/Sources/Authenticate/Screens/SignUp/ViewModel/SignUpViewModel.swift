@@ -10,12 +10,12 @@ import Combine
 
 public final class SignUpViewModel: ObservableObject {
 
-    private var useCase: SignUpUseCase!
+    private var useCase: AuthenticateUseCase!
     @Published var userName: String?
     @Published var passworld: String?
     @Published public var state: AuthenticateState?
 
-    public init(useCase: SignUpUseCase) {
+    public init(useCase: AuthenticateUseCase) {
         self.useCase = useCase
     }
 

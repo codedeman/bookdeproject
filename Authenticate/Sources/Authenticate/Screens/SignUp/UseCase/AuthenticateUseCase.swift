@@ -17,7 +17,7 @@ public protocol AuthenticateUseCase {
     func signUp(email: String, passworld: String, imageData: Data?) async -> AnyPublisher<Result<UserProfile, AppError>, Never>
 }
 
-public final class SignUpUseCaseImpl: AuthenticateUseCase {
+public final class ImplAuthenticateUseCase: AuthenticateUseCase {
 
     private var firebaseRespository: FireRepository
 
@@ -52,7 +52,11 @@ public final class SignUpUseCaseImpl: AuthenticateUseCase {
         let data = await firebaseRespository.signInWithEmail(email: email, passworld: passworld)
         switch data {
         case .success(let user):
-            let userProfile = UserProfile(providerID: user.providerID, displayName: user.displayName)
+            let userProfile = UserProfile(
+                providerID: user.providerID,
+                uid: user.uid,
+                displayName: user.displayName
+            )
             return .success(userProfile)
         case .failure(_):
             return .failure(AppError.genericError)

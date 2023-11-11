@@ -13,6 +13,10 @@ let package = Package(
         .library(
             name: "Authenticate",
             targets: ["Authenticate"]),
+
+        .library(
+                name: "AuthenticateMocks",
+                targets: ["AuthenticateMocks"]),
     ],
     dependencies: [
         .package(path: "./Cores/DBService"),
@@ -31,6 +35,16 @@ let package = Package(
             ],
             resources: [.process("Resources")]
         ),
+
+            .target(
+                name: "AuthenticateMocks",
+                dependencies: [
+                    "Authenticate",
+
+                ],
+                resources: [.process("Resources")]
+            ),
+
         .testTarget(
             name: "AuthenticateTests",
             dependencies: ["Authenticate"]),

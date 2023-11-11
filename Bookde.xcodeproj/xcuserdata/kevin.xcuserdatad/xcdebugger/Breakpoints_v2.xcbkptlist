@@ -204,6 +204,38 @@
             endingLineNumber = "23"
             landmarkName = "load(_:)"
             landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "41867AC2-7D65-41B3-9928-0968A11C28DA - 65b817d027345487"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Home.load&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(Swift.String) -&gt; &#x3c4;_0_0"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Home/Sources/Home/Test.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "1976">
+               </Location>
+               <Location
+                  uuid = "41867AC2-7D65-41B3-9928-0968A11C28DA - 7c1f501f55fdc485"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Home.load&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(Swift.String) -&gt; &#x3c4;_0_0"
+                  moduleName = "AppFlowTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Home/Sources/Home/Test.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "1976">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -220,6 +252,38 @@
             endingLineNumber = "21"
             landmarkName = "load(_:)"
             landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "F2BC32AF-9986-4504-A04B-D24ECBEBB450 - 65b817d0273454d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Home.load&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(Swift.String) -&gt; &#x3c4;_0_0"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Home/Sources/Home/Test.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "416">
+               </Location>
+               <Location
+                  uuid = "F2BC32AF-9986-4504-A04B-D24ECBEBB450 - 7c1f501f55fdc4db"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Home.load&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(Swift.String) -&gt; &#x3c4;_0_0"
+                  moduleName = "AppFlowTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Home/Sources/Home/Test.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "416">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -325,71 +389,11 @@
             filePath = "DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "storeUseInformation(uid:email:imageData:)"
             landmarkType = "7">
             <Locations>
-               <Location
-                  uuid = "4F9C0FEB-A99A-43B6-8E52-2408D04AE567 - 340921d502e3f0f6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DBFireBaseService.ImplFireRepository.storeUseInformation(uid: Swift.String, email: Swift.String, imageData: Swift.Optional&lt;Foundation.Data&gt;) -&gt; ()"
-                  moduleName = "Bookde"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kevin/project/Bookde/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "77"
-                  endingLineNumber = "77"
-                  offsetFromSymbolStart = "448">
-               </Location>
-               <Location
-                  uuid = "4F9C0FEB-A99A-43B6-8E52-2408D04AE567 - 340921d502e3f0f6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DBFireBaseService.ImplFireRepository.storeUseInformation(uid: Swift.String, email: Swift.String, imageData: Swift.Optional&lt;Foundation.Data&gt;) -&gt; ()"
-                  moduleName = "Bookde"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kevin/project/Bookde/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "77"
-                  endingLineNumber = "77"
-                  offsetFromSymbolStart = "124">
-               </Location>
-               <Location
-                  uuid = "4F9C0FEB-A99A-43B6-8E52-2408D04AE567 - 340921d502e3f0d5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DBFireBaseService.ImplFireRepository.storeUseInformation(uid: Swift.String, email: Swift.String, imageData: Swift.Optional&lt;Foundation.Data&gt;) -&gt; ()"
-                  moduleName = "Bookde"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kevin/project/Bookde/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "78"
-                  endingLineNumber = "78"
-                  offsetFromSymbolStart = "484">
-               </Location>
-               <Location
-                  uuid = "4F9C0FEB-A99A-43B6-8E52-2408D04AE567 - 340921d502e3f0d5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DBFireBaseService.ImplFireRepository.storeUseInformation(uid: Swift.String, email: Swift.String, imageData: Swift.Optional&lt;Foundation.Data&gt;) -&gt; ()"
-                  moduleName = "Bookde"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kevin/project/Bookde/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "78"
-                  endingLineNumber = "78"
-                  offsetFromSymbolStart = "192">
-               </Location>
                <Location
                   uuid = "4F9C0FEB-A99A-43B6-8E52-2408D04AE567 - 340921d502e3f5ff"
                   shouldBeEnabled = "Yes"
@@ -406,18 +410,18 @@
                   offsetFromSymbolStart = "192">
                </Location>
                <Location
-                  uuid = "4F9C0FEB-A99A-43B6-8E52-2408D04AE567 - 340921d502e3f520"
+                  uuid = "4F9C0FEB-A99A-43B6-8E52-2408D04AE567 - 2dae661a702a65fd"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DBFireBaseService.ImplFireRepository.storeUseInformation(uid: Swift.String, email: Swift.String, imageData: Swift.Optional&lt;Foundation.Data&gt;) -&gt; ()"
-                  moduleName = "Bookde"
+                  moduleName = "AppFlowTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kevin/project/Bookde/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
                   offsetFromSymbolStart = "192">
                </Location>
             </Locations>
@@ -483,6 +487,21 @@
                   endingLineNumber = "35"
                   offsetFromSymbolStart = "128">
                </Location>
+               <Location
+                  uuid = "5E36D1EE-A6D0-4572-BFE2-24499294769A - eaa0bed1bf4c0732"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Authenticate.SignUpViewModel.signUp(_: Swift.String, password: Swift.String, passworlConfirm: Swift.String, imageProfile: Swift.Optional&lt;Foundation.Data&gt;) async -&gt; ()"
+                  moduleName = "AppFlowTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/SignUp/ViewModel/SignUpViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "128">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -496,41 +515,11 @@
             filePath = "DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "storeUseInformation(uid:email:imageData:)"
             landmarkType = "7">
             <Locations>
-               <Location
-                  uuid = "6B233603-EEE0-435D-8E2B-BC0DA38A7C7E - 80076ae93abcddc7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DBFireBaseService.ImplFireRepository.storeUseInformation(uid: Swift.String, email: Swift.String, imageData: Swift.Optional&lt;Foundation.Data&gt;) -&gt; ()"
-                  moduleName = "Bookde"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kevin/project/Bookde/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "484">
-               </Location>
-               <Location
-                  uuid = "6B233603-EEE0-435D-8E2B-BC0DA38A7C7E - 80076ae93abcddc7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DBFireBaseService.ImplFireRepository.storeUseInformation(uid: Swift.String, email: Swift.String, imageData: Swift.Optional&lt;Foundation.Data&gt;) -&gt; ()"
-                  moduleName = "Bookde"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kevin/project/Bookde/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "256">
-               </Location>
                <Location
                   uuid = "6B233603-EEE0-435D-8E2B-BC0DA38A7C7E - 80076ae93abcda91"
                   shouldBeEnabled = "Yes"
@@ -547,18 +536,18 @@
                   offsetFromSymbolStart = "256">
                </Location>
                <Location
-                  uuid = "6B233603-EEE0-435D-8E2B-BC0DA38A7C7E - 80076ae93abcdab2"
+                  uuid = "6B233603-EEE0-435D-8E2B-BC0DA38A7C7E - 99a02d2648754a93"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "DBFireBaseService.ImplFireRepository.storeUseInformation(uid: Swift.String, email: Swift.String, imageData: Swift.Optional&lt;Foundation.Data&gt;) -&gt; ()"
-                  moduleName = "Bookde"
+                  moduleName = "AppFlowTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kevin/project/Bookde/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
                   offsetFromSymbolStart = "256">
                </Location>
             </Locations>
@@ -639,6 +628,51 @@
                   endingLineNumber = "104"
                   offsetFromSymbolStart = "152">
                </Location>
+               <Location
+                  uuid = "8194812D-F202-48F2-96D8-363960E18310 - 5b9bc804a596aefb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for Authenticate.SignUpView.signUp() async -&gt; ()"
+                  moduleName = "AppFlowTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/SignUp/SignUpScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "1788">
+               </Location>
+               <Location
+                  uuid = "8194812D-F202-48F2-96D8-363960E18310 - 249825dfe0009708"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for Authenticate.SignUpView.signUp() async -&gt; ()"
+                  moduleName = "AppFlowTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/SignUp/SignUpScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "8194812D-F202-48F2-96D8-363960E18310 - 67924a4663640af9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Authenticate.SignUpView.signUp() async -&gt; ()"
+                  moduleName = "AppFlowTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/SignUp/SignUpScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "152">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -687,6 +721,21 @@
                   endingLineNumber = "106"
                   offsetFromSymbolStart = "2068">
                </Location>
+               <Location
+                  uuid = "4317FDBB-2F6B-4748-AB2C-2FA0BB59F9D8 - 5b9bc804a596ad3d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for Authenticate.SignUpView.signUp() async -&gt; ()"
+                  moduleName = "AppFlowTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/SignUp/SignUpScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "2068">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -704,6 +753,118 @@
             endingLineNumber = "99"
             landmarkName = "signUp()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "83F72EE1-E089-472F-B4A4-4AD33B4D435A - 423c8fcbd75f3e04"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for Authenticate.SignUpView.signUp() async -&gt; ()"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/SignUp/SignUpScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "336">
+               </Location>
+               <Location
+                  uuid = "83F72EE1-E089-472F-B4A4-4AD33B4D435A - 5b9bc804a596ae06"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for Authenticate.SignUpView.signUp() async -&gt; ()"
+                  moduleName = "AppFlowTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/SignUp/SignUpScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "336">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "732287EE-E689-4498-A872-D7B9E77241EF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../AppFlow/Sources/AppFlow/AppFlow.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "signInViewModel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B4DCA67F-948C-4C37-9708-F62219503360"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../AppFlow/Sources/AppFlow/AppFlow.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "signInViewModel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "090E37BF-7D6F-404C-BC26-C0C21D95E024"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../AppFlow/Sources/AppFlow/AppStateManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "signInViewModel()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "090E37BF-7D6F-404C-BC26-C0C21D95E024 - be3b16441331980a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Authenticate.AuthenticateState) -&gt; () in AppFlow.AppStateManager.testsignInViewModel(useCase: Authenticate.AuthenticateUseCase) -&gt; Authenticate.SignInViewModel"
+                  moduleName = "AppFlowTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/AppFlow/Sources/AppFlow/AppStateManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "090E37BF-7D6F-404C-BC26-C0C21D95E024 - 15838d8243a858c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Authenticate.AuthenticateState) -&gt; () in AppFlow.AppStateManager.signInViewModel() -&gt; Authenticate.SignInViewModel"
+                  moduleName = "AppFlowTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/AppFlow/Sources/AppFlow/AppStateManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "148">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -10,11 +10,24 @@ import DBFireBaseService
 import Combine
 
 public protocol MessageUseCase {
+
     func fetchCurrentUser() async -> AnyPublisher<User, Never>
     func signOut() async -> AnyPublisher<Bool, Never>
+    func fetchAllUser() async -> AnyPublisher<[User], Never>
 }
 
 public final class ImplMessageUseCase: MessageUseCase {
+    public func fetchAllUser() async -> AnyPublisher<[User], Never> {
+        let status = await respository.fetchAllUsers()
+        switch status {
+        case .success(let users):
+           let userDto = users.map { User(email: $0.email, profileUrl: $0.profileUrl, uiid: $0.uiid) }
+            return Just(userDto).eraseToAnyPublisher()
+        case .failure(let error):
+            return Fail(error: error as! Never).eraseToAnyPublisher()
+        }
+    }
+    
     public func fetchCurrentUser() async -> AnyPublisher<User, Never> {
         let status = await respository.fetchCurrentUser()
         switch status {

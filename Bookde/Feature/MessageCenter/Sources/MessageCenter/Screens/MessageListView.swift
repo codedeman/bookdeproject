@@ -5,8 +5,38 @@
 //  Created by Kevin on 11/9/23.
 //
 
-import UIKit
+import SwiftUI
+import CoreUI
 
-class MessageListView: NSObject {
+public struct MessageListView: View {
+    var users: [User] = []
+    var loading: Bool
+    public var body: some View {
+        ScrollView(showsIndicators: false) {
+            ForEach(users) { user in
+                VStack {
+                    HStack(spacing: 16) {
+                        AsyncImage(url: URL(string: user.profileUrl))
+                            .frame(width: 30, height: 30)
+                            .cornerRadius(64)
+                            .foregroundColor(Color.blue).shimmering(active: loading)
+                        VStack(alignment: .leading) {
+                            Text(user.email).shimmering(active: loading)
+                                .font(.system(size: 16, weight: .bold))
+                            Text("Mesage sent to user")
+                                .font(.system(size: 12))
+                                .foregroundColor(.gray).shimmering(active: loading)
+                        }
+                        Spacer()
+                        Text("22d")
+                    }
+                    Divider()
+                        .padding(.vertical,8)
 
+                }.padding(.horizontal)
+            }.padding(.horizontal)
+        }
+    }
 }
+
+

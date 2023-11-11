@@ -16,7 +16,7 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "./Cores/DBService"),
-
+        .package(path: "./Cores/CoreUI"),
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
     ],
@@ -27,6 +27,7 @@ let package = Package(
             name: "MessageCenter",
             dependencies: [
                 .product(name: "DBService", package: "DBService"),
+                .product(name: "CoreUI", package: "CoreUI"),
                 .product(name: "DBFireBaseService", package: "DBService"),
             ]),
         .testTarget(

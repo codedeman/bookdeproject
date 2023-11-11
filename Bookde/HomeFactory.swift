@@ -27,7 +27,7 @@ public struct HomeFactoryImp: HomeFactory {
     }
 
     func makeAuthenticate() -> UIViewController {
-        let autView =  AppView(flow: AppFlow())
+        let autView =  AppView(flow: AppStateManager())
         return UIHostingController(rootView: autView)
 
     }

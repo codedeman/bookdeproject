@@ -6,8 +6,8 @@
 //
 
 import UIKit
-import FirebaseAuth
-public struct UserProfile: Codable {
+
+public struct UserProfile {
     public var providerID: String?
 
     public var uid: String = ""
@@ -19,8 +19,20 @@ public struct UserProfile: Codable {
     public var email: String?
 
     public var phoneNumber: String?
-
-
+    public init(
+        providerID: String? = nil,
+        uid: String, displayName: String? = nil,
+        photoURL: URL? = nil,
+        email: String? = nil,
+        phoneNumber: String? = nil
+    ) {
+        self.providerID = providerID
+        self.uid = uid
+        self.displayName = displayName
+        self.photoURL = photoURL
+        self.email = email
+        self.phoneNumber = phoneNumber
+    }
 
 }
 
