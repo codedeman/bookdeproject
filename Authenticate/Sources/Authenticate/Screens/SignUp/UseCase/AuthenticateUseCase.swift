@@ -12,15 +12,20 @@ import FirebaseAuth
 import DBCore
 import Combine
 
-public protocol SignUpUseCase {
+public protocol AuthenticateUseCase {
     func signIn(email: String, passworld: String) async -> Result<UserProfile, AppError>
     func signUp(email: String, passworld: String, imageData: Data?) async -> AnyPublisher<Result<UserProfile, AppError>, Never>
-
 }
 
-public final class SignUpUseCaseImpl: SignUpUseCase {
+public final class SignUpUseCaseImpl: AuthenticateUseCase {
 
-     public func signUp(email: String, passworld: String, imageData: Data?) async -> AnyPublisher<Result<UserProfile, AppError>, Never> {
+    private var firebaseRespository: FireRepository
+
+    public init(firebaseRespository: FireRepository = ImplFireRepository()) {
+        self.firebaseRespository = firebaseRespository
+    }
+
+    public func signUp(email: String, passworld: String, imageData: Data?) async -> AnyPublisher<Result<UserProfile, AppError>, Never> {
 
         let data = await firebaseRespository
             .signUpWithEmail(
@@ -42,14 +47,6 @@ public final class SignUpUseCaseImpl: SignUpUseCase {
         }
     }
 
-
-
-
-    private var firebaseRespository: FireRepository
-
-    public init(firebaseRespository: FireRepository = ImplFireRepository()) {
-        self.firebaseRespository = firebaseRespository
-    }
 
     public func signIn(email: String, passworld: String) async -> Result<UserProfile, AppError> {
         let data = await firebaseRespository.signInWithEmail(email: email, passworld: passworld)
