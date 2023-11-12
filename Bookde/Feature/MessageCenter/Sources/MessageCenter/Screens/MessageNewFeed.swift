@@ -29,14 +29,14 @@ public struct MesageFeedView: View {
                 case .loading:
                     MessageListView(
                         users: [
-                            .init(email: "", profileUrl: "", uiid: ""),
-                            .init(email: "", profileUrl: "", uiid: ""),
-                            .init(email: "", profileUrl: "", uiid: ""),
-                            .init(email: "", profileUrl: "", uiid: ""),
-                            .init(email: "", profileUrl: "", uiid: ""),
-                            .init(email: "", profileUrl: "", uiid: ""),
+                            .init(email: "", profileUrl: "", uiid: "123"),
+                            .init(email: "", profileUrl: "", uiid: "124"),
+                            .init(email: "", profileUrl: "", uiid: "124"),
+                            .init(email: "", profileUrl: "", uiid: "1251"),
+                            .init(email: "", profileUrl: "", uiid: "126"),
+                            .init(email: "", profileUrl: "", uiid: "127"),
                         ],
-                        loading: true
+                        loading: false
                     )
                 case .body(let users):
                    MessageListView(users: users, loading: false)

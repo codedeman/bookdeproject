@@ -37,12 +37,9 @@ public struct SignInView: View {
 
 
             Button(action: {
-                state.id = "Kevin ---> ec"
-//                state.
-//                Task {
-//                    state.didSelectBack = true
-//                    await viewModel.signUp(email: email, passworld: passworld)
-//                }
+                Task {
+                    await viewModel.signUp(email: email, passworld: passworld)
+                }
             }) {
               Text("Sign In")
                 .font(.headline)
