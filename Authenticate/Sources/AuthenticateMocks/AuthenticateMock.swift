@@ -58,6 +58,21 @@ public final class ImplMockAuthenticateUseCase: AuthenticateUseCase {
 
     }
 
+    public func fetchCurrentUser() async -> Result<UserProfile, Error> {
+        if isSucess {
+            let userProfile = UserProfile(providerID: "",
+                                   uid: "123",
+                                   displayName: "Kevin",
+                                   photoURL: nil,
+                                   email: "@gmail.com",
+                                   phoneNumber: "+6876228828"
+            )
+            return.success(userProfile)
+
+        } else {
+            return .failure(AppError.genericError)
+        }
+    }
 
 
 }

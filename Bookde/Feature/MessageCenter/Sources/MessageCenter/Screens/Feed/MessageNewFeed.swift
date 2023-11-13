@@ -8,8 +8,10 @@
 import SwiftUI
 import CoreUI
 
-public struct MesageFeedView: View {
+public struct MessageFeedView: View {
     @State var shouldShowLogOutOptions = false
+    @State private var isLoading = true
+
     @State var showNewMessage: Bool = false
     @StateObject var viewModel: MessageNewFeedViewModel
     
@@ -24,20 +26,33 @@ public struct MesageFeedView: View {
     public var body: some View {
         NavigationView {
             VStack(spacing: 10) {
-                MessageHeaderSectionView(user: User(email: "kk", profileUrl: "", uiid: ""))
-                switch viewModel.state {
+                MessageHeaderSectionView(user: viewModel.user).shimmering(active: isLoading)
+                switch viewModel.messageStatus {
                 case .loading(let users):
-                    MessageListView(users: users, loading: true)
+                    MessageListView(
+                        users: users,
+                        loading: true,
+                        didSelectUser: { user in
+
+                        }
+                    )
                 case .body(let users):
-                   MessageListView(users: users, loading: false)
+                    MessageListView(
+                        users: users, loading: false,
+                        didSelectUser: { user in
+                            viewModel.createChat(user: user)
+                        }
+                    )
                 }
             }.overlay(
                 newMessageButton,
                 alignment: .bottom).onAppear(perform: {
-                    
-                })
-        }
 
+
+                })
+        }.navigationBarBackButtonHidden().onReceive(viewModel.$user, perform: { user in
+            isLoading = user.email.isEmpty
+        })
     }
 
 

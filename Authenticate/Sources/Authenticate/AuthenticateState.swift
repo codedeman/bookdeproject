@@ -13,6 +13,7 @@ public enum AuthenticateState: StateManager {
     case startSignUp
     case finished
     case none
+    case userAuthenticated
 }
 
 public final class MyAuthenticateState: ObservableObject {

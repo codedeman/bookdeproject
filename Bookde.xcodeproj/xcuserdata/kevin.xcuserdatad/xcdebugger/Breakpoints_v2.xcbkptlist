@@ -763,51 +763,6 @@
                   endingLineNumber = "106"
                   offsetFromSymbolStart = "172">
                </Location>
-               <Location
-                  uuid = "8194812D-F202-48F2-96D8-363960E18310 - 2846587ae41599b5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for Authenticate.SignUpView.signUp() async -&gt; ()"
-                  moduleName = "BookdeScenario"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/SignUp/SignUpScreen.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
-                  offsetFromSymbolStart = "1788">
-               </Location>
-               <Location
-                  uuid = "8194812D-F202-48F2-96D8-363960E18310 - 5745b5a1a183a046"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for Authenticate.SignUpView.signUp() async -&gt; ()"
-                  moduleName = "BookdeScenario"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/SignUp/SignUpScreen.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "8194812D-F202-48F2-96D8-363960E18310 - 144fda3822e73db7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for Authenticate.SignUpView.signUp() async -&gt; ()"
-                  moduleName = "BookdeScenario"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/SignUp/SignUpScreen.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
-                  offsetFromSymbolStart = "152">
-               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -886,21 +841,6 @@
                   endingLineNumber = "106"
                   offsetFromSymbolStart = "172">
                </Location>
-               <Location
-                  uuid = "4317FDBB-2F6B-4748-AB2C-2FA0BB59F9D8 - 2846587ae4159a73"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for Authenticate.SignUpView.signUp() async -&gt; ()"
-                  moduleName = "BookdeScenario"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/SignUp/SignUpScreen.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "106"
-                  endingLineNumber = "106"
-                  offsetFromSymbolStart = "2068">
-               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -964,21 +904,6 @@
                   endingLineNumber = "99"
                   offsetFromSymbolStart = "472">
                </Location>
-               <Location
-                  uuid = "83F72EE1-E089-472F-B4A4-4AD33B4D435A - 2846587ae4159948"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for Authenticate.SignUpView.signUp() async -&gt; ()"
-                  moduleName = "BookdeScenario"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/SignUp/SignUpScreen.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "336">
-               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1017,17 +942,95 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7CFC09DD-5A74-4A15-9DE9-09452A10D556"
+            uuid = "A8C9F99E-80F5-4420-B203-309655FA97EB"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../AppFlow/Sources/AppFlow/AppStateManager.swift"
+            filePath = "Bookde/Feature/MessageCenter/Sources/MessageCenter/Screens/NewMessage/NewMessageView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "messageViewModel()"
+            startingLineNumber = "8"
+            endingLineNumber = "8"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A700339A-084D-48E4-AF88-C3F604E272DE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Authenticate/Sources/Authenticate/Screens/SignIn/SignInViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "fetchCurrentUser()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A700339A-084D-48E4-AF88-C3F604E272DE - 1a84f4374e9c134e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for Authenticate.SignInViewModel.fetchCurrentUser() async -&gt; ()"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/SignIn/SignInViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "A700339A-084D-48E4-AF88-C3F604E272DE - 76599e31a444c84a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for Authenticate.SignInViewModel.fetchCurrentUser() async -&gt; ()"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/SignIn/SignInViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "A700339A-084D-48E4-AF88-C3F604E272DE - 8717a970b23170b0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Authenticate.SignInViewModel.fetchCurrentUser() async -&gt; ()"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/SignIn/SignInViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "A700339A-084D-48E4-AF88-C3F604E272DE - 8717a970b23173fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Authenticate.SignInViewModel.fetchCurrentUser() async -&gt; ()"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Authenticate/Sources/Authenticate/Screens/SignIn/SignInViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "284">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -15,6 +15,8 @@ import Combine
 public protocol AuthenticateUseCase {
     func signIn(email: String, passworld: String) async -> Result<UserProfile, AppError>
     func signUp(email: String, passworld: String, imageData: Data?) async -> AnyPublisher<Result<UserProfile, AppError>, Never>
+    func fetchCurrentUser() async -> Result<UserProfile, Error>
+
 }
 
 public final class ImplAuthenticateUseCase: AuthenticateUseCase {
@@ -60,6 +62,21 @@ public final class ImplAuthenticateUseCase: AuthenticateUseCase {
             return .success(userProfile)
         case .failure(_):
             return .failure(AppError.genericError)
+        }
+    }
+
+    public func fetchCurrentUser() async -> Result<UserProfile, Error> {
+        let user = await firebaseRespository.fetchCurrentUser()
+        switch user {
+        case .success(let user):
+            let userProfile = UserProfile(
+                providerID: user.uiid,
+                uid: user.uiid,
+                displayName: user.email
+            )
+            return .success(userProfile)
+        case .failure(let error):
+            return .failure(error)
         }
     }
 

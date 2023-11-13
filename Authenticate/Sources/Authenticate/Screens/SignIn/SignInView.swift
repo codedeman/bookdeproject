@@ -50,11 +50,13 @@ public struct SignInView: View {
             }
 
             Button("Sign up now?") {
-                state.didSelectBack = true
-                state.id = "123"
+                viewModel.didTapSignUp()
             }
-
-        }
+        }.onAppear(perform: {
+            Task {
+                await viewModel.fetchCurrentUser()
+            }
+        })
     }
 }
 

@@ -13,16 +13,17 @@ import Foundation
 final public class MessageNewFeedViewModel: ObservableObject {
 
     private var useCase: MessageUseCase
-    private var subscribers: [AnyCancellable] = []
-    @Published var state: State
-    @Published public var isSignOut: Bool = false
+    private var subscribers = Set<AnyCancellable>()
+    @Published var messageStatus: Status
+    @Published var isSignOut: Bool = false
+    @Published var user: User = .init(email: "", profileUrl: "", uiid: "")
+    public var state = CurrentValueSubject<MessageState, Error>(.none)
 
     public init(useCase: MessageUseCase) {
         self.useCase = useCase
-        self.state = .loading([])
+        self.messageStatus = .loading([])
         Task {
             await fetch()
-
         }
     }
 
@@ -43,29 +44,28 @@ final public class MessageNewFeedViewModel: ObservableObject {
         case general([User])
     }
 
-    enum State {
+    enum Status {
         case loading(_ users:[User])
         case body(_ users: [User])
     }
 
     private func fetch() async {
-        state = .loading(loadingDefaulUser())
+        messageStatus = .loading(loadDefaultUsers())
         await useCase.fetchCurrentUser()
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: {  [weak self] user in
-                
+                self?.user = user
             })
             .store(in: &subscribers)
         await useCase.fetchAllUser()
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: {  [weak self] user in
-                self?.state = .body(user)
+                self?.messageStatus = .body(user)
             })
             .store(in: &subscribers)
     }
 
-    private func loadingDefaulUser() -> [User] {
-
+    private func loadDefaultUsers() -> [User] {
         let users: [User] = [
             .init(email: "", profileUrl: "", uiid: "123"),
             .init(email: "", profileUrl: "", uiid: "1256"),
@@ -74,13 +74,17 @@ final public class MessageNewFeedViewModel: ObservableObject {
             .init(email: "", profileUrl: "", uiid: "126"),
             .init(email: "", profileUrl: "", uiid: "127"),
         ]
-
         return users
     }
+
 
     func signOut() async {
             await useCase.signOut()
                 .assign(to: &$isSignOut)
+    }
+
+    func createChat(user: User) {
+        self.state.send(.startCreateNewMessage(users: user))
     }
 
 }

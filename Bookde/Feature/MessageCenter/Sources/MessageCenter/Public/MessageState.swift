@@ -5,14 +5,9 @@
 //  Created by Kevin on 11/11/23.
 //
 
-import Combine
+import DBCore
 
-public final class MessageState: ObservableObject {
-
-    @Published public var id: String = ""
-    @Published public var didSelectBack = false
-
-    public init(id: String) {
-        self.id = id
-    }
+public enum MessageState: StateManager {
+    case startCreateNewMessage(users: User)
+    case none
 }

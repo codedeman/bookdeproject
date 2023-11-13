@@ -13,6 +13,10 @@ let package = Package(
         .library(
             name: "MessageCenter",
             targets: ["MessageCenter"]),
+
+        .library(
+            name: "MessageCenterMocks",
+            targets: ["MessageCenterMocks"]),
     ],
     dependencies: [
         .package(path: "./Cores/DBService"),
@@ -30,6 +34,13 @@ let package = Package(
                 .product(name: "CoreUI", package: "CoreUI"),
                 .product(name: "DBFireBaseService", package: "DBService"),
             ]),
+        .target(
+            name: "MessageCenterMocks",
+            dependencies: [
+                "MessageCenter"
+            ],
+            resources: [.process("Resources")]
+        ),
         .testTarget(
             name: "MessageCenterTests",
             dependencies: ["MessageCenter"]),
