@@ -35,7 +35,6 @@ public struct SignInView: View {
               .background(Color.themeTextField)
               .cornerRadius(20.0)
 
-
             Button(action: {
                 Task {
                     await viewModel.signUp(email: email, passworld: passworld)
@@ -58,11 +57,4 @@ public struct SignInView: View {
         }
     }
 }
-
-
-//struct SwiftUIView_Previews: PreviewProvider {
-//    static var previews: some View {
-////        SignInView(viewModel: SignInViewModel)
-//    }
-//}
 

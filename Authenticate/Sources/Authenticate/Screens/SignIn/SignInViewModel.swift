@@ -15,11 +15,11 @@ public final class SignInViewModel: ObservableObject {
     @Published public var userProfile: UserProfile?
     public var state = CurrentValueSubject<AuthenticateState, Error>(.none)
     @Published public var appState: MyAuthenticateState = .init(id: "kevin")
-
     @Published var isLoading: Bool = false
-
-    public init(useCase: AuthenticateUseCase) {
+    @Published var stateTest: AuthenticateState
+    public init(useCase: AuthenticateUseCase, stateTest: AuthenticateState) {
         self.useCase = useCase
+        self.stateTest = stateTest
     }
 
     public func signUp(email: String, passworld: String) async {
@@ -44,6 +44,7 @@ public final class SignInViewModel: ObservableObject {
         self.isLoading = false
         state.send(.finished)
         appState.state = .finished
+        self.stateTest  = .finished
     }
 
     private func handleSignUpFailure(_ error: Error) {

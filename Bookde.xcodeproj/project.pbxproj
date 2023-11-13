@@ -292,7 +292,6 @@
 			isa = PBXGroup;
 			children = (
 				0A3184AB2AB9F34A00C4A9D1 /* MessageCenter */,
-				0AE5CA742A37814C00685FFE /* Kit */,
 				0AE5CA6F2A372E9800685FFE /* Onboarding */,
 				0AE5CA732A3739E100685FFE /* Home */,
 				0A47A2002A3C6EB600E9A4B1 /* Authenticate */,
@@ -349,13 +348,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		0AE5CA742A37814C00685FFE /* Kit */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Kit;
 			sourceTree = "<group>";
 		};
 		0AE5CA752A39CAD800685FFE /* Cores */ = {

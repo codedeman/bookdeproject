@@ -19,13 +19,13 @@ public struct MessageListView: View {
                         AsyncImage(url: URL(string: user.profileUrl))
                             .frame(width: 30, height: 30)
                             .cornerRadius(64)
-                            .foregroundColor(Color.blue)
+                            .foregroundColor(Color.blue).shimmering(active: loading)
                         VStack(alignment: .leading) {
                             Text(user.email)
-                                .font(.system(size: 16, weight: .bold))
+                                .font(.system(size: 16, weight: .bold)).shimmering(active: loading)
                             Text("Mesage sent to user")
                                 .font(.system(size: 12))
-                                .foregroundColor(.gray)
+                                .foregroundColor(.gray).shimmering(active: loading)
                         }
                         Spacer()
                         Text("22d")

@@ -19,7 +19,7 @@ final public class MessageNewFeedViewModel: ObservableObject {
 
     public init(useCase: MessageUseCase) {
         self.useCase = useCase
-        self.state = .loading
+        self.state = .loading([])
         Task {
             await fetch()
 
@@ -44,24 +44,38 @@ final public class MessageNewFeedViewModel: ObservableObject {
     }
 
     enum State {
-        case loading
+        case loading(_ users:[User])
         case body(_ users: [User])
     }
 
     private func fetch() async {
-        state = .loading
-//        await useCase.fetchCurrentUser()
-//            .receive(on: DispatchQueue.main)
-//            .sink(receiveValue: {  [weak self] user in
-//                
-//            })
-//            .store(in: &subscribers)
-//        await useCase.fetchAllUser()
-//            .receive(on: DispatchQueue.main)
-//            .sink(receiveValue: {  [weak self] user in
-//                self?.state = .body(user)
-//            })
-//            .store(in: &subscribers)
+        state = .loading(loadingDefaulUser())
+        await useCase.fetchCurrentUser()
+            .receive(on: DispatchQueue.main)
+            .sink(receiveValue: {  [weak self] user in
+                
+            })
+            .store(in: &subscribers)
+        await useCase.fetchAllUser()
+            .receive(on: DispatchQueue.main)
+            .sink(receiveValue: {  [weak self] user in
+                self?.state = .body(user)
+            })
+            .store(in: &subscribers)
+    }
+
+    private func loadingDefaulUser() -> [User] {
+
+        let users: [User] = [
+            .init(email: "", profileUrl: "", uiid: "123"),
+            .init(email: "", profileUrl: "", uiid: "1256"),
+            .init(email: "", profileUrl: "", uiid: "124"),
+            .init(email: "", profileUrl: "", uiid: "1251"),
+            .init(email: "", profileUrl: "", uiid: "126"),
+            .init(email: "", profileUrl: "", uiid: "127"),
+        ]
+
+        return users
     }
 
     func signOut() async {

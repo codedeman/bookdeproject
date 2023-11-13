@@ -26,25 +26,16 @@ public struct MesageFeedView: View {
             VStack(spacing: 10) {
                 MessageHeaderSectionView(user: User(email: "kk", profileUrl: "", uiid: ""))
                 switch viewModel.state {
-                case .loading:
-                    MessageListView(
-                        users: [
-                            .init(email: "", profileUrl: "", uiid: "123"),
-                            .init(email: "", profileUrl: "", uiid: "124"),
-                            .init(email: "", profileUrl: "", uiid: "124"),
-                            .init(email: "", profileUrl: "", uiid: "1251"),
-                            .init(email: "", profileUrl: "", uiid: "126"),
-                            .init(email: "", profileUrl: "", uiid: "127"),
-                        ],
-                        loading: false
-                    )
+                case .loading(let users):
+                    MessageListView(users: users, loading: true)
                 case .body(let users):
                    MessageListView(users: users, loading: false)
                 }
-
             }.overlay(
                 newMessageButton,
-                alignment: .bottom)
+                alignment: .bottom).onAppear(perform: {
+                    
+                })
         }
 
     }
