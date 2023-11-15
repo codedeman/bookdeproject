@@ -6,10 +6,8 @@
 //
 
 import Foundation
-import DBService
-import DBFireBaseService
 
-public struct User: Hashable, Equatable, Identifiable {
+public struct UserChat: Hashable, Equatable, Identifiable {
     public var id: String { uiid }
     var email: String
     var profileUrl: String
@@ -22,7 +20,7 @@ public struct User: Hashable, Equatable, Identifiable {
     }
 }
 
-extension User {
+extension UserChat {
 
    
 }
