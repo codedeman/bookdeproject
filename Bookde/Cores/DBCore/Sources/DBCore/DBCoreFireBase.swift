@@ -18,4 +18,5 @@ public struct AppError: Error, CustomDebugStringConvertible, Equatable {
 
 public extension AppError {
     static let genericError = AppError("The operation die at the moment")
+    static let fbFailedError = AppError("Failed to get snapshot")
 }

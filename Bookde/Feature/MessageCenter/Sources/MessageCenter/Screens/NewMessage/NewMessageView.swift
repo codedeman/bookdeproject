@@ -31,11 +31,11 @@ public struct NewMessageView: View {
     private var messageView: some View {
         NavigationView {
             ScrollView {
-                ForEach(0..<10) { num in
+                ForEach(viewModel.messages) { num in
                     HStack {
                         Spacer()
                         HStack {
-                            Text(messageState.user?.uiid ?? "")
+                            Text(num.text)
                                 .foregroundColor(Color.white)
                         }.padding()
                             .background(Color.blue)
@@ -58,7 +58,7 @@ public struct NewMessageView: View {
     private var inputBottom: some View {
         HStack {
             Image(systemName: "gear")
-            TextField("Description", text: $viewModel.message)
+            TextField("Description", text: $viewModel.text)
             Button {
                 viewModel.sendMessage(toId: messageState.user?.uiid ?? "")
             }label: {

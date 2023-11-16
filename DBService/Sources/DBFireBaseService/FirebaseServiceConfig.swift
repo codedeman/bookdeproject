@@ -22,7 +22,7 @@ public protocol FireRepository {
     func fetchAllUsers() async -> Result<[DocumentDTO], Error>
     func signOut() async  -> Bool
     func sendMessage(toId: String, message: String)
-     func fetchMessage(toId: String) async
+    func fetchMessage(toId: String) async -> Result<[MessageDTO], Error>
 }
 
 public extension FireRepository {
@@ -179,22 +179,78 @@ public final class ImplFireRepository: FireRepository {
             }
     }
 
-    public func fetchMessage(toId: String) async {
+    public func fetchMessage(toId: String) async -> Result<[MessageDTO], Error> {
         let fromId = Auth.auth().currentUser?.uid ?? ""
-        print("🔴 fromid \(fromId) , toId: \(toId)")
-        do {
-           Firestore
-                .firestore()
-                .collection("messages")
-                .document(fromId)
-                .collection(toId)
-                .document().getDocument { snapshot, error in
-                    guard  let dic  = snapshot?.data() as? [String: Any] else { return }
-                    print("🔴", dic)
-                }
-        }
+        print("🔴 fromid \(fromId), toId: \(toId)")
 
+        let query = Firestore.firestore()
+            .collection("messages")
+            .document(fromId)
+            .collection(toId)
+
+        do {
+            let querySnapshot = try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<[MessageDTO], Error>) in
+                _ = query.addSnapshotListener { querySnapshot, error in
+                    if let error = error {
+                        continuation.resume(throwing: error)
+                        return
+                    }
+
+                    guard let querySnapshot = querySnapshot else {
+                        continuation.resume(throwing: AppError.genericError)
+                        return
+                    }
+
+                    let messagesDTO = querySnapshot.documents.compactMap { document -> MessageDTO? in
+                        guard let data = document.data() as? [String: Any] else { return nil }
+                        let messageDto = MessageDTO(json: data)
+                        return messageDto
+                    }
+
+                    continuation.resume(returning: messagesDTO)
+                }
+            }
+
+            return .success(querySnapshot)
+        } catch {
+            return .failure(error)
+        }
     }
+
+
+
+//    public func fetchMessage(toId: String, completion: @escaping (Result<[MessageDTO], Error>) -> Void) {
+//        let fromId = Auth.auth().currentUser?.uid ?? ""
+//        print("🔴 fromid \(fromId), toId: \(toId)")
+//
+//        let query = Firestore.firestore()
+//            .collection("messages")
+//            .document(fromId)
+//            .collection(toId)
+//
+//        let listener = query.addSnapshotListener { querySnapshot, error in
+//            if let error = error {
+//                completion(.failure(error))
+//                return
+//            }
+//
+//            guard let querySnapshot = querySnapshot else {
+//                completion(.failure(FirbaseError.generic))
+//                return
+//            }
+//
+//            let messagesDTO = querySnapshot.documents.compactMap { document -> MessageDTO? in
+//                guard let data = document.data() as? [String: Any] else { return nil }
+//                let messageDto = MessageDTO(json: data)
+//                return messageDto
+//            }
+//
+//            completion(.success(messagesDTO))
+//        }
+//    }
+
+
+
 
     public init () {}
 

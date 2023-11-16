@@ -12,7 +12,7 @@ public final class NewMessageViewModel: ObservableObject {
 
     private var usecase: MessageUseCase
     @Published var user: UserChat
-    @Published var message: String = ""
+    @Published var text: String = ""
 
     public init(usecase: MessageUseCase,user: UserChat) {
         self.usecase = usecase
@@ -21,11 +21,14 @@ public final class NewMessageViewModel: ObservableObject {
 
     @MainActor
     func sendMessage(toId: String) {
-        usecase.send(toId: user.uiid, messgage: message)
+        usecase.send(toId: user.uiid, messgage: text)
     }
+    @Published var messages: [MessageModel] = []
 
+    @MainActor
     func fetchMessage(toId: String) async {
-        await usecase.fetchMessage(toId: toId)
+        let message = await usecase.fetchMessage(toId: toId)
+        message.assertNoFailure().assign(to: &$messages)
     }
 
 }

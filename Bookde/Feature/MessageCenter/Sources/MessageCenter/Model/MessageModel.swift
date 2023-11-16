@@ -7,10 +7,18 @@
 
 
 import Foundation
-
-struct MessageModel: Identifiable, Codable {
-    var id: String
-    var text: String
-    var received: Bool
-    var timestamp: Date
+import FirebaseAuth
+enum UserType {
+    case sender
+    case receiver
 }
+
+public struct MessageModel: Identifiable {
+    public var id: String { fromId }
+    var toId: String
+    var fromId: String
+    var text: String
+    var timesstamp: String
+}
+
+
