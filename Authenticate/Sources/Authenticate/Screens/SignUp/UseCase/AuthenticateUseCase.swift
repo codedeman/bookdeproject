@@ -21,6 +21,9 @@ public protocol AuthenticateUseCase {
 
 public final class ImplAuthenticateUseCase: AuthenticateUseCase {
 
+
+
+
     private var firebaseRespository: FireRepository
 
     public init(firebaseRespository: FireRepository = ImplFireRepository()) {

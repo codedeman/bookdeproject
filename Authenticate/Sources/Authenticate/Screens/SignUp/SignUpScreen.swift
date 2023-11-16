@@ -95,10 +95,6 @@ public struct SignUpView: View {
     }
 
     private func signUp() async {
-        if let image = UIImage(named: "person.fill") {
-            avatarImage = Image(uiImage: image)
-        }
-        print("image resource \(String(describing: avatarImage))")
         let image = avatarImage?.getUIImage(newSize: .zero)
         let imagedata = image?.jpegData(compressionQuality: 0.8)
         await viewModel.signUp(

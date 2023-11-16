@@ -14,7 +14,6 @@ struct ImagePicker: UIViewControllerRepresentable {
         init(presentationMode: Binding<PresentationMode>, image: Binding<Image?>) {
             _presentationMode = presentationMode
             _image = image
-            print("😅😅😅 \(String(describing: _image.wrappedValue))")
         }
 
         func imagePickerController(_ picker: UIImagePickerController,

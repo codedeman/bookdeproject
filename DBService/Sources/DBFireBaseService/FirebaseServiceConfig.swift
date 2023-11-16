@@ -143,7 +143,8 @@ public final class ImplFireRepository: FireRepository {
         } catch {
             return .failure(error)
         }
-    }
+
+   }
 
     public func sendMessage(toId: String, message: String) {
         let fromId = Auth.auth().currentUser?.uid ?? ""
