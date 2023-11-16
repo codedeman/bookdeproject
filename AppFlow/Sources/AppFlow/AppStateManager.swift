@@ -17,6 +17,8 @@ public final class AppStateManager: ObservableObject {
 
     @Published var appState: [AppState] = []
     @Published var myAuthState: AuthenticateState = .none
+    @Published var messageState: NewMessageState
+
     private var diContainer: AppDIContainer
 
     public init(
@@ -27,7 +29,7 @@ public final class AppStateManager: ObservableObject {
             )
         )
     ) {
-        
+        messageState = .init(user: nil)
         self.diContainer = diContainer
     }
 
@@ -39,8 +41,8 @@ public final class AppStateManager: ObservableObject {
         } receiveValue: { [weak self] messageState in
             switch messageState {
             case .startCreateNewMessage(let user):
-                print("➡️ user",user)
-                self?.appState.append(.startCreateNewMessage)
+                self?.messageState = .init(user: user)
+                self?.appState.append(.startCreateNewMessage(user: user))
             default:
                 break
             }
@@ -78,8 +80,14 @@ public final class AppStateManager: ObservableObject {
         return vm
     }
 
-    func newMesageViewModel() -> NewMessageViewModel {
-        let vm = NewMessageViewModel(usecase: diContainer.dependencies.mesageUseCase)
+    func newMesageViewModel(user: UserChat) -> NewMessageViewModel {
+        messageState.$user.sink { usechat in
+            print("❤️",usechat)
+        }.store(in: &subscription)
+        let vm = NewMessageViewModel(
+            usecase: diContainer.dependencies.mesageUseCase,
+            user: user
+        )
         return vm
     }
 }

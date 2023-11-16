@@ -58,9 +58,11 @@ public final class SignInViewModel: ObservableObject {
     }
 
      func fetchCurrentUser() async  {
+         self.isLoading = true
         let currentUser =  await self.useCase.fetchCurrentUser()
         switch currentUser {
-        case .success(let user):
+        case .success(_):
+            self.isLoading = false
             self.state.send(.userAuthenticated)
         case .failure(_):
             break

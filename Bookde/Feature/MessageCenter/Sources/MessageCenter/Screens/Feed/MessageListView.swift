@@ -9,10 +9,10 @@ import SwiftUI
 import CoreUI
 
 public struct MessageListView: View {
-    var users: [User] = []
+    var users: [UserChat] = []
     var loading: Bool
-    @State private var selectedUser: User? = nil
-    let didSelectUser: (User) -> ()
+    @State private var selectedUser: UserChat? = nil
+    let didSelectUser: (UserChat) -> ()
 
     public var body: some View {
         ScrollView(showsIndicators: false) {
@@ -41,7 +41,6 @@ public struct MessageListView: View {
                         Divider()
                             .padding(.vertical,8)
                 }
-
 
                 }
 

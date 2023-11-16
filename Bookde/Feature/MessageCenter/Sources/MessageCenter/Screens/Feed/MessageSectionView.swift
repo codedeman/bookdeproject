@@ -1,7 +1,7 @@
 import SwiftUI
 
 public struct MessageHeaderSectionView: View {
-    var user: User
+    var user: UserChat
     @State var shouldShowLogOutOptions = false
     public var body: some View {
         VStack(alignment: .leading) {

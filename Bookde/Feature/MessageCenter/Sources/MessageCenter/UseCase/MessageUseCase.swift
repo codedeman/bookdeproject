@@ -11,28 +11,38 @@ import Combine
 
 public protocol MessageUseCase {
 
-    func fetchCurrentUser() async -> AnyPublisher<User, Never>
+    func fetchCurrentUser() async -> AnyPublisher<UserChat, Never>
     func signOut() async -> AnyPublisher<Bool, Never>
-    func fetchAllUser() async -> AnyPublisher<[User], Never>
+    func fetchAllUser() async -> AnyPublisher<[UserChat], Never>
+    func send(toId:String, messgage: String)
+    func fetchMessage(toId: String) async
 }
 
 public final class ImplMessageUseCase: MessageUseCase {
-    public func fetchAllUser() async -> AnyPublisher<[User], Never> {
+
+    private var respository: FireRepository
+
+    public init(respository: FireRepository = ImplFireRepository())
+    {
+        self.respository = respository
+    }
+
+    public func fetchAllUser() async -> AnyPublisher<[UserChat], Never> {
         let status = await respository.fetchAllUsers()
         switch status {
         case .success(let users):
-           let userDto = users.map { User(email: $0.email, profileUrl: $0.profileUrl, uiid: $0.uiid) }
+           let userDto = users.map { UserChat(email: $0.email, profileUrl: $0.profileUrl, uiid: $0.uiid) }
             return Just(userDto).eraseToAnyPublisher()
         case .failure(let error):
             return Fail(error: error as! Never).eraseToAnyPublisher()
         }
     }
-    
-    public func fetchCurrentUser() async -> AnyPublisher<User, Never> {
+
+    public func fetchCurrentUser() async -> AnyPublisher<UserChat, Never> {
         let status = await respository.fetchCurrentUser()
         switch status {
         case .success(let document):
-            let user = User(
+            let user = UserChat(
                 email: document.email,
                 profileUrl: document.profileUrl,
                 uiid: document.uiid
@@ -44,19 +54,11 @@ public final class ImplMessageUseCase: MessageUseCase {
     }
     
 
-
-    private var respository: FireRepository
-
-    public init(respository: FireRepository = ImplFireRepository())
-    {
-        self.respository = respository
-    }
-
-    public func fetchCurrentUser() async -> AnyPublisher<Result<User, Error>, Never> {
+    public func fetchCurrentUser() async -> AnyPublisher<Result<UserChat, Error>, Never> {
         let status = await respository.fetchCurrentUser()
         switch status {
         case .success(let document):
-            let user = User(
+            let user = UserChat(
                 email: document.email,
                 profileUrl: document.profileUrl,
                 uiid: document.uiid
@@ -70,6 +72,14 @@ public final class ImplMessageUseCase: MessageUseCase {
     public func signOut() async -> AnyPublisher<Bool, Never> {
         let isSignOut = await respository.signOut()
         return Just(isSignOut).eraseToAnyPublisher()
+    }
+
+    public func send(toId: String, messgage: String) {
+        respository.sendMessage(toId: toId, message: messgage)
+    }
+
+    public func fetchMessage(toId: String) async {
+        await respository.fetchMessage(toId: toId)
     }
 
 }

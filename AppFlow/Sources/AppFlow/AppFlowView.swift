@@ -33,8 +33,10 @@ public struct AppView: View {
                     SignUpView(viewModel: appCondinator.signUpViewModel())
                 case .startSignIn:
                     SignInView(viewModel: appCondinator.signInViewModel())
-                case .startCreateNewMessage:
-                    NewMessageView(viewModel: appCondinator.newMesageViewModel())
+                case .startCreateNewMessage(let user):
+                    NewMessageView(
+                        viewModel: appCondinator.newMesageViewModel(user: user))
+                    .environmentObject(appCondinator.messageState)
                 }
 
             }

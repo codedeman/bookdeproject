@@ -10,6 +10,7 @@ import SwiftUI
 public struct NewMessageView: View {
 
     @ObservedObject var viewModel: NewMessageViewModel
+    @EnvironmentObject var messageState: NewMessageState
 
     public init (viewModel: NewMessageViewModel) {
         self.viewModel = viewModel
@@ -17,27 +18,49 @@ public struct NewMessageView: View {
 
     @State var textMessage: String = ""
     public var body: some View {
-        ScrollView {
-            ForEach(0..<10) { num in
-                HStack {
-                    Spacer()
-                    HStack {
-                        Text("Message ABC")
-                            .foregroundColor(Color.white)
-                    }.padding()
-                        .background(Color.blue)
-                        .cornerRadius(8)
-                }.padding(.horizontal)
-                    .padding(.top,8)
+        ZStack {
+            messageView
+        }.onAppear(perform: {
+            Task {
+              await viewModel.fetchMessage(toId: messageState.user?.uiid ?? "")
             }
+        })
 
-        }.navigationTitle("hello")
-        HStack{ Spacer() }
+    }
+
+    private var messageView: some View {
+        NavigationView {
+            ScrollView {
+                ForEach(0..<10) { num in
+                    HStack {
+                        Spacer()
+                        HStack {
+                            Text(messageState.user?.uiid ?? "")
+                                .foregroundColor(Color.white)
+                        }.padding()
+                            .background(Color.blue)
+                            .cornerRadius(8)
+                    }.padding(.horizontal)
+                        .padding(.top,8)
+                }
+            }
+            HStack{ Spacer() }
+
+        }.ignoresSafeArea()
+            .navigationTitle($viewModel.user.email)
+            .background(Color(.init(white: 0.95, alpha: 1)))
+            .safeAreaInset(edge: .bottom) {
+                inputBottom
+                    .background(Color(.systemBackground).ignoresSafeArea())
+            }
+    }
+
+    private var inputBottom: some View {
         HStack {
             Image(systemName: "gear")
-            TextField("Description", text: $textMessage)
+            TextField("Description", text: $viewModel.message)
             Button {
-
+                viewModel.sendMessage(toId: messageState.user?.uiid ?? "")
             }label: {
                 Text("Send").foregroundColor(.white)
             }
@@ -45,10 +68,20 @@ public struct NewMessageView: View {
             .padding(.vertical,8)
             .background(Color.blue)
                 .cornerRadius(8)
+
         }.padding()
     }
 }
 
 #Preview {
-    NewMessageView(viewModel: .init(usecase: ImplMessageUseCase()))
+    NewMessageView(
+        viewModel: .init(
+            usecase: ImplMessageUseCase(),
+            user: .init(
+                email: "kevin",
+                profileUrl: "",
+                uiid: ""
+            )
+        )
+    )
 }

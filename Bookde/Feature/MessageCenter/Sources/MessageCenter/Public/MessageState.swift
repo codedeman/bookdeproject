@@ -8,6 +8,6 @@
 import DBCore
 
 public enum MessageState: StateManager {
-    case startCreateNewMessage(users: User)
+    case startCreateNewMessage(users: UserChat)
     case none
 }

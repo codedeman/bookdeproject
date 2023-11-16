@@ -16,7 +16,7 @@ final public class MessageNewFeedViewModel: ObservableObject {
     private var subscribers = Set<AnyCancellable>()
     @Published var messageStatus: Status
     @Published var isSignOut: Bool = false
-    @Published var user: User = .init(email: "", profileUrl: "", uiid: "")
+    @Published var user: UserChat = .init(email: "", profileUrl: "", uiid: "")
     public var state = CurrentValueSubject<MessageState, Error>(.none)
 
     public init(useCase: MessageUseCase) {
@@ -32,7 +32,7 @@ final public class MessageNewFeedViewModel: ObservableObject {
             return UUID()
         }
 
-        case currentUser(User)
+        case currentUser(UserChat)
     }
 
     enum BodySection: Equatable, Identifiable {
@@ -41,12 +41,12 @@ final public class MessageNewFeedViewModel: ObservableObject {
             return UUID()
         }
 
-        case general([User])
+        case general([UserChat])
     }
 
     enum Status {
-        case loading(_ users:[User])
-        case body(_ users: [User])
+        case loading(_ users:[UserChat])
+        case body(_ users: [UserChat])
     }
 
     private func fetch() async {
@@ -65,8 +65,8 @@ final public class MessageNewFeedViewModel: ObservableObject {
             .store(in: &subscribers)
     }
 
-    private func loadDefaultUsers() -> [User] {
-        let users: [User] = [
+    private func loadDefaultUsers() -> [UserChat] {
+        let users: [UserChat] = [
             .init(email: "", profileUrl: "", uiid: "123"),
             .init(email: "", profileUrl: "", uiid: "1256"),
             .init(email: "", profileUrl: "", uiid: "124"),
@@ -83,7 +83,7 @@ final public class MessageNewFeedViewModel: ObservableObject {
                 .assign(to: &$isSignOut)
     }
 
-    func createChat(user: User) {
+    func createChat(user: UserChat) {
         self.state.send(.startCreateNewMessage(users: user))
     }
 

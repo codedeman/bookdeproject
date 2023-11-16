@@ -14,12 +14,15 @@ import FirebaseFirestore
 enum FirbaseError: Error {
     case generic
 }
+
 public protocol FireRepository {
     func signInWithEmail(email: String, passworld: String) async -> Result<UserDTO,Error>
     func signUpWithEmail(email: String, passworld: String, imageProfile: Data?) async -> Result<UserDTO,Error>
     func fetchCurrentUser() async -> Result<DocumentDTO, Error>
     func fetchAllUsers() async -> Result<[DocumentDTO], Error>
     func signOut() async  -> Bool
+    func sendMessage(toId: String, message: String)
+     func fetchMessage(toId: String) async
 }
 
 public extension FireRepository {
@@ -142,7 +145,55 @@ public final class ImplFireRepository: FireRepository {
         }
     }
 
+    public func sendMessage(toId: String, message: String) {
+        let fromId = Auth.auth().currentUser?.uid ?? ""
 
+        let messageData = ["fromId": fromId,
+                           "toId": toId,
+                           "text" : message,
+                           "timesstamp": Timestamp()
+        ] as [String : Any]
+
+        Firestore
+            .firestore()
+            .collection("messages")
+            .document(fromId)
+            .collection(toId)
+            .document().setData(messageData) { error in
+                if error != nil {
+                    print("error")
+                }
+            }
+
+        Firestore
+            .firestore()
+            .collection("messages")
+            .document(toId)
+            .collection(fromId)
+            .document().setData(messageData) { error in
+                if error != nil {
+                    print("error")
+                }
+                print("success fully save message")
+            }
+    }
+
+    public func fetchMessage(toId: String) async {
+        let fromId = Auth.auth().currentUser?.uid ?? ""
+        print("🔴 fromid \(fromId) , toId: \(toId)")
+        do {
+           Firestore
+                .firestore()
+                .collection("messages")
+                .document(fromId)
+                .collection(toId)
+                .document().getDocument { snapshot, error in
+                    guard  let dic  = snapshot?.data() as? [String: Any] else { return }
+                    print("🔴", dic)
+                }
+        }
+
+    }
 
     public init () {}
 
