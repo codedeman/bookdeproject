@@ -23,6 +23,7 @@ public protocol FireRepository {
     func signOut() async  -> Bool
     func sendMessage(toId: String, message: String)
     func fetchMessage(toId: String) async -> Result<[MessageDTO], Error>
+     func fetchMessage(toId: String, completion: @escaping (Result<[MessageDTO],Error>) -> Void)
 }
 
 public extension FireRepository {
@@ -146,7 +147,7 @@ public final class ImplFireRepository: FireRepository {
 
    }
 
-    public func sendMessage(toId: String, message: String) {
+    public func sendMessage(toId: String, message: String)  {
         let fromId = Auth.auth().currentUser?.uid ?? ""
 
         let messageData = ["fromId": fromId,
@@ -177,6 +178,7 @@ public final class ImplFireRepository: FireRepository {
                 }
                 print("success fully save message")
             }
+
     }
 
     public func fetchMessage(toId: String) async -> Result<[MessageDTO], Error> {
@@ -204,7 +206,10 @@ public final class ImplFireRepository: FireRepository {
 
                     let messagesDTO = querySnapshot.documents.compactMap { document -> MessageDTO? in
                         guard let data = document.data() as? [String: Any] else { return nil }
-                        let messageDto = MessageDTO(json: data)
+                        let messageDto = MessageDTO(
+                            json: data,
+                            dococumentId: document.documentID
+                        )
                         return messageDto
                     }
 
@@ -219,6 +224,29 @@ public final class ImplFireRepository: FireRepository {
         }
     }
 
+    public func fetchMessage(toId: String, completion: @escaping (Result<[MessageDTO],Error>) -> Void) {
+        let fromId = Auth.auth().currentUser?.uid ?? ""
+        var messages: [MessageDTO] = []
+        let query = Firestore.firestore()
+            .collection("messages")
+            .document(fromId)
+            .collection(toId)
+            .addSnapshotListener { querySnapShot, error in
+                if let error = error {
+                    completion(.failure(error))
+                }
+                querySnapShot?.documents.forEach({ document in
+                    let data = document.data()
+                    let messageDto = MessageDTO(
+                        json: data,
+                        dococumentId: document.documentID
+                    )
+                    messages.append(messageDto)
+                })
+                completion(.success(messages))
+            }
+
+    }
 
     public init () {}
 
