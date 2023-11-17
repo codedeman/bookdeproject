@@ -11,18 +11,18 @@ public struct NewMessageView: View {
 
     @ObservedObject var viewModel: NewMessageViewModel
     @EnvironmentObject var messageState: NewMessageState
+    @State var text: String = ""
 
     public init (viewModel: NewMessageViewModel) {
         self.viewModel = viewModel
     }
 
-    @State var textMessage: String = ""
     public var body: some View {
         ZStack {
             messageView
         }.onAppear(perform: {
             Task {
-              await viewModel.fetchMessage(toId: messageState.user?.uiid ?? "")
+               viewModel.fetchMessage(toId: messageState.user?.uiid ?? "")
             }
         })
 
@@ -57,10 +57,12 @@ public struct NewMessageView: View {
 
     private var inputBottom: some View {
         HStack {
-            Image(systemName: "gear")
-            TextField("Description", text: $viewModel.text)
+            Image(systemName: "message")
+            TextField("Write a message...", text: $text)
             Button {
-                viewModel.sendMessage(toId: messageState.user?.uiid ?? "")
+                Task {
+                   await viewModel.sendMessage(toId: messageState.user?.uiid ?? "",message: text)
+                }
             }label: {
                 Text("Send").foregroundColor(.white)
             }
@@ -69,7 +71,9 @@ public struct NewMessageView: View {
             .background(Color.blue)
                 .cornerRadius(8)
 
-        }.padding()
+        }.padding().onReceive(viewModel.$isSendingSucess) { complete in
+            text = complete ? "" : ""
+        }
     }
 }
 

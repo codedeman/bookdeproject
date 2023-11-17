@@ -14,12 +14,13 @@ public protocol MessageUseCase {
     func fetchCurrentUser() async -> AnyPublisher<UserChat, Never>
     func signOut() async -> AnyPublisher<Bool, Never>
     func fetchAllUser() async -> AnyPublisher<[UserChat], Never>
-    func send(toId:String, messgage: String)
+    func send(toId: String, message: String) async -> AnyPublisher<Bool, Never>
     func fetchMessage(toId: String) async -> AnyPublisher<[MessageModel], Never>
     func fetchMessage(toId: String, completion: @escaping (Result<[MessageDTO],Error>) -> Void)
 }
 
 public final class ImplMessageUseCase: MessageUseCase {
+
 
 
     private var respository: FireRepository
@@ -76,9 +77,7 @@ public final class ImplMessageUseCase: MessageUseCase {
         return Just(isSignOut).eraseToAnyPublisher()
     }
 
-    public func send(toId: String, messgage: String) {
-        respository.sendMessage(toId: toId, message: messgage)
-    }
+    
 
     public func fetchMessage(toId: String) async -> AnyPublisher<[MessageModel], Never> {
         let result = await respository.fetchMessage(toId: toId)
@@ -96,6 +95,19 @@ public final class ImplMessageUseCase: MessageUseCase {
         respository.fetchMessage(toId: toId, completion: completion)
     }
 
+    public func send(toId: String, message: String) async -> AnyPublisher<Bool, Never> {
+        return Future<Bool, Never> { promise in
+            self.respository.sendMessage(toId: toId, message: message) { result in
+                switch result {
+                case .success(let isSuccess):
+                    promise(.success(isSuccess))
+                case .failure(let error):
+                    promise(.failure(error as! Never))
+                }
+            }
+        }
+        .eraseToAnyPublisher()
+    }
 
 }
 
