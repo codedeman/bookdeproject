@@ -14,11 +14,13 @@ public protocol MessageUseCase {
     func fetchCurrentUser() async -> AnyPublisher<UserChat, Never>
     func signOut() async -> AnyPublisher<Bool, Never>
     func fetchAllUser() async -> AnyPublisher<[UserChat], Never>
-    func send(toId:String, messgage: String)
+    func send(toId: String, message: String) async -> AnyPublisher<Bool, Never>
     func fetchMessage(toId: String) async -> AnyPublisher<[MessageModel], Never>
+    func fetchMessage(toId: String, completion: @escaping (Result<[MessageDTO],Error>) -> Void)
 }
 
 public final class ImplMessageUseCase: MessageUseCase {
+
 
 
     private var respository: FireRepository
@@ -75,23 +77,36 @@ public final class ImplMessageUseCase: MessageUseCase {
         return Just(isSignOut).eraseToAnyPublisher()
     }
 
-    public func send(toId: String, messgage: String) {
-        respository.sendMessage(toId: toId, message: messgage)
-    }
-
-    public func fetchMessage(toId: String) async {
-        await respository.fetchMessage(toId: toId)
-    }
+    
 
     public func fetchMessage(toId: String) async -> AnyPublisher<[MessageModel], Never> {
         let result = await respository.fetchMessage(toId: toId)
         switch result {
         case .success(let messagesDTO):
-            let message = messagesDTO.map { MessageModel(toId: $0.toId, fromId: $0.fromId, text: $0.text, timesstamp: $0.timesstamp) }
+            let message = messagesDTO.map { MessageModel(toId: $0.toId, fromId: $0.fromId, text: $0.text, timesstamp: $0.timesstamp, documentId: $0.dococumentId) }
             return Just(message).eraseToAnyPublisher()
         case .failure(let error):
             return Fail(error: (error as? Never)!).eraseToAnyPublisher()
         }
+    }
+
+    public func fetchMessage(toId: String, completion: @escaping (Result<[MessageDTO],Error>) -> Void)
+    {
+        respository.fetchMessage(toId: toId, completion: completion)
+    }
+
+    public func send(toId: String, message: String) async -> AnyPublisher<Bool, Never> {
+        return Future<Bool, Never> { promise in
+            self.respository.sendMessage(toId: toId, message: message) { result in
+                switch result {
+                case .success(let isSuccess):
+                    promise(.success(isSuccess))
+                case .failure(let error):
+                    promise(.failure(error as! Never))
+                }
+            }
+        }
+        .eraseToAnyPublisher()
     }
 
 }

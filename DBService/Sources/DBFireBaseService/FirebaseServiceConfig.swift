@@ -21,8 +21,9 @@ public protocol FireRepository {
     func fetchCurrentUser() async -> Result<DocumentDTO, Error>
     func fetchAllUsers() async -> Result<[DocumentDTO], Error>
     func signOut() async  -> Bool
-    func sendMessage(toId: String, message: String)
+    func sendMessage(toId: String, message: String, completion: @escaping (Result<Bool,Error>) -> Void)
     func fetchMessage(toId: String) async -> Result<[MessageDTO], Error>
+     func fetchMessage(toId: String, completion: @escaping (Result<[MessageDTO],Error>) -> Void)
 }
 
 public extension FireRepository {
@@ -39,6 +40,45 @@ public extension FireRepository {
 }
 
 public final class ImplFireRepository: FireRepository {
+
+    public func sendMessage(toId: String,
+                            message: String,
+                            completion: @escaping (Result<Bool, Error>
+                            ) -> Void) {
+        let fromId = Auth.auth().currentUser?.uid ?? ""
+
+        let messageData = [
+            "fromId": fromId,
+            "toId": toId,
+            "text" : message,
+            "timesstamp": Timestamp()
+        ] as [String : Any]
+
+        Firestore
+            .firestore()
+            .collection("messages")
+            .document(fromId)
+            .collection(toId)
+            .document().setData(messageData) { error in
+                if let error = error {
+                    completion(.failure(error))
+                }
+            }
+
+        Firestore
+            .firestore()
+            .collection("messages")
+            .document(toId)
+            .collection(fromId)
+            .document().setData(messageData) { error in
+                if let error = error {
+                    completion(.failure(error))
+                }
+                completion(.success(true))
+
+            }
+    }
+
 
 
     public func fetchCurrentUser() async -> Result<DocumentDTO, Error> {
@@ -105,15 +145,7 @@ public final class ImplFireRepository: FireRepository {
                 print("<==== scucess ====>")
             }
 
-//        let ref = Storage
-//            .storage()
-//            .reference(withPath: uid)
-//
-//        ref.putData(data) { file, error in
-//            if let error = error {
-//                print(" upload image \(error)")
-//            }
-//        }
+
 
    }
 
@@ -129,6 +161,8 @@ public final class ImplFireRepository: FireRepository {
 
     public func fetchAllUsers() async -> Result<[DocumentDTO], Error> {
         var users: [DocumentDTO] = []
+        let userId = Auth.auth().currentUser?.uid ?? ""
+
         do {
             let snapshot = try await Firestore.firestore()
                 .collection("users")
@@ -137,7 +171,9 @@ public final class ImplFireRepository: FireRepository {
             snapshot.documents.forEach { document in
                 let data = document.data()
                 let documentDTO = DocumentDTO(dic: data)
-                users.append(documentDTO)
+                if documentDTO.uiid != userId {
+                    users.append(documentDTO)
+                }
             }
             return .success(users)
         } catch {
@@ -146,38 +182,6 @@ public final class ImplFireRepository: FireRepository {
 
    }
 
-    public func sendMessage(toId: String, message: String) {
-        let fromId = Auth.auth().currentUser?.uid ?? ""
-
-        let messageData = ["fromId": fromId,
-                           "toId": toId,
-                           "text" : message,
-                           "timesstamp": Timestamp()
-        ] as [String : Any]
-
-        Firestore
-            .firestore()
-            .collection("messages")
-            .document(fromId)
-            .collection(toId)
-            .document().setData(messageData) { error in
-                if error != nil {
-                    print("error")
-                }
-            }
-
-        Firestore
-            .firestore()
-            .collection("messages")
-            .document(toId)
-            .collection(fromId)
-            .document().setData(messageData) { error in
-                if error != nil {
-                    print("error")
-                }
-                print("success fully save message")
-            }
-    }
 
     public func fetchMessage(toId: String) async -> Result<[MessageDTO], Error> {
         let fromId = Auth.auth().currentUser?.uid ?? ""
@@ -204,7 +208,10 @@ public final class ImplFireRepository: FireRepository {
 
                     let messagesDTO = querySnapshot.documents.compactMap { document -> MessageDTO? in
                         guard let data = document.data() as? [String: Any] else { return nil }
-                        let messageDto = MessageDTO(json: data)
+                        let messageDto = MessageDTO(
+                            json: data,
+                            dococumentId: document.documentID
+                        )
                         return messageDto
                     }
 
@@ -219,6 +226,29 @@ public final class ImplFireRepository: FireRepository {
         }
     }
 
+    public func fetchMessage(toId: String, completion: @escaping (Result<[MessageDTO],Error>) -> Void) {
+        let fromId = Auth.auth().currentUser?.uid ?? ""
+        var messages: [MessageDTO] = []
+        _ = Firestore.firestore()
+            .collection("messages")
+            .document(fromId)
+            .collection(toId)
+            .addSnapshotListener { querySnapShot, error in
+                if let error = error {
+                    completion(.failure(error))
+                }
+                querySnapShot?.documents.forEach({ document in
+                    let data = document.data()
+                    let messageDto = MessageDTO(
+                        json: data,
+                        dococumentId: document.documentID
+                    )
+                    messages.append(messageDto)
+                })
+                completion(.success(messages))
+            }
+
+    }
 
     public init () {}
 

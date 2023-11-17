@@ -3,4 +3,181 @@
    uuid = "2BD089EC-7A44-4B52-BC45-08CEA1EF2154"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "74BDE150-890B-4768-A7EB-5F89BE3BCA55"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
+            landmarkName = "fetchMessage(toId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "74BDE150-890B-4768-A7EB-5F89BE3BCA55 - e030b181b0b8d2a8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.CheckedContinuation&lt;Swift.Array&lt;DBFireBaseService.MessageDTO&gt;, Swift.Error&gt;) -&gt; () in DBFireBaseService.ImplFireRepository.fetchMessage(toId: Swift.String) async -&gt; Swift.Result&lt;Swift.Array&lt;DBFireBaseService.MessageDTO&gt;, Swift.Error&gt;"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "216"
+                  endingLineNumber = "216"
+                  offsetFromSymbolStart = "1388">
+               </Location>
+               <Location
+                  uuid = "74BDE150-890B-4768-A7EB-5F89BE3BCA55 - e030b181b0b8d2a8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.CheckedContinuation&lt;Swift.Array&lt;DBFireBaseService.MessageDTO&gt;, Swift.Error&gt;) -&gt; () in DBFireBaseService.ImplFireRepository.fetchMessage(toId: Swift.String) async -&gt; Swift.Result&lt;Swift.Array&lt;DBFireBaseService.MessageDTO&gt;, Swift.Error&gt;"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "216"
+                  endingLineNumber = "216"
+                  offsetFromSymbolStart = "1036">
+               </Location>
+               <Location
+                  uuid = "74BDE150-890B-4768-A7EB-5F89BE3BCA55 - e030b181b0b8d26a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.CheckedContinuation&lt;Swift.Array&lt;DBFireBaseService.MessageDTO&gt;, Swift.Error&gt;) -&gt; () in DBFireBaseService.ImplFireRepository.fetchMessage(toId: Swift.String) async -&gt; Swift.Result&lt;Swift.Array&lt;DBFireBaseService.MessageDTO&gt;, Swift.Error&gt;"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "218"
+                  endingLineNumber = "218"
+                  offsetFromSymbolStart = "1036">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9D22A34B-26D9-462D-B8D5-6C27638ECD68"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bookde/Feature/MessageCenter/Sources/MessageCenter/UseCase/MessageUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "fetchMessage(toId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7D7831A9-BE67-4080-BF35-FFD829F651CC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bookde/Feature/MessageCenter/Sources/MessageCenter/UseCase/MessageUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "fetchMessage(toId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7D7831A9-BE67-4080-BF35-FFD829F651CC - 5bf21bcbc665f133"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for MessageCenter.ImplMessageUseCase.fetchMessage(toId: Swift.String) async -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;MessageCenter.MessageModel&gt;, Swift.Never&gt;"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Feature/MessageCenter/Sources/MessageCenter/UseCase/MessageUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "256">
+               </Location>
+               <Location
+                  uuid = "7D7831A9-BE67-4080-BF35-FFD829F651CC - f70026fd5d8f9c85"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (DBFireBaseService.MessageDTO) -&gt; MessageCenter.MessageModel in MessageCenter.ImplMessageUseCase.fetchMessage(toId: Swift.String) async -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;MessageCenter.MessageModel&gt;, Swift.Never&gt;"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Feature/MessageCenter/Sources/MessageCenter/UseCase/MessageUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C7329AAF-EF05-4C9E-AB0F-036C4BD87A7B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bookde/Feature/MessageCenter/Sources/MessageCenter/UseCase/MessageUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "fetchMessage(toId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E220E50F-3DFB-494A-8DBF-8849A0768532"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "fetchAllUsers()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DD9B1CB3-E586-441C-88D8-B4EAC5E3E4C0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
+            landmarkName = "fetchAllUsers()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

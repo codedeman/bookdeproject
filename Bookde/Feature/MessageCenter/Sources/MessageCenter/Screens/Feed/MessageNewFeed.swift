@@ -44,12 +44,13 @@ public struct MessageFeedView: View {
                         }
                     )
                 }
-            }.overlay(
-                newMessageButton,
-                alignment: .bottom).onAppear(perform: {
-
-
-                })
+            }
+//            .overlay(
+////                newMessageButton,
+//                alignment: .bottom).onAppear(perform: {
+//
+//
+//                })
         }.navigationBarBackButtonHidden().onReceive(viewModel.$user, perform: { user in
             isLoading = user.email.isEmpty
         })
