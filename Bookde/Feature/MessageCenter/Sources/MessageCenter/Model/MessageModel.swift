@@ -14,11 +14,10 @@ enum UserType {
 }
 
 public struct MessageModel: Identifiable {
-    public var id: String { fromId }
+    public var id: String = UUID().uuidString
     var toId: String
     var fromId: String
     var text: String
     var timesstamp: String
 }
-
 
