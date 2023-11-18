@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreUI
 
 public struct NewMessageView: View {
 
@@ -20,11 +21,15 @@ public struct NewMessageView: View {
     public var body: some View {
         ZStack {
             messageView
+            if viewModel.state == .error {
+                ErrorScreenTemplateView()
+            }
         }.onAppear(perform: {
             Task {
                viewModel.fetchMessage(toId: messageState.user?.uiid ?? "")
             }
         })
+
 
     }
 

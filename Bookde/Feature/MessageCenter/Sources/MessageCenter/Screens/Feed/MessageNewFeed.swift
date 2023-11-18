@@ -26,7 +26,15 @@ public struct MessageFeedView: View {
     public var body: some View {
         NavigationView {
             VStack(spacing: 10) {
-                MessageHeaderSectionView(user: viewModel.user).shimmering(active: isLoading)
+                MessageHeaderSectionView(
+                    user: viewModel.user,
+                    didTapLogOut: {
+                        Task {
+                            await viewModel.signOut()
+                        }
+                    }).onReceive(viewModel.$isSignOut, perform: { _ in
+                        print("tesing navigation")
+                    })
                 switch viewModel.messageStatus {
                 case .loading(let users):
                     MessageListView(
@@ -45,14 +53,13 @@ public struct MessageFeedView: View {
                     )
                 }
             }
-//            .overlay(
-////                newMessageButton,
-//                alignment: .bottom).onAppear(perform: {
-//
-//
-//                })
+
         }.navigationBarBackButtonHidden().onReceive(viewModel.$user, perform: { user in
             isLoading = user.email.isEmpty
+        }).onAppear(perform: {
+            Task {
+              await viewModel.fetch()
+            }
         })
     }
 

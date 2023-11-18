@@ -21,8 +21,6 @@ public protocol MessageUseCase {
 
 public final class ImplMessageUseCase: MessageUseCase {
 
-
-
     private var respository: FireRepository
 
     public init(respository: FireRepository = ImplFireRepository())
@@ -77,7 +75,6 @@ public final class ImplMessageUseCase: MessageUseCase {
         return Just(isSignOut).eraseToAnyPublisher()
     }
 
-    
 
     public func fetchMessage(toId: String) async -> AnyPublisher<[MessageModel], Never> {
         let result = await respository.fetchMessage(toId: toId)
@@ -110,5 +107,4 @@ public final class ImplMessageUseCase: MessageUseCase {
     }
 
 }
-
 

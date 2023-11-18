@@ -41,7 +41,6 @@ public protocol DBServiceProtocol {
 }
 
 public extension DBServiceProtocol {
-
     func request<T: Codable>(_ apiRoutable: APIRoutable, type: T.Type) async -> Result<T, ApiError> {
         let urlRequest = URLRequest(url: apiRoutable.baseURl)
         do {
@@ -57,10 +56,14 @@ public extension DBServiceProtocol {
             } else {
                 throw ApiError.failedSerialization
             }
-        } catch let eror  {
-            return .failure(eror as! ApiError)
+        } catch let error as ApiError {
+            return .failure(error)
+        } catch {
+            return .failure(.invalidData)
         }
     }
+
+
 }
 
 

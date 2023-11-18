@@ -16,6 +16,7 @@ enum FirbaseError: Error {
 }
 
 public protocol FireRepository {
+
     func signInWithEmail(email: String, passworld: String) async -> Result<UserDTO,Error>
     func signUpWithEmail(email: String, passworld: String, imageProfile: Data?) async -> Result<UserDTO,Error>
     func fetchCurrentUser() async -> Result<DocumentDTO, Error>
@@ -45,7 +46,10 @@ public final class ImplFireRepository: FireRepository {
                             message: String,
                             completion: @escaping (Result<Bool, Error>
                             ) -> Void) {
-        let fromId = Auth.auth().currentUser?.uid ?? ""
+        guard let fromId = Auth.auth().currentUser?.uid, !toId.isEmpty else {
+            completion(.failure(FirbaseError.generic))
+            return
+        }
 
         let messageData = [
             "fromId": fromId,
@@ -82,7 +86,7 @@ public final class ImplFireRepository: FireRepository {
 
 
     public func fetchCurrentUser() async -> Result<DocumentDTO, Error> {
-        let uiid = Auth.auth().currentUser?.uid ?? ""
+        guard let uiid = Auth.auth().currentUser?.uid  else { return .failure(FirbaseError.generic) }
 
         do {
             let snapshot = try await Firestore.firestore()
@@ -145,7 +149,16 @@ public final class ImplFireRepository: FireRepository {
                 print("<==== scucess ====>")
             }
 
-
+        Firestore
+            .firestore()
+            .collection("messages")
+            .document(uid)
+            .setData(userData) { error in
+                if let error = error {
+                    print("error \(error)")
+                }
+                print("<==== message success ====>")
+            }
 
    }
 
@@ -161,7 +174,7 @@ public final class ImplFireRepository: FireRepository {
 
     public func fetchAllUsers() async -> Result<[DocumentDTO], Error> {
         var users: [DocumentDTO] = []
-        let userId = Auth.auth().currentUser?.uid ?? ""
+        guard let userId = Auth.auth().currentUser?.uid else { return .failure(FirbaseError.generic) }
 
         do {
             let snapshot = try await Firestore.firestore()
@@ -184,7 +197,7 @@ public final class ImplFireRepository: FireRepository {
 
 
     public func fetchMessage(toId: String) async -> Result<[MessageDTO], Error> {
-        let fromId = Auth.auth().currentUser?.uid ?? ""
+        guard let fromId = Auth.auth().currentUser?.uid  else { return .failure(FirbaseError.generic) }
 
         let query = Firestore.firestore()
             .collection("messages")
@@ -227,7 +240,10 @@ public final class ImplFireRepository: FireRepository {
     }
 
     public func fetchMessage(toId: String, completion: @escaping (Result<[MessageDTO],Error>) -> Void) {
-        let fromId = Auth.auth().currentUser?.uid ?? ""
+        guard let fromId = Auth.auth().currentUser?.uid, !toId.isEmpty  else {
+            completion(.failure(FirbaseError.generic))
+            return
+        }
         var messages: [MessageDTO] = []
         _ = Firestore.firestore()
             .collection("messages")

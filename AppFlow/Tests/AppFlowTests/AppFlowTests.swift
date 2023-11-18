@@ -1,5 +1,6 @@
 import XCTest
 import AuthenticateMocks
+import MessageCenter
 @testable import AppFlow
 @testable import Authenticate
 
@@ -12,7 +13,7 @@ final class AppFlowTests: XCTestCase {
             diContainer: .init(
                 dependencies: .init(
                     authUseCase: ImplMockAuthenticateUseCase(isSucess: true),
-                    mesageUseCase: <#MessageUseCase#>)
+                    mesageUseCase: ImplMessageUseCase())
             )
         )
     }

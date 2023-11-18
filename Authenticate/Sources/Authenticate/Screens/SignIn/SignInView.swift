@@ -25,10 +25,10 @@ public struct SignInView: View {
               .background(Color.themeTextField)
               .cornerRadius(20.0)
 
-            if viewModel.isLoading {
-                ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle(tint: .blue))
-            }
+//            if viewModel.isLoading {
+//                ProgressView()
+//                    .progressViewStyle(CircularProgressViewStyle(tint: .blue))
+//            }
 
             SecureField("Password", text: self.$passworld)
               .padding()

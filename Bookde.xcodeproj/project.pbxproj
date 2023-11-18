@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A00553B2924E5CF00802F40 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A00553A2924E5CE00802F40 /* User.swift */; };
+		0A229CEA2B085CB8003C149F /* CoreUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0A229CE92B085CB8003C149F /* CoreUI */; };
 		0A3184AA2AB9704F00C4A9D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A3184A92AB9704F00C4A9D1 /* GoogleService-Info.plist */; };
 		0A421CFD2B00AEF10061D3FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A421CFC2B00AEF10061D3FF /* AppDelegate.swift */; };
 		0A421CFF2B00AEF10061D3FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A421CFE2B00AEF10061D3FF /* SceneDelegate.swift */; };
@@ -148,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A9157272AF0FB7A0058D938 /* AppFlow in Frameworks */,
+				0A229CEA2B085CB8003C149F /* CoreUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +448,7 @@
 			name = Bookde;
 			packageProductDependencies = (
 				0A9157262AF0FB7A0058D938 /* AppFlow */,
+				0A229CE92B085CB8003C149F /* CoreUI */,
 			);
 			productName = Bookde;
 			productReference = 0A5785C62921E83000E92026 /* Bookde.app */;
@@ -1192,6 +1195,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0A229CE92B085CB8003C149F /* CoreUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreUI;
+		};
 		0A421D2A2B00AF010061D3FF /* AppFlow */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppFlow;

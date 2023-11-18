@@ -22,9 +22,6 @@ final public class MessageNewFeedViewModel: ObservableObject {
     public init(useCase: MessageUseCase) {
         self.useCase = useCase
         self.messageStatus = .loading([])
-        Task {
-            await fetch()
-        }
     }
 
     enum HeaderSection: Equatable, Identifiable {
@@ -49,7 +46,7 @@ final public class MessageNewFeedViewModel: ObservableObject {
         case body(_ users: [UserChat])
     }
 
-    private func fetch() async {
+    func fetch() async {
         messageStatus = .loading(loadDefaultUsers())
         await useCase.fetchCurrentUser()
             .receive(on: DispatchQueue.main)
@@ -77,9 +74,8 @@ final public class MessageNewFeedViewModel: ObservableObject {
         return users
     }
 
-
     func signOut() async {
-            await useCase.signOut()
+        await useCase.signOut().assertNoFailure()
                 .assign(to: &$isSignOut)
     }
 
