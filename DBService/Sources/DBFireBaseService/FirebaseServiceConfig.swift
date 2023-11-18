@@ -16,6 +16,7 @@ enum FirbaseError: Error {
 }
 
 public protocol FireRepository {
+
     func signInWithEmail(email: String, passworld: String) async -> Result<UserDTO,Error>
     func signUpWithEmail(email: String, passworld: String, imageProfile: Data?) async -> Result<UserDTO,Error>
     func fetchCurrentUser() async -> Result<DocumentDTO, Error>
@@ -82,7 +83,7 @@ public final class ImplFireRepository: FireRepository {
 
 
     public func fetchCurrentUser() async -> Result<DocumentDTO, Error> {
-        let uiid = Auth.auth().currentUser?.uid ?? ""
+        guard let uiid = Auth.auth().currentUser?.uid  else { return .failure(FirbaseError.generic) }
 
         do {
             let snapshot = try await Firestore.firestore()
@@ -161,7 +162,7 @@ public final class ImplFireRepository: FireRepository {
 
     public func fetchAllUsers() async -> Result<[DocumentDTO], Error> {
         var users: [DocumentDTO] = []
-        let userId = Auth.auth().currentUser?.uid ?? ""
+        guard let userId = Auth.auth().currentUser?.uid else { return .failure(FirbaseError.generic) }
 
         do {
             let snapshot = try await Firestore.firestore()

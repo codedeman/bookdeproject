@@ -28,10 +28,17 @@ public final class NewMessageViewModel: ObservableObject {
 
     @MainActor
     func fetchMessage(toId: String)  {
+
         usecase.fetchMessage(toId: toId) { [weak self] result in
             switch result {
             case .success(let messagesDTO):
-                let message = messagesDTO.map { MessageModel(toId: $0.toId, fromId: $0.fromId, text: $0.text, timesstamp: $0.timesstamp, documentId: $0.dococumentId) }
+                let message = messagesDTO.map { MessageModel(
+                    toId: $0.toId,
+                    fromId: $0.fromId,
+                    text: $0.text,
+                    timesstamp: $0.timesstamp,
+                    documentId: $0.dococumentId)
+                }
                 self?.messages = message
             case .failure(_):
                 break
