@@ -14,8 +14,8 @@
             filePath = "DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "217"
-            endingLineNumber = "217"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
             landmarkName = "fetchMessage(toId:)"
             landmarkType = "7">
             <Locations>
@@ -281,8 +281,8 @@
             filePath = "DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
             landmarkName = "fetchAllUsers()"
             landmarkType = "7">
             <Locations>
@@ -344,8 +344,8 @@
             filePath = "DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
             landmarkName = "fetchAllUsers()"
             landmarkType = "7">
             <Locations>
