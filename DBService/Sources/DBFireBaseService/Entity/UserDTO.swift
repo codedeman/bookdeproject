@@ -47,6 +47,7 @@ public struct UserDTO {
             uid: user.user.uid,
             displayName: user.user.displayName,
             photoURL: user.user.photoURL,
+            email: user.user.email,
             phoneNumber: user.user.phoneNumber
         )
     }

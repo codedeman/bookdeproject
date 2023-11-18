@@ -21,8 +21,6 @@ public protocol MessageUseCase {
 
 public final class ImplMessageUseCase: MessageUseCase {
 
-
-
     private var respository: FireRepository
 
     public init(respository: FireRepository = ImplFireRepository())
