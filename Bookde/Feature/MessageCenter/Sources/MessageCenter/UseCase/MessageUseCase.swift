@@ -35,7 +35,7 @@ public final class ImplMessageUseCase: MessageUseCase {
            let userDto = users.map { UserChat(email: $0.email, profileUrl: $0.profileUrl, uiid: $0.uiid) }
             return Just(userDto).eraseToAnyPublisher()
         case .failure(let error):
-            return Fail(error: error as! Never).eraseToAnyPublisher()
+            return Fail(error: (error as? Never)!).eraseToAnyPublisher()
         }
     }
 
@@ -50,11 +50,10 @@ public final class ImplMessageUseCase: MessageUseCase {
             )
             return Just(user).eraseToAnyPublisher()
         case .failure(let error):
-            return Fail(error: error as! Never).eraseToAnyPublisher()
+            return Fail(error: (error as? Never)!).eraseToAnyPublisher()
         }
     }
     
-
     public func fetchCurrentUser() async -> AnyPublisher<Result<UserChat, Error>, Never> {
         let status = await respository.fetchCurrentUser()
         switch status {
@@ -66,7 +65,7 @@ public final class ImplMessageUseCase: MessageUseCase {
             )
             return Just(.success(user)).eraseToAnyPublisher()
         case .failure(let error):
-            return Fail(error: error as! Never).eraseToAnyPublisher()
+            return Fail(error: (error as? Never)!).eraseToAnyPublisher()
         }
     }
 
@@ -74,7 +73,6 @@ public final class ImplMessageUseCase: MessageUseCase {
         let isSignOut = await respository.signOut()
         return Just(isSignOut).eraseToAnyPublisher()
     }
-
 
     public func fetchMessage(toId: String) async -> AnyPublisher<[MessageModel], Never> {
         let result = await respository.fetchMessage(toId: toId)
@@ -99,7 +97,7 @@ public final class ImplMessageUseCase: MessageUseCase {
                 case .success(let isSuccess):
                     promise(.success(isSuccess))
                 case .failure(let error):
-                    promise(.failure(error as! Never))
+                    promise(.failure((error as? Never?)!!))
                 }
             }
         }

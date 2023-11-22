@@ -30,7 +30,9 @@
 		0A5785FE2922222C00E92026 /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A5785FD2922222C00E92026 /* landmarkData.json */; };
 		0A5786012922229E00E92026 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5786002922229E00E92026 /* ModelData.swift */; };
 		0A5786052922233000E92026 /* LandMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5786042922233000E92026 /* LandMark.swift */; };
-		0A9157272AF0FB7A0058D938 /* AppFlow in Frameworks */ = {isa = PBXBuildFile; productRef = 0A9157262AF0FB7A0058D938 /* AppFlow */; };
+		0A7C26A42B0E1437004029C1 /* DBFireBaseService in Frameworks */ = {isa = PBXBuildFile; productRef = 0A7C26A32B0E1437004029C1 /* DBFireBaseService */; };
+		0A7C26A62B0E146D004029C1 /* AppFlow in Frameworks */ = {isa = PBXBuildFile; productRef = 0A7C26A52B0E146D004029C1 /* AppFlow */; };
+		0A7C26A82B0E147E004029C1 /* DBCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0A7C26A72B0E147E004029C1 /* DBCore */; };
 		0ADD642E2A8BDF2C00C7BB60 /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD642D2A8BDF2C00C7BB60 /* AppFactory.swift */; };
 		0ADD64302A8BDF6D00C7BB60 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD642F2A8BDF6D00C7BB60 /* Coordinator.swift */; };
 		0ADD64322A8BDFA800C7BB60 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD64312A8BDFA800C7BB60 /* HomeFactory.swift */; };
@@ -148,8 +150,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A9157272AF0FB7A0058D938 /* AppFlow in Frameworks */,
+				0A7C26A62B0E146D004029C1 /* AppFlow in Frameworks */,
+				0A7C26A82B0E147E004029C1 /* DBCore in Frameworks */,
 				0A229CEA2B085CB8003C149F /* CoreUI in Frameworks */,
+				0A7C26A42B0E1437004029C1 /* DBFireBaseService in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +444,7 @@
 				0A5785C22921E83000E92026 /* Sources */,
 				0A5785C32921E83000E92026 /* Frameworks */,
 				0A5785C42921E83000E92026 /* Resources */,
+				0A7C26A92B0E155B004029C1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -447,8 +452,10 @@
 			);
 			name = Bookde;
 			packageProductDependencies = (
-				0A9157262AF0FB7A0058D938 /* AppFlow */,
 				0A229CE92B085CB8003C149F /* CoreUI */,
+				0A7C26A32B0E1437004029C1 /* DBFireBaseService */,
+				0A7C26A52B0E146D004029C1 /* AppFlow */,
+				0A7C26A72B0E147E004029C1 /* DBCore */,
 			);
 			productName = Bookde;
 			productReference = 0A5785C62921E83000E92026 /* Bookde.app */;
@@ -600,6 +607,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A7C26A92B0E155B004029C1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0A421CF62B00AEF10061D3FF /* Sources */ = {
@@ -1203,9 +1230,17 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = AppFlow;
 		};
-		0A9157262AF0FB7A0058D938 /* AppFlow */ = {
+		0A7C26A32B0E1437004029C1 /* DBFireBaseService */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DBFireBaseService;
+		};
+		0A7C26A52B0E146D004029C1 /* AppFlow */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppFlow;
+		};
+		0A7C26A72B0E147E004029C1 /* DBCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DBCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

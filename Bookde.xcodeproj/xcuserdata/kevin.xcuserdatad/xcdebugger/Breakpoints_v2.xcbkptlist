@@ -14,8 +14,8 @@
             filePath = "DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "217"
-            endingLineNumber = "217"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
             landmarkName = "fetchMessage(toId:)"
             landmarkType = "7">
             <Locations>
@@ -107,8 +107,8 @@
             filePath = "Bookde/Feature/MessageCenter/Sources/MessageCenter/UseCase/MessageUseCase.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "fetchMessage(toId:)"
             landmarkType = "7">
             <Locations>
@@ -155,8 +155,8 @@
             filePath = "Bookde/Feature/MessageCenter/Sources/MessageCenter/UseCase/MessageUseCase.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "fetchMessage(toId:)"
             landmarkType = "7">
             <Locations>
@@ -233,8 +233,8 @@
             filePath = "Bookde/Feature/MessageCenter/Sources/MessageCenter/UseCase/MessageUseCase.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "fetchMessage(toId:)"
             landmarkType = "7">
             <Locations>
@@ -281,10 +281,10 @@
             filePath = "DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
-            landmarkName = "fetchAllUsers()"
-            landmarkType = "7">
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "ImplFireRepository"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "E220E50F-3DFB-494A-8DBF-8849A0768532 - 8825dad1c9230677"
@@ -344,9 +344,9 @@
             filePath = "DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
-            landmarkName = "fetchAllUsers()"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "signOut()"
             landmarkType = "7">
             <Locations>
                <Location

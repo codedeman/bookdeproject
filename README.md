@@ -16,6 +16,8 @@ Welcome to the Bookde project, where you'll embark on an exciting journey into t
 ### Checklist ✅
 - [X] Unit testing 
 - [X] FireBase Intergrate
+## Framework
+- SwiftLint 
 
 ### Architecture 
 Modular Architecture ❤️ MVVM Combine 

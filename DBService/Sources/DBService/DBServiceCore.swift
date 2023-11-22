@@ -91,7 +91,7 @@ public final class DBServiceImpl:  DBServiceProtocol {
                 throw ApiError.failedSerialization
             }
         } catch let eror  {
-            return .failure(eror as! ApiError)
+            return .failure((eror as? ApiError)!)
         }
     }
 

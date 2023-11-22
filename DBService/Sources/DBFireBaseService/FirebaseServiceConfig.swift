@@ -83,8 +83,6 @@ public final class ImplFireRepository: FireRepository {
             }
     }
 
-
-
     public func fetchCurrentUser() async -> Result<DocumentDTO, Error> {
         guard let uiid = Auth.auth().currentUser?.uid  else { return .failure(FirbaseError.generic) }
 
@@ -136,7 +134,7 @@ public final class ImplFireRepository: FireRepository {
             userData = [
                 "uid": uid,
                 "email": email,
-                "profileUrl": "https://firebasestorage.googleapis.com/v0/b/bookdeuiproject.appspot.com/o/6FA2236B-B62D-4E50-9855-83DA85ED3FBB.JPG?alt=media&token=5b98ac62-26cc-45f6-ad0d-82e962ead322&_gl=1*1824x0w*_ga*NjI4MDA1MDAuMTY5ODQ3OTY3MQ..*_ga_CW55HF8NVT*MTY5OTI2NDUzNC45LjEuMTY5OTI2NDYxNy40My4wLjA."
+                "profileUrl": ""
             ]
         Firestore
             .firestore()
