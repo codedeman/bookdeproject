@@ -21,9 +21,7 @@ let package = Package(
         .package(path: "./Feature/MessageCenter"),
 
         .package(path: "./DBService"),
-        .package(path: "./DBCore"),
-        .package(url: "https://github.com/realm/SwiftLint.git", from: "0.37.0"),
-
+        .package(path: "./DBCore")
 
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
