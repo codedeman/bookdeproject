@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0A00553B2924E5CF00802F40 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A00553A2924E5CE00802F40 /* User.swift */; };
-		0A229CEA2B085CB8003C149F /* CoreUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0A229CE92B085CB8003C149F /* CoreUI */; };
 		0A3184AA2AB9704F00C4A9D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A3184A92AB9704F00C4A9D1 /* GoogleService-Info.plist */; };
 		0A421CFD2B00AEF10061D3FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A421CFC2B00AEF10061D3FF /* AppDelegate.swift */; };
 		0A421CFF2B00AEF10061D3FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A421CFE2B00AEF10061D3FF /* SceneDelegate.swift */; };
@@ -20,6 +19,7 @@
 		0A421D1E2B00AEF30061D3FF /* BookdeScenarioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A421D1D2B00AEF30061D3FF /* BookdeScenarioUITests.swift */; };
 		0A421D202B00AEF30061D3FF /* BookdeScenarioUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A421D1F2B00AEF30061D3FF /* BookdeScenarioUITestsLaunchTests.swift */; };
 		0A421D2B2B00AF010061D3FF /* AppFlow in Frameworks */ = {isa = PBXBuildFile; productRef = 0A421D2A2B00AF010061D3FF /* AppFlow */; };
+		0A484E2A2B1B9BFA00887864 /* AppFlow in Frameworks */ = {isa = PBXBuildFile; productRef = 0A484E292B1B9BFA00887864 /* AppFlow */; };
 		0A5785CA2921E83000E92026 /* BookdeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5785C92921E83000E92026 /* BookdeApp.swift */; };
 		0A5785CE2921E83100E92026 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A5785CD2921E83100E92026 /* Assets.xcassets */; };
 		0A5785D12921E83100E92026 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A5785D02921E83100E92026 /* Preview Assets.xcassets */; };
@@ -30,9 +30,6 @@
 		0A5785FE2922222C00E92026 /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A5785FD2922222C00E92026 /* landmarkData.json */; };
 		0A5786012922229E00E92026 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5786002922229E00E92026 /* ModelData.swift */; };
 		0A5786052922233000E92026 /* LandMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5786042922233000E92026 /* LandMark.swift */; };
-		0A7C26A42B0E1437004029C1 /* DBFireBaseService in Frameworks */ = {isa = PBXBuildFile; productRef = 0A7C26A32B0E1437004029C1 /* DBFireBaseService */; };
-		0A7C26A62B0E146D004029C1 /* AppFlow in Frameworks */ = {isa = PBXBuildFile; productRef = 0A7C26A52B0E146D004029C1 /* AppFlow */; };
-		0A7C26A82B0E147E004029C1 /* DBCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0A7C26A72B0E147E004029C1 /* DBCore */; };
 		0ADD642E2A8BDF2C00C7BB60 /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD642D2A8BDF2C00C7BB60 /* AppFactory.swift */; };
 		0ADD64302A8BDF6D00C7BB60 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD642F2A8BDF6D00C7BB60 /* Coordinator.swift */; };
 		0ADD64322A8BDFA800C7BB60 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD64312A8BDFA800C7BB60 /* HomeFactory.swift */; };
@@ -77,6 +74,7 @@
 /* Begin PBXFileReference section */
 		0A00553A2924E5CE00802F40 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0A00CBC82AF00A9F00881A39 /* Loger */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Loger; path = ../../../../Loger; sourceTree = "<group>"; };
+		0A127D6E2B1B9B41004CE26C /* AppFlow */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AppFlow; sourceTree = "<group>"; };
 		0A3184A92AB9704F00C4A9D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0A3184AB2AB9F34A00C4A9D1 /* MessageCenter */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MessageCenter; sourceTree = "<group>"; };
 		0A421CFA2B00AEF10061D3FF /* BookdeScenario.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookdeScenario.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,7 +92,6 @@
 		0A421D1F2B00AEF30061D3FF /* BookdeScenarioUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookdeScenarioUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0A44E4E72AAC7637002FF450 /* DBCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DBCore; sourceTree = "<group>"; };
 		0A47A2002A3C6EB600E9A4B1 /* Authenticate */ = {isa = PBXFileReference; lastKnownFileType = text; path = Authenticate; sourceTree = SOURCE_ROOT; };
-		0A4A44372A839E7A00D0AA82 /* DBService */ = {isa = PBXFileReference; lastKnownFileType = text; path = DBService; sourceTree = SOURCE_ROOT; };
 		0A5785C62921E83000E92026 /* Bookde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookde.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A5785C92921E83000E92026 /* BookdeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookdeApp.swift; sourceTree = "<group>"; };
 		0A5785CD2921E83100E92026 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,7 +106,7 @@
 		0A5786002922229E00E92026 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		0A5786042922233000E92026 /* LandMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandMark.swift; sourceTree = "<group>"; };
 		0A9AFD462AEB65F100305F45 /* CoreUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CoreUI; path = ../../../../CoreUI; sourceTree = "<group>"; };
-		0AC3D7212B02DF9600854AF6 /* AppFlow */ = {isa = PBXFileReference; lastKnownFileType = text; path = AppFlow; sourceTree = SOURCE_ROOT; };
+		0ACF84A32B1CCFF200999914 /* DBService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DBService; sourceTree = "<group>"; };
 		0ADD642D2A8BDF2C00C7BB60 /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
 		0ADD642F2A8BDF6D00C7BB60 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		0ADD64312A8BDFA800C7BB60 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
@@ -118,7 +115,6 @@
 		0ADD64372A8CD9F200C7BB60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0ADD64392A8CDBFE00C7BB60 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		0AE367082B028C5F00CDC219 /* TestSupport */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TestSupport; path = ../../../../movie_challenge/TestSupport; sourceTree = "<group>"; };
-		0AE5CA6F2A372E9800685FFE /* Onboarding */ = {isa = PBXFileReference; lastKnownFileType = text; path = Onboarding; sourceTree = SOURCE_ROOT; };
 		0AE5CA732A3739E100685FFE /* Home */ = {isa = PBXFileReference; lastKnownFileType = text; path = Home; sourceTree = SOURCE_ROOT; };
 		0AE5CA762A39CB6F00685FFE /* DBLocalNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBLocalNetwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,10 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A7C26A62B0E146D004029C1 /* AppFlow in Frameworks */,
-				0A7C26A82B0E147E004029C1 /* DBCore in Frameworks */,
-				0A229CEA2B085CB8003C149F /* CoreUI in Frameworks */,
-				0A7C26A42B0E1437004029C1 /* DBFireBaseService in Frameworks */,
+				0A484E2A2B1B9BFA00887864 /* AppFlow in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,7 +170,7 @@
 		0A38B3432AE6D0B000FC986D /* Product */ = {
 			isa = PBXGroup;
 			children = (
-				0AC3D7212B02DF9600854AF6 /* AppFlow */,
+				0A127D6E2B1B9B41004CE26C /* AppFlow */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -300,7 +293,6 @@
 			isa = PBXGroup;
 			children = (
 				0A3184AB2AB9F34A00C4A9D1 /* MessageCenter */,
-				0AE5CA6F2A372E9800685FFE /* Onboarding */,
 				0AE5CA732A3739E100685FFE /* Home */,
 				0A47A2002A3C6EB600E9A4B1 /* Authenticate */,
 				0A91E18629232F8A0070EB69 /* Common */,
@@ -369,10 +361,10 @@
 		0AE5CA752A39CAD800685FFE /* Cores */ = {
 			isa = PBXGroup;
 			children = (
+				0ACF84A32B1CCFF200999914 /* DBService */,
 				0A00CBC82AF00A9F00881A39 /* Loger */,
 				0A9AFD462AEB65F100305F45 /* CoreUI */,
 				0A44E4E72AAC7637002FF450 /* DBCore */,
-				0A4A44372A839E7A00D0AA82 /* DBService */,
 				0AE5CA762A39CB6F00685FFE /* DBLocalNetwork.swift */,
 			);
 			path = Cores;
@@ -452,10 +444,7 @@
 			);
 			name = Bookde;
 			packageProductDependencies = (
-				0A229CE92B085CB8003C149F /* CoreUI */,
-				0A7C26A32B0E1437004029C1 /* DBFireBaseService */,
-				0A7C26A52B0E146D004029C1 /* AppFlow */,
-				0A7C26A72B0E147E004029C1 /* DBCore */,
+				0A484E292B1B9BFA00887864 /* AppFlow */,
 			);
 			productName = Bookde;
 			productReference = 0A5785C62921E83000E92026 /* Bookde.app */;
@@ -1222,25 +1211,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0A229CE92B085CB8003C149F /* CoreUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = CoreUI;
-		};
 		0A421D2A2B00AF010061D3FF /* AppFlow */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppFlow;
 		};
-		0A7C26A32B0E1437004029C1 /* DBFireBaseService */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DBFireBaseService;
-		};
-		0A7C26A52B0E146D004029C1 /* AppFlow */ = {
+		0A484E292B1B9BFA00887864 /* AppFlow */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppFlow;
-		};
-		0A7C26A72B0E147E004029C1 /* DBCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DBCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

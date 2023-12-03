@@ -103,7 +103,6 @@ public final class ImplFireRepository: FireRepository {
         }
     }
 
-
     public func signUpWithEmail(
         email: String,
         passworld: String,
