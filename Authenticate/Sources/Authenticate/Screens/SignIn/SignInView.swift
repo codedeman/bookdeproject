@@ -9,10 +9,12 @@ import SwiftUI
 import DBCore
 
 public struct SignInView: View {
-    @State private var email = "China@gmail.com"
+
+    @State private var email = "K@gmail.com"
     @State private var passworld = "02111997"
     @EnvironmentObject var state: MyAuthenticateState
     @ObservedObject var viewModel: SignInViewModel
+    @EnvironmentObject var signInState: MyAuthenticateState
 
     public init(viewModel: SignInViewModel) {
         self.viewModel = viewModel
@@ -24,11 +26,6 @@ public struct SignInView: View {
               .padding()
               .background(Color.themeTextField)
               .cornerRadius(20.0)
-
-//            if viewModel.isLoading {
-//                ProgressView()
-//                    .progressViewStyle(CircularProgressViewStyle(tint: .blue))
-//            }
 
             SecureField("Password", text: self.$passworld)
               .padding()
@@ -52,11 +49,16 @@ public struct SignInView: View {
             Button("Sign up now?") {
                 viewModel.didTapSignUp()
             }
-        }.onAppear(perform: {
+        }
+        .onAppear(perform: {
             Task {
                 await viewModel.fetchCurrentUser()
             }
         })
+        .onReceive(viewModel.$userProfile, perform: {  user in
+            guard let user = user else { return }
+            self.signInState.user = user
+        })
+
     }
 }
-

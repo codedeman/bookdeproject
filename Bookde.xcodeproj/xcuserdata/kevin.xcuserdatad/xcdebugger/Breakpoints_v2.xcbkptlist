@@ -142,6 +142,21 @@
                   endingLineNumber = "85"
                   offsetFromSymbolStart = "688">
                </Location>
+               <Location
+                  uuid = "9D22A34B-26D9-462D-B8D5-6C27638ECD68 - 5bf21bcbc665f150"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for MessageCenter.ImplMessageUseCase.fetchMessage(toId: Swift.String) async -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;MessageCenter.MessageModel&gt;, Swift.Never&gt;"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Feature/MessageCenter/Sources/MessageCenter/UseCase/MessageUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "388">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -220,6 +235,21 @@
                   endingLineNumber = "84"
                   offsetFromSymbolStart = "116">
                </Location>
+               <Location
+                  uuid = "7D7831A9-BE67-4080-BF35-FFD829F651CC - 5bf21bcbc665f0b7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for MessageCenter.ImplMessageUseCase.fetchMessage(toId: Swift.String) async -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;MessageCenter.MessageModel&gt;, Swift.Never&gt;"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Feature/MessageCenter/Sources/MessageCenter/UseCase/MessageUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "688">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -267,6 +297,21 @@
                   startingLineNumber = "87"
                   endingLineNumber = "87"
                   offsetFromSymbolStart = "428">
+               </Location>
+               <Location
+                  uuid = "C7329AAF-EF05-4C9E-AB0F-036C4BD87A7B - 5bf21bcbc665f133"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for MessageCenter.ImplMessageUseCase.fetchMessage(toId: Swift.String) async -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;MessageCenter.MessageModel&gt;, Swift.Never&gt;"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Feature/MessageCenter/Sources/MessageCenter/UseCase/MessageUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "868">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -427,6 +472,54 @@
             endingLineNumber = "65"
             landmarkName = "signInViewModel()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA279419-4000-4939-A8B9-779FD0EF5104"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Authenticate/Sources/Authenticate/Screens/SignIn/SignInViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "signUp(email:passworld:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F3101CDB-EE45-4D58-B849-E0499D879B82"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Authenticate/Sources/Authenticate/Screens/SignIn/SignInViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "signUp(email:passworld:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "797DB628-AC1F-48B6-950C-0EF4DC5A1259"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Authenticate/Sources/Authenticate/Screens/SignIn/SignInView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

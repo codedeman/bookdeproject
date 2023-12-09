@@ -4,7 +4,6 @@
 //
 //  Created by Kevin on 10/24/23.
 //
-//import Authenticate
 
 import Authenticate
 import Home
@@ -41,4 +40,3 @@ extension AppDIContainer {
         )
     }
 }
-

@@ -14,7 +14,7 @@ public final class SignUpViewModel: ObservableObject {
     @Published var userName: String?
     @Published var passworld: String?
     @Published public var state: AuthenticateState?
-    @Published var profile:UserProfile?
+    @Published var profile: UserProfile?
 
     public init(useCase: AuthenticateUseCase) {
         self.useCase = useCase

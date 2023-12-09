@@ -8,8 +8,7 @@ public struct MessageHeaderSectionView: View {
     public var body: some View {
         VStack(alignment: .leading) {
             HStack(alignment: .top, spacing: 16) {
-
-                AsyncImage(url: URL(string: user.profileUrl))
+                AsyncImage(url: URL(string: user.profileUrl ?? ""))
                     .frame(width: 24, height: 24)
                     .cornerRadius(64)
                     .foregroundColor(Color.blue).shimmering(active: true)
@@ -46,4 +45,3 @@ public struct MessageHeaderSectionView: View {
         }
     }
 }
-

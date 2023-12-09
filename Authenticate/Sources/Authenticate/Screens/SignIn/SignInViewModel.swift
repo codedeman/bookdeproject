@@ -13,19 +13,11 @@ public final class SignInViewModel: ObservableObject {
 
     private let useCase: AuthenticateUseCase
     @Published public var userProfile: UserProfile?
-    public var state = CurrentValueSubject<AuthenticateState, Error>(.none)
-    @Published public var appState: MyAuthenticateState = .init(id: "kevin")
     @Published var isLoading: Bool = false
     var hasFetchedUser = false
 
     public init(useCase: AuthenticateUseCase) {
         self.useCase = useCase
-        Task {
-//              if !hasFetchedUser {
-//                  await self.fetchCurrentUser()
-//                  hasFetchedUser = true
-//              }
-          }
 
     }
 
@@ -43,14 +35,11 @@ public final class SignInViewModel: ObservableObject {
     }
 
     public func didTapSignUp() {
-        state.send(.startSignUp)
     }
 
     private func handleSignUpSuccess(_ user: UserProfile) {
         self.userProfile = user
         self.isLoading = false
-        state.send(.finished)
-        appState.state = .finished
     }
 
     private func handleSignUpFailure(_ error: Error) {
@@ -61,13 +50,12 @@ public final class SignInViewModel: ObservableObject {
          self.isLoading = true
         let currentUser =  await self.useCase.fetchCurrentUser()
         switch currentUser {
-        case .success(_):
+        case .success(let user):
             self.isLoading = false
-            self.state.send(.userAuthenticated)
+            self.userProfile = user
         case .failure(_):
             break
         }
     }
-
 
 }

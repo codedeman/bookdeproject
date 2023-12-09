@@ -26,10 +26,9 @@ public struct NewMessageView: View {
             }
         }.onAppear(perform: {
             Task {
-               viewModel.fetchMessage(toId: messageState.user?.uiid ?? "")
+                viewModel.fetchMessage(toId: messageState.user.uiid )
             }
         })
-
 
     }
 
@@ -66,7 +65,7 @@ public struct NewMessageView: View {
             TextField("Write a message...", text: $text)
             Button {
                 Task {
-                   await viewModel.sendMessage(toId: messageState.user?.uiid ?? "",message: text)
+                    await viewModel.sendMessage(toId: messageState.user.uiid ?? "",message: text)
                 }
             }label: {
                 Text("Send").foregroundColor(.white)

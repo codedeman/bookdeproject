@@ -13,14 +13,12 @@ public enum AppStep: Hashable {
 
 public final class AppStateManager: ObservableObject {
 
-    var subscription = Set<AnyCancellable>()
-
+    private var subscription = Set<AnyCancellable>()
+    @Published private var messageState: NewMessageState
+    @Published  var myAuthState: MyAuthenticateState = .init(id: "")
+    @Published var myAppState: MyAppState = .init(appState: .startSignIn)
     @Published var appState: [AppState] = []
-    @Published var myAuthState: AuthenticateState = .none
-    @Published var messageState: NewMessageState
-
     private var diContainer: AppDIContainer
-
     public init(
         diContainer: AppDIContainer = .init(
             dependencies: .init(
@@ -29,63 +27,63 @@ public final class AppStateManager: ObservableObject {
             )
         )
     ) {
-        messageState = .init(user: nil)
+        messageState = .init(user: .init(email: "", profileUrl: "", uiid: ""))
+        self.myAuthState = .init(id: "")
         self.diContainer = diContainer
+        let myAuthPublisher = $myAuthState
+            .flatMap { $0.$user }
+            .compactMap { $0 }
+            .map {
+                MyAppState(
+                    appState: .startCreateNewMessage(
+                        user: .init(
+                            email: $0.email ?? "",
+                            profileUrl: "",
+                            uiid: $0.uid
+                        )
+                    )
+                )
+            }
+            .assertNoFailure()
+            .share()
+
+        myAuthPublisher
+            .assign(to: &$myAppState)
+
     }
 
     @MainActor func messageViewModel() -> MessageNewFeedViewModel {
-        let vm = MessageNewFeedViewModel(useCase: diContainer.dependencies.mesageUseCase)
-
-        vm.state.sink { error in
-
-        } receiveValue: { [weak self] messageState in
-            switch messageState {
-            case .startCreateNewMessage(let user):
-                self?.messageState = .init(user: user)
-                self?.appState.append(.startCreateNewMessage(user: user))
-            default:
-                break
-            }
-        }.store(in: &subscription)
-
+        let vm = MessageNewFeedViewModel(
+            useCase: diContainer
+                .dependencies
+                .mesageUseCase
+        )
         return vm
     }
 
-
     @MainActor func signInViewModel() -> SignInViewModel {
         let vm = SignInViewModel(
-            useCase: diContainer.dependencies.authUseCase
+            useCase: diContainer
+                .dependencies
+                .authUseCase
         )
-
-        vm.state.sink { error in
-
-        } receiveValue: { [weak self] state in
-            switch state {
-            case .finished:
-                self?.appState.append(.startHome)
-            case .startSignUp:
-                self?.appState.append(.startSignUp)
-            case .userAuthenticated:
-                self?.appState.append(.startHome)
-            default:
-                break
-            }
-        }.store(in: &subscription)
-
         return vm
     }
 
     func signUpViewModel() -> SignUpViewModel {
-        let vm = SignUpViewModel(useCase: diContainer.dependencies.authUseCase)
+        let vm = SignUpViewModel(
+            useCase: diContainer
+                .dependencies
+                .authUseCase
+        )
         return vm
     }
 
     func newMesageViewModel(user: UserChat) -> NewMessageViewModel {
-        messageState.$user.sink { usechat in
-            print("❤️",usechat)
-        }.store(in: &subscription)
         let vm = NewMessageViewModel(
-            usecase: diContainer.dependencies.mesageUseCase,
+            usecase: diContainer
+                .dependencies
+                .mesageUseCase,
             user: user
         )
         return vm

@@ -27,7 +27,7 @@ public final class NewMessageViewModel: ObservableObject {
 
     @MainActor
     func sendMessage(toId: String, message: String) async {
-       let result = await usecase.send(toId: user.uiid, message: message)
+        let result = await usecase.send(toId: user.uiid ?? "", message: message)
         result.assign(to: &$isSendingSucess)
 
     }
@@ -35,7 +35,6 @@ public final class NewMessageViewModel: ObservableObject {
 
     @MainActor
     func fetchMessage(toId: String)  {
-
         usecase.fetchMessage(toId: toId) { [weak self] result in
             switch result {
             case .success(let messagesDTO):
@@ -55,11 +54,10 @@ public final class NewMessageViewModel: ObservableObject {
 
 }
 
-
 public final class NewMessageState: ObservableObject {
-    @Published public var user: UserChat?
+    @Published public var user: UserChat
 
-    public init(user: UserChat?) {
+    public init(user: UserChat) {
         self.user = user
     }
 

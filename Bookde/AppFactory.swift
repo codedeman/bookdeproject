@@ -22,7 +22,4 @@ struct AppFactoryImp: AppFactory {
         )
         return homeCoordinator
     }
-    
-
 }
-

@@ -63,8 +63,6 @@ public struct MessageFeedView: View {
         })
     }
 
-
-
     private var newMessageButton: some View {
         Button {
             showNewMessage.toggle()
