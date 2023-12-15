@@ -25,7 +25,6 @@
 		0A5785DB2921E83100E92026 /* BookdeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5785DA2921E83100E92026 /* BookdeTests.swift */; };
 		0A5785E52921E83200E92026 /* BookdeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5785E42921E83200E92026 /* BookdeUITests.swift */; };
 		0A5785E72921E83200E92026 /* BookdeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5785E62921E83200E92026 /* BookdeUITestsLaunchTests.swift */; };
-		0A5785FE2922222C00E92026 /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A5785FD2922222C00E92026 /* landmarkData.json */; };
 		0ADD642E2A8BDF2C00C7BB60 /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD642D2A8BDF2C00C7BB60 /* AppFactory.swift */; };
 		0ADD64302A8BDF6D00C7BB60 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD642F2A8BDF6D00C7BB60 /* Coordinator.swift */; };
 		0ADD64322A8BDFA800C7BB60 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD64312A8BDFA800C7BB60 /* HomeFactory.swift */; };
@@ -95,7 +94,6 @@
 		0A5785E02921E83200E92026 /* BookdeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookdeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A5785E42921E83200E92026 /* BookdeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookdeUITests.swift; sourceTree = "<group>"; };
 		0A5785E62921E83200E92026 /* BookdeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookdeUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		0A5785FD2922222C00E92026 /* landmarkData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = landmarkData.json; sourceTree = "<group>"; };
 		0A80B2092B25C3D9003EE7FA /* Routers */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Routers; path = ../../../../movie_challenge/Routers; sourceTree = "<group>"; };
 		0A9AFD462AEB65F100305F45 /* CoreUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CoreUI; path = ../../../../CoreUI; sourceTree = "<group>"; };
 		0ACF84A32B1CCFF200999914 /* DBService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DBService; sourceTree = "<group>"; };
@@ -197,13 +195,6 @@
 			path = BookdeScenarioUITests;
 			sourceTree = "<group>";
 		};
-		0A47A2012A3C730200E9A4B1 /* Foundation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Foundation;
-			sourceTree = "<group>";
-		};
 		0A5785BD2921E83000E92026 = {
 			isa = PBXGroup;
 			children = (
@@ -236,8 +227,6 @@
 			children = (
 				0AE367072B028BCE00CDC219 /* TestSuport */,
 				0A38B3432AE6D0B000FC986D /* Product */,
-				0A47A2012A3C730200E9A4B1 /* Foundation */,
-				0A5785FC292221D400E92026 /* Resources */,
 				0A5785F32921E84300E92026 /* Feature */,
 				0AE5CA752A39CAD800685FFE /* Cores */,
 				0A5785C92921E83000E92026 /* BookdeApp.swift */,
@@ -288,14 +277,6 @@
 				0A47A2002A3C6EB600E9A4B1 /* Authenticate */,
 			);
 			path = Feature;
-			sourceTree = "<group>";
-		};
-		0A5785FC292221D400E92026 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				0A5785FD2922222C00E92026 /* landmarkData.json */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		0AE367072B028BCE00CDC219 /* TestSuport */ = {
@@ -532,7 +513,6 @@
 				0A5785D12921E83100E92026 /* Preview Assets.xcassets in Resources */,
 				0A3184AA2AB9704F00C4A9D1 /* GoogleService-Info.plist in Resources */,
 				0A5785CE2921E83100E92026 /* Assets.xcassets in Resources */,
-				0A5785FE2922222C00E92026 /* landmarkData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
