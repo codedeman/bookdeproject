@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreUI
+import Routers
 
 public struct MessageFeedView: View {
     @State var shouldShowLogOutOptions = false
@@ -42,14 +43,14 @@ public struct MessageFeedView: View {
                         users: users,
                         loading: true,
                         didSelectUser: { user in
-
+                        
                         }
                     )
                 case .body(let users):
                     MessageListView(
                         users: users, loading: false,
                         didSelectUser: { user in
-                            viewModel.createChat(user: user)
+                            router.navigate(to: MessageState.startCreateNewMessage(users: user))
                         }
                     )
                 }
