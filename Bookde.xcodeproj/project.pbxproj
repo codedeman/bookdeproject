@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A00553B2924E5CF00802F40 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A00553A2924E5CE00802F40 /* User.swift */; };
 		0A3184AA2AB9704F00C4A9D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A3184A92AB9704F00C4A9D1 /* GoogleService-Info.plist */; };
 		0A421CFD2B00AEF10061D3FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A421CFC2B00AEF10061D3FF /* AppDelegate.swift */; };
 		0A421CFF2B00AEF10061D3FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A421CFE2B00AEF10061D3FF /* SceneDelegate.swift */; };
@@ -26,10 +25,7 @@
 		0A5785DB2921E83100E92026 /* BookdeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5785DA2921E83100E92026 /* BookdeTests.swift */; };
 		0A5785E52921E83200E92026 /* BookdeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5785E42921E83200E92026 /* BookdeUITests.swift */; };
 		0A5785E72921E83200E92026 /* BookdeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5785E62921E83200E92026 /* BookdeUITestsLaunchTests.swift */; };
-		0A5785F52921E87200E92026 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5785F42921E87200E92026 /* LoginScreen.swift */; };
 		0A5785FE2922222C00E92026 /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A5785FD2922222C00E92026 /* landmarkData.json */; };
-		0A5786012922229E00E92026 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5786002922229E00E92026 /* ModelData.swift */; };
-		0A5786052922233000E92026 /* LandMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5786042922233000E92026 /* LandMark.swift */; };
 		0ADD642E2A8BDF2C00C7BB60 /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD642D2A8BDF2C00C7BB60 /* AppFactory.swift */; };
 		0ADD64302A8BDF6D00C7BB60 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD642F2A8BDF6D00C7BB60 /* Coordinator.swift */; };
 		0ADD64322A8BDFA800C7BB60 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD64312A8BDFA800C7BB60 /* HomeFactory.swift */; };
@@ -37,7 +33,6 @@
 		0ADD64362A8CD31A00C7BB60 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD64352A8CD31A00C7BB60 /* AppCoordinator.swift */; };
 		0ADD64382A8CD9F200C7BB60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD64372A8CD9F200C7BB60 /* AppDelegate.swift */; };
 		0ADD643A2A8CDBFE00C7BB60 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD64392A8CDBFE00C7BB60 /* HomeCoordinator.swift */; };
-		0AE5CA772A39CB6F00685FFE /* DBLocalNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5CA762A39CB6F00685FFE /* DBLocalNetwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +67,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A00553A2924E5CE00802F40 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0A00CBC82AF00A9F00881A39 /* Loger */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Loger; path = ../../../../Loger; sourceTree = "<group>"; };
 		0A127D6E2B1B9B41004CE26C /* AppFlow */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AppFlow; sourceTree = "<group>"; };
 		0A3184A92AB9704F00C4A9D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -101,10 +95,8 @@
 		0A5785E02921E83200E92026 /* BookdeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookdeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A5785E42921E83200E92026 /* BookdeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookdeUITests.swift; sourceTree = "<group>"; };
 		0A5785E62921E83200E92026 /* BookdeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookdeUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		0A5785F42921E87200E92026 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		0A5785FD2922222C00E92026 /* landmarkData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = landmarkData.json; sourceTree = "<group>"; };
-		0A5786002922229E00E92026 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
-		0A5786042922233000E92026 /* LandMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandMark.swift; sourceTree = "<group>"; };
+		0A80B2092B25C3D9003EE7FA /* Routers */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Routers; path = ../../../../movie_challenge/Routers; sourceTree = "<group>"; };
 		0A9AFD462AEB65F100305F45 /* CoreUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CoreUI; path = ../../../../CoreUI; sourceTree = "<group>"; };
 		0ACF84A32B1CCFF200999914 /* DBService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DBService; sourceTree = "<group>"; };
 		0ADD642D2A8BDF2C00C7BB60 /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
@@ -116,7 +108,6 @@
 		0ADD64392A8CDBFE00C7BB60 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		0AE367082B028C5F00CDC219 /* TestSupport */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TestSupport; path = ../../../../movie_challenge/TestSupport; sourceTree = "<group>"; };
 		0AE5CA732A3739E100685FFE /* Home */ = {isa = PBXFileReference; lastKnownFileType = text; path = Home; sourceTree = SOURCE_ROOT; };
-		0AE5CA762A39CB6F00685FFE /* DBLocalNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBLocalNetwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,20 +286,8 @@
 				0A3184AB2AB9F34A00C4A9D1 /* MessageCenter */,
 				0AE5CA732A3739E100685FFE /* Home */,
 				0A47A2002A3C6EB600E9A4B1 /* Authenticate */,
-				0A91E18629232F8A0070EB69 /* Common */,
-				0A5786062922724F00E92026 /* Detail */,
-				0A5785FF2922226100E92026 /* ModelData */,
-				0A5785F62921FB9C00E92026 /* LoginScreen */,
 			);
 			path = Feature;
-			sourceTree = "<group>";
-		};
-		0A5785F62921FB9C00E92026 /* LoginScreen */ = {
-			isa = PBXGroup;
-			children = (
-				0A5785F42921E87200E92026 /* LoginScreen.swift */,
-			);
-			path = LoginScreen;
 			sourceTree = "<group>";
 		};
 		0A5785FC292221D400E92026 /* Resources */ = {
@@ -317,30 +296,6 @@
 				0A5785FD2922222C00E92026 /* landmarkData.json */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		0A5785FF2922226100E92026 /* ModelData */ = {
-			isa = PBXGroup;
-			children = (
-				0A5786002922229E00E92026 /* ModelData.swift */,
-				0A5786042922233000E92026 /* LandMark.swift */,
-				0A00553A2924E5CE00802F40 /* User.swift */,
-			);
-			path = ModelData;
-			sourceTree = "<group>";
-		};
-		0A5786062922724F00E92026 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Detail;
-			sourceTree = "<group>";
-		};
-		0A91E18629232F8A0070EB69 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		0AE367072B028BCE00CDC219 /* TestSuport */ = {
@@ -361,11 +316,11 @@
 		0AE5CA752A39CAD800685FFE /* Cores */ = {
 			isa = PBXGroup;
 			children = (
+				0A80B2092B25C3D9003EE7FA /* Routers */,
 				0ACF84A32B1CCFF200999914 /* DBService */,
 				0A00CBC82AF00A9F00881A39 /* Loger */,
 				0A9AFD462AEB65F100305F45 /* CoreUI */,
 				0A44E4E72AAC7637002FF450 /* DBCore */,
-				0AE5CA762A39CB6F00685FFE /* DBLocalNetwork.swift */,
 			);
 			path = Cores;
 			sourceTree = "<group>";
@@ -654,14 +609,9 @@
 				0ADD64342A8CD21100C7BB60 /* SceneDelegate.swift in Sources */,
 				0ADD64362A8CD31A00C7BB60 /* AppCoordinator.swift in Sources */,
 				0A5785CA2921E83000E92026 /* BookdeApp.swift in Sources */,
-				0A5785F52921E87200E92026 /* LoginScreen.swift in Sources */,
-				0AE5CA772A39CB6F00685FFE /* DBLocalNetwork.swift in Sources */,
 				0ADD643A2A8CDBFE00C7BB60 /* HomeCoordinator.swift in Sources */,
 				0ADD64322A8BDFA800C7BB60 /* HomeFactory.swift in Sources */,
-				0A5786012922229E00E92026 /* ModelData.swift in Sources */,
-				0A00553B2924E5CF00802F40 /* User.swift in Sources */,
 				0ADD64382A8CD9F200C7BB60 /* AppDelegate.swift in Sources */,
-				0A5786052922233000E92026 /* LandMark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

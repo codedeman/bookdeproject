@@ -17,7 +17,6 @@ final public class MessageNewFeedViewModel: ObservableObject {
     @Published var messageStatus: Status
     @Published var isSignOut: Bool = false
     @Published var user: UserChat = .init(email: "", profileUrl: "", uiid: "")
-    public var state = CurrentValueSubject<MessageState, Error>(.none)
 
     public init(useCase: MessageUseCase) {
         self.useCase = useCase
@@ -80,7 +79,6 @@ final public class MessageNewFeedViewModel: ObservableObject {
     }
 
     func createChat(user: UserChat) {
-        self.state.send(.startCreateNewMessage(users: user))
     }
 
 }

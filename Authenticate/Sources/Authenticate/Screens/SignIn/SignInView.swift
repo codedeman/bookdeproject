@@ -7,17 +7,18 @@
 
 import SwiftUI
 import DBCore
+import Routers
 
 public struct SignInView: View {
 
     @State private var email = "K@gmail.com"
     @State private var passworld = "02111997"
-    @EnvironmentObject var state: MyAuthenticateState
     @ObservedObject var viewModel: SignInViewModel
-    @EnvironmentObject var signInState: MyAuthenticateState
+    @EnvironmentObject private var router: Router
 
     public init(viewModel: SignInViewModel) {
         self.viewModel = viewModel
+
     }
 
     public var body: some View {
@@ -47,7 +48,7 @@ public struct SignInView: View {
             }
 
             Button("Sign up now?") {
-                viewModel.didTapSignUp()
+                router.navigate(to: AuthenticateState.startSignUp)
             }
         }
         .onAppear(perform: {
@@ -57,7 +58,7 @@ public struct SignInView: View {
         })
         .onReceive(viewModel.$userProfile, perform: {  user in
             guard let user = user else { return }
-            self.signInState.user = user
+            router.navigate(to: AuthenticateState.startMessageWithUser(user: user))
         })
 
     }

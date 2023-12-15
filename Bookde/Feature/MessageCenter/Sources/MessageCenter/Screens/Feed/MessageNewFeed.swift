@@ -14,7 +14,8 @@ public struct MessageFeedView: View {
 
     @State var showNewMessage: Bool = false
     @StateObject var viewModel: MessageNewFeedViewModel
-    
+    @EnvironmentObject private var router: Router
+
     public init(
         _ shouldShowLogOutOptions: Bool = false,
         viewModel: MessageNewFeedViewModel

@@ -31,7 +31,6 @@ public final class SignInViewModel: ObservableObject {
             self.handleSignUpFailure(error)
             break
         }
-
     }
 
     public func didTapSignUp() {
@@ -46,8 +45,8 @@ public final class SignInViewModel: ObservableObject {
         self.isLoading = false
     }
 
-     func fetchCurrentUser() async  {
-         self.isLoading = true
+    func fetchCurrentUser() async  {
+        self.isLoading = true
         let currentUser =  await self.useCase.fetchCurrentUser()
         switch currentUser {
         case .success(let user):

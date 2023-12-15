@@ -12,61 +12,43 @@ import FirebaseAuth
 import Home
 import MessageCenter
 import CoreUI
+import Routers
 
 public struct AppView: View {
     @StateObject var appCondinator: AppStateManager = .init()
     @State private var showingHome = false
     @State private var showingMessageCenter = false
     @State private var showingError = false
-    @State  var appState: AppState = .startSignIn
+    @ObservedObject var router = Router()
 
     public init(flow: AppStateManager) {
         self._appCondinator = StateObject(wrappedValue: flow)
     }
 
     public var body: some View {
-        NavigationView {
-            ZStack {
-                SignInView(
-                    viewModel: appCondinator.signInViewModel()
-                )
-                .environmentObject(
-                    appCondinator.myAuthState
-                )
-
-            }
-        }.onReceive(appCondinator.myAppState.$appState, perform: { state in
-            switch state {
-            case .startSignUp:
-                break
-            case .startHome:
-                break
-            case .startSignIn:
-                break
-            case .startCreateNewMessage(user: let user):
-                showingError = !user.uiid.isEmpty
-                break
-
-            }
-
-        }).sheet(isPresented: $showingError, content: {
-            ErrorScreenTemplateView()
-        })
-    }
-}
-
-extension AppState {
-    func toNavigationPath() -> NavigationPath {
-        switch self {
-        case .startSignIn:
-            return NavigationPath.init()
-        case .startHome:
-            return NavigationPath(["Home"])
-        case .startCreateNewMessage(let user):
-            return NavigationPath(["Home", "CreateNewMessage", user.uiid])
-            // ... convert other states to NavigationPath
-        case .startSignUp:
-            return NavigationPath(["Home"])
+        NavigationStack(path: $router.navPath) {
+            SignInView(viewModel: appCondinator.signInViewModel())
+                .environmentObject(router)
+                .navigationDestination(for: AuthenticateState.self) { state in
+                    switch state {
+                    case .startSignUp:
+                        SignUpView(viewModel: appCondinator.signUpViewModel())
+                    case .startMessageWithUser(let user):
+                        MessageFeedView(viewModel: appCondinator.messageViewModel())
+                            .environmentObject(router)
+                            .navigationDestination(for: MessageState.self) { state in
+                                switch state {
+                                case .startCreateNewMessage(let user):
+                                    NewMessageView(viewModel: appCondinator.newMesageViewModel(user: user))
+                                default:
+                                    EmptyView()
+                                }
+                            }
+                    default:
+                        EmptyView()
+                    }
+                }
         }
+
     }
 }
