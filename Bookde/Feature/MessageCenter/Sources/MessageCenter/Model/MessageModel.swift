@@ -23,8 +23,5 @@ public struct MessageModel: Identifiable {
     var text: String
     var timesstamp: String
     var documentId: String
-
-
-
 }
 

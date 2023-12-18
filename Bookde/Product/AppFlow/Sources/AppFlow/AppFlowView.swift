@@ -1,18 +1,18 @@
 //
 //  AppFlowView.swift
-//  
+//
 //
 //  Created by Kevin on 10/24/23.
 //
 
-import SwiftUI
 import Authenticate
+import CoreUI
 import DBService
 import FirebaseAuth
 import Home
 import MessageCenter
-import CoreUI
 import Routers
+import SwiftUI
 
 public struct AppView: View {
     @StateObject var appCondinator: AppStateManager = .init()
@@ -28,27 +28,21 @@ public struct AppView: View {
     public var body: some View {
         NavigationStack(path: $router.navPath) {
             SignInView(viewModel: appCondinator.signInViewModel())
-                .environmentObject(router)
                 .navigationDestination(for: AuthenticateState.self) { state in
-                    switch state {
-                    case .startSignUp:
-                        SignUpView(viewModel: appCondinator.signUpViewModel())
-                    case .startMessageWithUser(let user):
-                        MessageFeedView(viewModel: appCondinator.messageViewModel())
-                            .environmentObject(router)
-                            .navigationDestination(for: MessageState.self) { state in
-                                switch state {
-                                case .startCreateNewMessage(let user):
-                                    NewMessageView(viewModel: appCondinator.newMesageViewModel(user: user))
-                                default:
-                                    EmptyView()
-                                }
-                            }
-                    default:
-                        EmptyView()
+                switch state {
+                case .startNewFeed:
+                    MessageFeedView(viewModel: appCondinator.messageViewModel()).navigationDestination(for: MessageState.self) { state in
+                        switch state {
+                        case .startCreateNewMessage(let user):
+                            NewMessageView(viewModel: appCondinator.newMesageViewModel(user: user))
+                        default:
+                            EmptyView()
+                        }
                     }
+                default:
+                    EmptyView()
                 }
-        }
-
+            }
+        }.environmentObject(router)
     }
 }

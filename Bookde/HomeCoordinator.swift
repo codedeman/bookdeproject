@@ -23,4 +23,3 @@ final class HomeCoordinator: Coordinator {
         navigation.present(controller, animated: true)
     }
 }
-

@@ -6,12 +6,12 @@ public struct MessageHeaderSectionView: View {
     let didTapLogOut: () -> ()
 
     public var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .trailing) {
             HStack(alignment: .top, spacing: 16) {
-                AsyncImage(url: URL(string: user.profileUrl ?? ""))
+                AsyncImage(url: URL(string: user.profileUrl))
                     .frame(width: 24, height: 24)
                     .cornerRadius(64)
-                    .foregroundColor(Color.blue).shimmering(active: true)
+                    .foregroundColor(Color.blue)
                 VStack(alignment: .leading, spacing: 4) {
                     Text("Hello, \(user.email)")
                         .font(.system(size: 14, weight: .bold))

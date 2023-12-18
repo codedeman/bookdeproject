@@ -14,7 +14,7 @@ public enum AuthenticateState: StateManager {
     case finished
     case none
     case userAuthenticated
-    case startMessageWithUser(user: UserProfile)
+    case startNewFeed
 }
 
 public final class MyAuthenticateState: ObservableObject {

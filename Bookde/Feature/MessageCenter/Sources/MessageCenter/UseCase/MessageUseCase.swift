@@ -1,30 +1,27 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by Kevin on 11/5/23.
 //
 
-import Foundation
-import DBFireBaseService
 import Combine
+import DBFireBaseService
+import Foundation
 
 public protocol MessageUseCase {
-
     func fetchCurrentUser() async -> AnyPublisher<UserChat, Never>
     func signOut() async -> AnyPublisher<Bool, Never>
     func fetchAllUser() async -> AnyPublisher<[UserChat], Never>
     func send(toId: String, message: String) async -> AnyPublisher<Bool, Never>
     func fetchMessage(toId: String) async -> AnyPublisher<[MessageModel], Never>
-    func fetchMessage(toId: String, completion: @escaping (Result<[MessageDTO],Error>) -> Void)
+    func fetchMessage(toId: String, completion: @escaping (Result<[MessageDTO], Error>) -> Void)
 }
 
 public final class ImplMessageUseCase: MessageUseCase {
-
     private var respository: FireRepository
 
-    public init(respository: FireRepository = ImplFireRepository())
-    {
+    public init(respository: FireRepository = ImplFireRepository()) {
         self.respository = respository
     }
 
@@ -32,7 +29,7 @@ public final class ImplMessageUseCase: MessageUseCase {
         let status = await respository.fetchAllUsers()
         switch status {
         case .success(let users):
-           let userDto = users.map { UserChat(email: $0.email, profileUrl: $0.profileUrl, uiid: $0.uiid) }
+            let userDto = users.map { UserChat(email: $0.email, profileUrl: $0.profileUrl, uiid: $0.uiid) }
             return Just(userDto).eraseToAnyPublisher()
         case .failure(let error):
             return Fail(error: (error as? Never)!).eraseToAnyPublisher()
@@ -53,7 +50,7 @@ public final class ImplMessageUseCase: MessageUseCase {
             return Fail(error: (error as? Never)!).eraseToAnyPublisher()
         }
     }
-    
+
     public func fetchCurrentUser() async -> AnyPublisher<Result<UserChat, Error>, Never> {
         let status = await respository.fetchCurrentUser()
         switch status {
@@ -85,8 +82,7 @@ public final class ImplMessageUseCase: MessageUseCase {
         }
     }
 
-    public func fetchMessage(toId: String, completion: @escaping (Result<[MessageDTO],Error>) -> Void)
-    {
+    public func fetchMessage(toId: String, completion: @escaping (Result<[MessageDTO], Error>) -> Void) {
         respository.fetchMessage(toId: toId, completion: completion)
     }
 
@@ -97,12 +93,11 @@ public final class ImplMessageUseCase: MessageUseCase {
                 case .success(let isSuccess):
                     promise(.success(isSuccess))
                 case .failure(let error):
-                    promise(.failure((error as? Never?)!!))
+                    guard let error = error as? Never else { return }
+                    promise(.failure(error))
                 }
             }
         }
         .eraseToAnyPublisher()
     }
-
 }
-

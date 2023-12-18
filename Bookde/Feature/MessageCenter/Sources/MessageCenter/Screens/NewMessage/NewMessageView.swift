@@ -21,12 +21,12 @@ public struct NewMessageView: View {
     public var body: some View {
         ZStack {
             messageView
-            if viewModel.state == .error {
-                ErrorScreenTemplateView()
-            }
+//            if viewModel.state == .error {
+//                ErrorScreenTemplateView()
+//            }
         }.onAppear(perform: {
             Task {
-                viewModel.fetchMessage(toId: messageState.user.uiid )
+                viewModel.fetchMessage()
             }
         })
 
@@ -45,10 +45,10 @@ public struct NewMessageView: View {
                             .background(Color.blue)
                             .cornerRadius(8)
                     }.padding(.horizontal)
-                        .padding(.top,8)
+                        .padding(.top, 8)
                 }
             }
-            HStack{ Spacer() }
+//            HStack{ Spacer() }
 
         }.ignoresSafeArea()
             .navigationTitle($viewModel.user.email)
@@ -65,13 +65,13 @@ public struct NewMessageView: View {
             TextField("Write a message...", text: $text)
             Button {
                 Task {
-                    await viewModel.sendMessage(toId: messageState.user.uiid ?? "",message: text)
+                    await viewModel.sendMessage(message: text)
                 }
             }label: {
                 Text("Send").foregroundColor(.white)
             }
             .padding(.horizontal)
-            .padding(.vertical,8)
+            .padding(.vertical, 8 )
             .background(Color.blue)
                 .cornerRadius(8)
 

@@ -8,7 +8,6 @@
 import Foundation
 import Combine
 
-
 public final class NewMessageViewModel: ObservableObject {
 
     private var usecase: MessageUseCase
@@ -20,22 +19,29 @@ public final class NewMessageViewModel: ObservableObject {
         case error
         case none
     }
-    public init(usecase: MessageUseCase,user: UserChat) {
+
+    public init(usecase: MessageUseCase,
+                user: UserChat) {
         self.usecase = usecase
         self.user = user
     }
 
     @MainActor
-    func sendMessage(toId: String, message: String) async {
-        let result = await usecase.send(toId: user.uiid ?? "", message: message)
+    func sendMessage(message: String) async {
+
+        let result = await usecase.send(
+            toId: user.uiid,
+            message: message
+        )
+
         result.assign(to: &$isSendingSucess)
 
     }
     @Published var messages: [MessageModel] = []
 
     @MainActor
-    func fetchMessage(toId: String)  {
-        usecase.fetchMessage(toId: toId) { [weak self] result in
+    func fetchMessage() {
+        usecase.fetchMessage(toId: user.uiid) { [weak self] result in
             switch result {
             case .success(let messagesDTO):
                 let message = messagesDTO.map { MessageModel(
@@ -47,6 +53,7 @@ public final class NewMessageViewModel: ObservableObject {
                 }
                 self?.messages = message
             case .failure(_):
+            
                 self?.state = .error
             }
         }

@@ -32,22 +32,6 @@ public final class SignUpViewModel: ObservableObject {
             passworld: password,
             imageData: imageProfile
         )
-//            if case .success(let userProfile) = user {
-//                self.profile = userProfile
-//            } else if case .failure(let error) = user {
-//                // Handle the error case if needed
-//                print("Signup failed with error: \(error)")
-//            }
-
-//       user.sink { [self] result in
-//            switch result {
-//            case .success(let user):
-//                print("user id: \(user.uid)")
-//                state = .finished
-//            case .failure(let error):
-//                print("error *** \(error)")
-//            }
-//       }.store(in: &su)
 
     }
 

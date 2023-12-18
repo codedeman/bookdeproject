@@ -27,7 +27,7 @@ public struct MessageFeedView: View {
 
     public var body: some View {
         NavigationView {
-            VStack(spacing: 10) {
+            VStack {
                 MessageHeaderSectionView(
                     user: viewModel.user,
                     didTapLogOut: {
@@ -50,6 +50,7 @@ public struct MessageFeedView: View {
                     MessageListView(
                         users: users, loading: false,
                         didSelectUser: { user in
+                            print("user id", user.uiid,user.email)
                             router.navigate(to: MessageState.startCreateNewMessage(users: user))
                         }
                     )
