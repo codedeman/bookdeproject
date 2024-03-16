@@ -29,9 +29,12 @@ public struct AppView: View {
         NavigationStack(path: $router.navPath) {
             SignInView(viewModel: appCondinator.signInViewModel())
                 .navigationDestination(for: AuthenticateState.self) { state in
+                    EmptyView()
+
                 switch state {
                 case .startNewFeed:
-                    MessageFeedView(viewModel: appCondinator.messageViewModel()).navigationDestination(for: MessageState.self) { state in
+                    MessageFeedView(viewModel: appCondinator.messageViewModel())
+                        .navigationDestination(for: MessageState.self) { state in
                         switch state {
                         case .startCreateNewMessage(let user):
                             NewMessageView(viewModel: appCondinator.newMesageViewModel(user: user))

@@ -68,7 +68,7 @@ final public class MessageNewFeedViewModel: ObservableObject {
             .init(email: "", profileUrl: "", uiid: "124"),
             .init(email: "", profileUrl: "", uiid: "1251"),
             .init(email: "", profileUrl: "", uiid: "126"),
-            .init(email: "", profileUrl: "", uiid: "127"),
+            .init(email: "", profileUrl: "", uiid: "127")
         ]
         return users
     }

@@ -19,4 +19,3 @@ public struct UserChat: Hashable, Equatable, Identifiable {
         self.uiid = uiid
     }
 }
-

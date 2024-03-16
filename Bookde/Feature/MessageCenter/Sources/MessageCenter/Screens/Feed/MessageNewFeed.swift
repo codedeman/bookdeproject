@@ -26,7 +26,7 @@ public struct MessageFeedView: View {
     }
 
     public var body: some View {
-        NavigationView {
+        ZStack {
             VStack {
                 MessageHeaderSectionView(
                     user: viewModel.user,
@@ -43,27 +43,26 @@ public struct MessageFeedView: View {
                         users: users,
                         loading: true,
                         didSelectUser: { user in
-                        
+                            print("", user)
                         }
                     )
                 case .body(let users):
                     MessageListView(
-                        users: users, loading: false,
+                        users: users,
+                        loading: false,
                         didSelectUser: { user in
-                            print("user id", user.uiid,user.email)
-                            router.navigate(to: MessageState.startCreateNewMessage(users: user))
+                            print("", user)
                         }
                     )
                 }
-            }
+            }.onAppear(perform: {
+                Task {
+                    await viewModel.fetch()
+                }
+            })
 
-        }.navigationBarBackButtonHidden().onReceive(viewModel.$user, perform: { user in
-            isLoading = user.email.isEmpty
-        }).onAppear(perform: {
-            Task {
-              await viewModel.fetch()
-            }
-        })
+        }.navigationBarHidden(true)
+
     }
 
     private var newMessageButton: some View {
@@ -89,5 +88,4 @@ public struct MessageFeedView: View {
 
     }
 }
-
 

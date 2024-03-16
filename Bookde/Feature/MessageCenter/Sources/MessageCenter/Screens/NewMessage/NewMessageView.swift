@@ -19,7 +19,7 @@ public struct NewMessageView: View {
     }
 
     public var body: some View {
-        ZStack {
+        VStack {
             messageView
 //            if viewModel.state == .error {
 //                ErrorScreenTemplateView()

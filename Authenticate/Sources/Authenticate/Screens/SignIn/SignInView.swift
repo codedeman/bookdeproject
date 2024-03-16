@@ -8,6 +8,8 @@
 import DBCore
 import Routers
 import SwiftUI
+import AVFAudio
+import Speech
 
 public struct SignInView: View {
     @State private var email = "K@gmail.com"
@@ -55,7 +57,7 @@ public struct SignInView: View {
             }
         })
         .onReceive(viewModel.$userProfile, perform: { user in
-            guard let user = user else { return }
+            guard user != nil else { return }
             router.navigate(to: AuthenticateState.startNewFeed)
         })
     }
