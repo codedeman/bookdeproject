@@ -20,6 +20,7 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "./Cores/DBService"),
+        .package(path: "./Routers")
 
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
@@ -30,8 +31,10 @@ let package = Package(
         .target(
             name: "Authenticate",
             dependencies: [
+                "Routers",
                 .product(name: "DBService", package: "DBService"),
                 .product(name: "DBFireBaseService", package: "DBService"),
+                
             ],
             resources: [.process("Resources")]
         ),

@@ -8,6 +8,7 @@
 import Foundation
 import DBCore
 import MessageCenter
+import Combine
 
 public enum AppState: StateManager {
 
@@ -30,4 +31,13 @@ public enum AppState: StateManager {
     case startHome
     case startSignIn
     case startCreateNewMessage(user: UserChat)
+}
+
+final class MyAppState: ObservableObject {
+
+    @Published public var appState: AppState = .startSignIn
+    init(appState: AppState) {
+        self.appState = appState
+    }
+
 }

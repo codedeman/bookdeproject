@@ -100,180 +100,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9D22A34B-26D9-462D-B8D5-6C27638ECD68"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Bookde/Feature/MessageCenter/Sources/MessageCenter/UseCase/MessageUseCase.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "fetchMessage(toId:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "9D22A34B-26D9-462D-B8D5-6C27638ECD68 - 5bf21bcbc665f1dc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for MessageCenter.ImplMessageUseCase.fetchMessage(toId: Swift.String) async -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;MessageCenter.MessageModel&gt;, Swift.Never&gt;"
-                  moduleName = "Bookde"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Feature/MessageCenter/Sources/MessageCenter/UseCase/MessageUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "688">
-               </Location>
-               <Location
-                  uuid = "9D22A34B-26D9-462D-B8D5-6C27638ECD68 - 5bf21bcbc665f112"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for MessageCenter.ImplMessageUseCase.fetchMessage(toId: Swift.String) async -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;MessageCenter.MessageModel&gt;, Swift.Never&gt;"
-                  moduleName = "Bookde"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Feature/MessageCenter/Sources/MessageCenter/UseCase/MessageUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "85"
-                  endingLineNumber = "85"
-                  offsetFromSymbolStart = "688">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7D7831A9-BE67-4080-BF35-FFD829F651CC"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Bookde/Feature/MessageCenter/Sources/MessageCenter/UseCase/MessageUseCase.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "fetchMessage(toId:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "7D7831A9-BE67-4080-BF35-FFD829F651CC - 5bf21bcbc665f133"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for MessageCenter.ImplMessageUseCase.fetchMessage(toId: Swift.String) async -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;MessageCenter.MessageModel&gt;, Swift.Never&gt;"
-                  moduleName = "Bookde"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Feature/MessageCenter/Sources/MessageCenter/UseCase/MessageUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "256">
-               </Location>
-               <Location
-                  uuid = "7D7831A9-BE67-4080-BF35-FFD829F651CC - f70026fd5d8f9c85"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (DBFireBaseService.MessageDTO) -&gt; MessageCenter.MessageModel in MessageCenter.ImplMessageUseCase.fetchMessage(toId: Swift.String) async -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;MessageCenter.MessageModel&gt;, Swift.Never&gt;"
-                  moduleName = "Bookde"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Feature/MessageCenter/Sources/MessageCenter/UseCase/MessageUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "116">
-               </Location>
-               <Location
-                  uuid = "7D7831A9-BE67-4080-BF35-FFD829F651CC - 5bf21bcbc665f171"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for MessageCenter.ImplMessageUseCase.fetchMessage(toId: Swift.String) async -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;MessageCenter.MessageModel&gt;, Swift.Never&gt;"
-                  moduleName = "Bookde"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Feature/MessageCenter/Sources/MessageCenter/UseCase/MessageUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "256">
-               </Location>
-               <Location
-                  uuid = "7D7831A9-BE67-4080-BF35-FFD829F651CC - f70026fd5d8f9cc7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (DBFireBaseService.MessageDTO) -&gt; MessageCenter.MessageModel in MessageCenter.ImplMessageUseCase.fetchMessage(toId: Swift.String) async -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;MessageCenter.MessageModel&gt;, Swift.Never&gt;"
-                  moduleName = "Bookde"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Feature/MessageCenter/Sources/MessageCenter/UseCase/MessageUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "116">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C7329AAF-EF05-4C9E-AB0F-036C4BD87A7B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Bookde/Feature/MessageCenter/Sources/MessageCenter/UseCase/MessageUseCase.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "fetchMessage(toId:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "C7329AAF-EF05-4C9E-AB0F-036C4BD87A7B - 5bf21bcbc665f19e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for MessageCenter.ImplMessageUseCase.fetchMessage(toId: Swift.String) async -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;MessageCenter.MessageModel&gt;, Swift.Never&gt;"
-                  moduleName = "Bookde"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Feature/MessageCenter/Sources/MessageCenter/UseCase/MessageUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "428">
-               </Location>
-               <Location
-                  uuid = "C7329AAF-EF05-4C9E-AB0F-036C4BD87A7B - 5bf21bcbc665f1dc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for MessageCenter.ImplMessageUseCase.fetchMessage(toId: Swift.String) async -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;MessageCenter.MessageModel&gt;, Swift.Never&gt;"
-                  moduleName = "Bookde"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Feature/MessageCenter/Sources/MessageCenter/UseCase/MessageUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "428">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "E220E50F-3DFB-494A-8DBF-8849A0768532"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -426,6 +252,214 @@
             startingLineNumber = "65"
             endingLineNumber = "65"
             landmarkName = "signInViewModel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3F4C354C-2B2C-4C93-881B-B0F9BA8FB4D2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bookde/Feature/MessageCenter/Sources/MessageCenter/Screens/NewMessage/NewMessageViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "sendMessage(message:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3F4C354C-2B2C-4C93-881B-B0F9BA8FB4D2 - 6baa4f6769b1702f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for MessageCenter.NewMessageViewModel.sendMessage(message: Swift.String) async -&gt; ()"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Feature/MessageCenter/Sources/MessageCenter/Screens/NewMessage/NewMessageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "3F4C354C-2B2C-4C93-881B-B0F9BA8FB4D2 - 6baa4f6769b1700c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for MessageCenter.NewMessageViewModel.sendMessage(message: Swift.String) async -&gt; ()"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Feature/MessageCenter/Sources/MessageCenter/Screens/NewMessage/NewMessageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "240">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "20E0C9F7-BE03-4D1A-A128-89B93F9A7621"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bookde/Feature/MessageCenter/Sources/MessageCenter/Screens/NewMessage/NewMessageViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "sendMessage(message:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "20E0C9F7-BE03-4D1A-A128-89B93F9A7621 - 6baa4f6769b1702f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for MessageCenter.NewMessageViewModel.sendMessage(message: Swift.String) async -&gt; ()"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Feature/MessageCenter/Sources/MessageCenter/Screens/NewMessage/NewMessageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "20E0C9F7-BE03-4D1A-A128-89B93F9A7621 - 6baa4f6769b1700c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for MessageCenter.NewMessageViewModel.sendMessage(message: Swift.String) async -&gt; ()"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Feature/MessageCenter/Sources/MessageCenter/Screens/NewMessage/NewMessageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "240">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "649EDC14-E903-4A81-874D-2AAD5EF7C0B6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bookde/Feature/MessageCenter/Sources/MessageCenter/Screens/NewMessage/NewMessageViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "fetchMessage()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "649EDC14-E903-4A81-874D-2AAD5EF7C0B6 - d7e4279787e83a36"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;DBFireBaseService.MessageDTO&gt;, Swift.Error&gt;) -&gt; () in MessageCenter.NewMessageViewModel.fetchMessage() -&gt; ()"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Feature/MessageCenter/Sources/MessageCenter/Screens/NewMessage/NewMessageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "632">
+               </Location>
+               <Location
+                  uuid = "649EDC14-E903-4A81-874D-2AAD5EF7C0B6 - d7e4279787e83a17"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;DBFireBaseService.MessageDTO&gt;, Swift.Error&gt;) -&gt; () in MessageCenter.NewMessageViewModel.fetchMessage() -&gt; ()"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Feature/MessageCenter/Sources/MessageCenter/Screens/NewMessage/NewMessageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "768">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A7AF0E6B-6FA3-46C6-96A4-31E7F6968BCB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bookde/Feature/MessageCenter/Sources/MessageCenter/Screens/NewMessage/NewMessageViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "fetchMessage()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A7AF0E6B-6FA3-46C6-96A4-31E7F6968BCB - d7e4279787e83a55"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;DBFireBaseService.MessageDTO&gt;, Swift.Error&gt;) -&gt; () in MessageCenter.NewMessageViewModel.fetchMessage() -&gt; ()"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Feature/MessageCenter/Sources/MessageCenter/Screens/NewMessage/NewMessageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "448">
+               </Location>
+               <Location
+                  uuid = "A7AF0E6B-6FA3-46C6-96A4-31E7F6968BCB - 179562445e10c92c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (DBFireBaseService.MessageDTO) -&gt; MessageCenter.MessageModel in closure #1 (Swift.Result&lt;Swift.Array&lt;DBFireBaseService.MessageDTO&gt;, Swift.Error&gt;) -&gt; () in MessageCenter.NewMessageViewModel.fetchMessage() -&gt; ()"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Feature/MessageCenter/Sources/MessageCenter/Screens/NewMessage/NewMessageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "252">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0C460B49-E5C1-4C95-B72A-A1D080AF97B5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bookde/Feature/MessageCenter/Sources/MessageCenter/Screens/NewMessage/NewMessageViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "fetchMessage()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

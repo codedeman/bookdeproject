@@ -21,7 +21,9 @@ let package = Package(
         .package(path: "./Feature/MessageCenter"),
 
         .package(path: "./DBService"),
-        .package(path: "./DBCore")
+        .package(path: "./DBCore"),
+        .package(path: "./Routers")
+
 
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
@@ -35,7 +37,8 @@ let package = Package(
                            "Home",
                            "DBService",
                            "DBCore",
-                           "MessageCenter"
+                           "MessageCenter",
+                           "Routers"
                           ],
             resources: [
                 .process("Resources")

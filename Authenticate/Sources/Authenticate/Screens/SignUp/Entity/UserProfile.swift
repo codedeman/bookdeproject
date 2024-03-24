@@ -7,7 +7,7 @@
 
 import UIKit
 
-public struct UserProfile {
+public struct UserProfile: Equatable, Hashable {
     public var providerID: String?
 
     public var uid: String = ""

@@ -10,5 +10,4 @@ import Foundation
 public protocol APIRoutable {
     var path: String { get }
     var baseURl: URL { get }
-    
 }

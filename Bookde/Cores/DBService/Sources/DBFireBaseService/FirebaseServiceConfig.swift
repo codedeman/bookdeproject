@@ -17,14 +17,14 @@ enum FirbaseError: Error {
 
 public protocol FireRepository {
 
-    func signInWithEmail(email: String, passworld: String) async -> Result<UserDTO,Error>
-    func signUpWithEmail(email: String, passworld: String, imageProfile: Data?) async -> Result<UserDTO,Error>
+    func signInWithEmail(email: String, passworld: String) async -> Result<UserDTO, Error>
+    func signUpWithEmail(email: String, passworld: String, imageProfile: Data?) async -> Result<UserDTO, Error>
     func fetchCurrentUser() async -> Result<DocumentDTO, Error>
     func fetchAllUsers() async -> Result<[DocumentDTO], Error>
     func signOut() async  -> Bool
-    func sendMessage(toId: String, message: String, completion: @escaping (Result<Bool,Error>) -> Void)
+    func sendMessage(toId: String, message: String, completion: @escaping (Result<Bool, Error>) -> Void)
     func fetchMessage(toId: String) async -> Result<[MessageDTO], Error>
-     func fetchMessage(toId: String, completion: @escaping (Result<[MessageDTO],Error>) -> Void)
+     func fetchMessage(toId: String, completion: @escaping (Result<[MessageDTO], Error>) -> Void)
 }
 
 public extension FireRepository {
@@ -236,7 +236,7 @@ public final class ImplFireRepository: FireRepository {
         }
     }
 
-    public func fetchMessage(toId: String, completion: @escaping (Result<[MessageDTO],Error>) -> Void) {
+    public func fetchMessage(toId: String, completion: @escaping (Result<[MessageDTO], Error>) -> Void) {
         guard let fromId = Auth.auth().currentUser?.uid, !toId.isEmpty  else {
             completion(.failure(FirbaseError.generic))
             return
@@ -264,6 +264,5 @@ public final class ImplFireRepository: FireRepository {
     }
 
     public init () {}
-
 
 }
