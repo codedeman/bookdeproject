@@ -30,7 +30,6 @@ public struct AppView: View {
             SignInView(viewModel: appCondinator.signInViewModel())
                 .navigationDestination(for: AuthenticateState.self) { state in
                     EmptyView()
-
                 switch state {
                 case .startNewFeed:
                     MessageFeedView(viewModel: appCondinator.messageViewModel())

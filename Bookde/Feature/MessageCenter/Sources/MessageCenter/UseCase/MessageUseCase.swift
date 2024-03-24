@@ -75,7 +75,13 @@ public final class ImplMessageUseCase: MessageUseCase {
         let result = await respository.fetchMessage(toId: toId)
         switch result {
         case .success(let messagesDTO):
-            let message = messagesDTO.map { MessageModel(toId: $0.toId, fromId: $0.fromId, text: $0.text, timesstamp: $0.timesstamp, documentId: $0.dococumentId) }
+            let message = messagesDTO.map { MessageModel(
+                toId: $0.toId,
+                fromId: $0.fromId,
+                text: $0.text,
+                timesstamp: $0.timesstamp,
+                documentId: $0.dococumentId)
+            }
             return Just(message).eraseToAnyPublisher()
         case .failure(let error):
             return Fail(error: (error as? Never)!).eraseToAnyPublisher()

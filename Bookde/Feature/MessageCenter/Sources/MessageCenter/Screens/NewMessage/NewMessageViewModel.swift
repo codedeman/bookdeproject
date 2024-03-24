@@ -16,7 +16,7 @@ public final class NewMessageViewModel: ObservableObject {
     @Published var state: State = .none
 
     enum State {
-        case error
+        case error(error: Error)
         case none
     }
 
@@ -24,6 +24,7 @@ public final class NewMessageViewModel: ObservableObject {
                 user: UserChat) {
         self.usecase = usecase
         self.user = user
+        print("user \(user.email) \(user.uiid)")
     }
 
     @MainActor
@@ -33,28 +34,31 @@ public final class NewMessageViewModel: ObservableObject {
             toId: user.uiid,
             message: message
         )
-
+        print("send message", user.email, user.uiid)
         result.assign(to: &$isSendingSucess)
 
     }
-    @Published var messages: [MessageModel] = []
+    @Published var messages: [MessageModel]?
 
     @MainActor
     func fetchMessage() {
         usecase.fetchMessage(toId: user.uiid) { [weak self] result in
             switch result {
             case .success(let messagesDTO):
-                let message = messagesDTO.map { MessageModel(
+                let message = messagesDTO
+                    .compactMap{$0}
+                    .map { MessageModel(
                     toId: $0.toId,
                     fromId: $0.fromId,
                     text: $0.text,
                     timesstamp: $0.timesstamp,
                     documentId: $0.dococumentId)
                 }
+                print("message count \(message.count)")
                 self?.messages = message
-            case .failure(_):
-            
-                self?.state = .error
+            case .failure(let error):
+                print("error===> \(error)")
+                self?.state = .error(error: error)
             }
         }
     }

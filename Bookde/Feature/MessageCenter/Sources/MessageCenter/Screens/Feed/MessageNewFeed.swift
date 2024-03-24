@@ -43,7 +43,7 @@ public struct MessageFeedView: View {
                         users: users,
                         loading: true,
                         didSelectUser: { user in
-                            print("", user)
+                            self.router.navigate(to: MessageState.startCreateNewMessage(users: user))
                         }
                     )
                 case .body(let users):
@@ -51,7 +51,7 @@ public struct MessageFeedView: View {
                         users: users,
                         loading: false,
                         didSelectUser: { user in
-                            print("", user)
+                            self.router.navigate(to: MessageState.startCreateNewMessage(users: user))
                         }
                     )
                 }

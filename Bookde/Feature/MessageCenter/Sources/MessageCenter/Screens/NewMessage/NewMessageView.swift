@@ -14,49 +14,48 @@ public struct NewMessageView: View {
     @EnvironmentObject var messageState: NewMessageState
     @State var text: String = ""
 
-    public init (viewModel: NewMessageViewModel) {
+    public init(viewModel: NewMessageViewModel) {
         self.viewModel = viewModel
     }
 
     public var body: some View {
         VStack {
             messageView
-//            if viewModel.state == .error {
-//                ErrorScreenTemplateView()
-//            }
-        }.onAppear(perform: {
+        }
+    }
+
+    private var messageView: some View {
+//        NavigationView {
+            ScrollView {
+                ForEach(viewModel.messages ?? [] ) { num in
+                    HStack {
+                        Spacer()
+                        HStack {
+                            Text("Hi HI")
+                                .foregroundColor(Color.white)
+                        }
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(8)
+                    }
+                    .padding(.horizontal)
+                    .padding(.top, 8)
+                }
+            }
+            .background(Color.yellow) // Move this inside ScrollView if intended.
+            .navigationBarTitle(viewModel.user.email) // Use navigationBarTitle directly.
+            .background(Color(.init(white: 0.95, alpha: 1)))
+            .safeAreaInset(edge: .bottom) {
+                inputBottom
+                    .background(Color(.systemBackground)
+                    .ignoresSafeArea())
+            }
+//        }
+        .onAppear(perform: {
             Task {
                 viewModel.fetchMessage()
             }
         })
-
-    }
-
-    private var messageView: some View {
-        NavigationView {
-            ScrollView {
-                ForEach(viewModel.messages) { num in
-                    HStack {
-                        Spacer()
-                        HStack {
-                            Text(num.text)
-                                .foregroundColor(Color.white)
-                        }.padding()
-                            .background(Color.blue)
-                            .cornerRadius(8)
-                    }.padding(.horizontal)
-                        .padding(.top, 8)
-                }
-            }
-//            HStack{ Spacer() }
-
-        }.ignoresSafeArea()
-            .navigationTitle($viewModel.user.email)
-            .background(Color(.init(white: 0.95, alpha: 1)))
-            .safeAreaInset(edge: .bottom) {
-                inputBottom
-                    .background(Color(.systemBackground).ignoresSafeArea())
-            }
     }
 
     private var inputBottom: some View {
@@ -80,6 +79,7 @@ public struct NewMessageView: View {
         }
     }
 }
+
 
 #Preview {
     NewMessageView(
