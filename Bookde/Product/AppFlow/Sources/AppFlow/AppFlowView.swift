@@ -29,22 +29,19 @@ public struct AppView: View {
         NavigationStack(path: $router.navPath) {
             SignInView(viewModel: appCondinator.signInViewModel())
                 .navigationDestination(for: AuthenticateState.self) { state in
-                    EmptyView()
-                switch state {
-                case .startNewFeed:
-                    MessageFeedView(viewModel: appCondinator.messageViewModel())
-                        .navigationDestination(for: MessageState.self) { state in
-                        switch state {
-                        case .startCreateNewMessage(let user):
-                            NewMessageView(viewModel: appCondinator.newMesageViewModel(user: user))
-                        default:
-                            EmptyView()
+                    switch state {
+                    case .startNewFeed:
+                        MessageFeedView(viewModel: appCondinator.messageViewModel())
+                        { user in
+                            router.navigate(to: AuthenticateState.startCreateNewMessage(user: user))
                         }
+                    case .startCreateNewMessage(user: let user):
+                        NewMessageView(viewModel: appCondinator.newMesageViewModel(user: user))
+                    default:
+                        EmptyView().background(.red)
                     }
-                default:
-                    EmptyView()
+
                 }
-            }
         }.environmentObject(router)
     }
 }

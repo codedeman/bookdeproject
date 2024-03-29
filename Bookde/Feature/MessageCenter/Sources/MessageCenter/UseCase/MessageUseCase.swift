@@ -10,7 +10,7 @@ import DBFireBaseService
 import Foundation
 
 public protocol MessageUseCase {
-    func fetchCurrentUser() async -> AnyPublisher<UserChat, Never>
+    func fetchCurrentUser() async -> AnyPublisher<UserChat, Error>
     func signOut() async -> AnyPublisher<Bool, Never>
     func fetchAllUser() async -> AnyPublisher<[UserChat], Never>
     func send(toId: String, message: String) async -> AnyPublisher<Bool, Never>
@@ -19,6 +19,30 @@ public protocol MessageUseCase {
 }
 
 public final class ImplMessageUseCase: MessageUseCase {
+    public func fetchCurrentUser() async -> AnyPublisher<UserChat, Error> {
+        do {
+            let status = try await respository.fetchCurrentUser()
+            switch status {
+            case .success(let status):
+                let user = UserChat(
+                    email: status.email,
+                    profileUrl: status.profileUrl,
+                    uiid: status.uiid
+                )
+                return Just(user)
+                    .setFailureType(to: Error.self)
+                    .eraseToAnyPublisher()
+            case .failure(let error ):
+                return Fail(error: error)
+                    .eraseToAnyPublisher()
+            }
+        } catch {
+            return Fail(error: error)
+                .eraseToAnyPublisher()
+        }
+    }
+
+
     private var respository: FireRepository
 
     public init(respository: FireRepository = ImplFireRepository()) {
@@ -31,21 +55,6 @@ public final class ImplMessageUseCase: MessageUseCase {
         case .success(let users):
             let userDto = users.map { UserChat(email: $0.email, profileUrl: $0.profileUrl, uiid: $0.uiid) }
             return Just(userDto).eraseToAnyPublisher()
-        case .failure(let error):
-            return Fail(error: (error as? Never)!).eraseToAnyPublisher()
-        }
-    }
-
-    public func fetchCurrentUser() async -> AnyPublisher<UserChat, Never> {
-        let status = await respository.fetchCurrentUser()
-        switch status {
-        case .success(let document):
-            let user = UserChat(
-                email: document.email,
-                profileUrl: document.profileUrl,
-                uiid: document.uiid
-            )
-            return Just(user).eraseToAnyPublisher()
         case .failure(let error):
             return Fail(error: (error as? Never)!).eraseToAnyPublisher()
         }

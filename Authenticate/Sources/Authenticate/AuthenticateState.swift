@@ -8,6 +8,7 @@
 import UIKit
 import DBCore
 import SwiftUI
+import MessageCenter
 
 public enum AuthenticateState: StateManager {
     case startSignUp
@@ -15,6 +16,8 @@ public enum AuthenticateState: StateManager {
     case none
     case userAuthenticated
     case startNewFeed
+    case startCreateNewMessage(user: UserChat)
+
 }
 
 public final class MyAuthenticateState: ObservableObject {

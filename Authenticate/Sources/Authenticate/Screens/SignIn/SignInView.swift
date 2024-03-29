@@ -16,9 +16,11 @@ public struct SignInView: View {
     @State private var passworld = "02111997"
     @ObservedObject var viewModel: SignInViewModel
     @EnvironmentObject private var router: Router
+    let navigateNewFeed: () -> Void
 
-    public init(viewModel: SignInViewModel) {
+    public init(viewModel: SignInViewModel, navigateNewFeed: @escaping () -> Void = {}) {
         self.viewModel = viewModel
+        self.navigateNewFeed = navigateNewFeed
     }
 
     public var body: some View {

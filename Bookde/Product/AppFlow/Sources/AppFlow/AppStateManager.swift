@@ -52,39 +52,35 @@ public final class AppStateManager: ObservableObject {
     }
 
     @MainActor func messageViewModel() -> MessageNewFeedViewModel {
-        let vm = MessageNewFeedViewModel(
+        return MessageNewFeedViewModel(
             useCase: diContainer
                 .dependencies
                 .mesageUseCase
         )
-        return vm
     }
 
     @MainActor func signInViewModel() -> SignInViewModel {
-        let vm = SignInViewModel(
+        return SignInViewModel(
             useCase: diContainer
                 .dependencies
                 .authUseCase
         )
-        return vm
     }
 
     func signUpViewModel() -> SignUpViewModel {
-        let vm = SignUpViewModel(
+        return  SignUpViewModel(
             useCase: diContainer
                 .dependencies
                 .authUseCase
         )
-        return vm
     }
-
+    @MainActor
     func newMesageViewModel(user: UserChat) -> NewMessageViewModel {
-        let vm = NewMessageViewModel(
+        return NewMessageViewModel(
             usecase: diContainer
                 .dependencies
                 .mesageUseCase,
             user: user
         )
-        return vm
     }
 }

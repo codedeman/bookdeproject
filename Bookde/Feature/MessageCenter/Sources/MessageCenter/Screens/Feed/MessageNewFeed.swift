@@ -16,13 +16,16 @@ public struct MessageFeedView: View {
     @State var showNewMessage: Bool = false
     @StateObject var viewModel: MessageNewFeedViewModel
     @EnvironmentObject private var router: Router
+    let startCreateNewMessage: (UserChat) -> Void
 
     public init(
         _ shouldShowLogOutOptions: Bool = false,
-        viewModel: MessageNewFeedViewModel
+        viewModel: MessageNewFeedViewModel,
+        startCreateNewMessage: @escaping (UserChat) -> Void = {_ in  }
     ) {
         self.shouldShowLogOutOptions = shouldShowLogOutOptions
         _viewModel = .init(wrappedValue: viewModel)
+        self.startCreateNewMessage = startCreateNewMessage
     }
 
     public var body: some View {
@@ -43,7 +46,7 @@ public struct MessageFeedView: View {
                         users: users,
                         loading: true,
                         didSelectUser: { user in
-                            self.router.navigate(to: MessageState.startCreateNewMessage(users: user))
+                            self.startCreateNewMessage(user)
                         }
                     )
                 case .body(let users):
@@ -51,7 +54,7 @@ public struct MessageFeedView: View {
                         users: users,
                         loading: false,
                         didSelectUser: { user in
-                            self.router.navigate(to: MessageState.startCreateNewMessage(users: user))
+                            self.startCreateNewMessage(user)
                         }
                     )
                 }
@@ -88,4 +91,3 @@ public struct MessageFeedView: View {
 
     }
 }
-

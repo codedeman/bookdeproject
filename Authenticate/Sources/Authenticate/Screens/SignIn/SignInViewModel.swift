@@ -29,7 +29,6 @@ public final class SignInViewModel: ObservableObject {
             self.handleSignUpSuccess(user)
         case .failure(let error):
             self.handleSignUpFailure(error)
-            break
         }
     }
 

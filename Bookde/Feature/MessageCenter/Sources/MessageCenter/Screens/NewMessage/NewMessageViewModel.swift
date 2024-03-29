@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+@MainActor
 
 public final class NewMessageViewModel: ObservableObject {
 
@@ -14,7 +15,7 @@ public final class NewMessageViewModel: ObservableObject {
     @Published var user: UserChat
     @Published var isSendingSucess: Bool = false
     @Published var state: State = .none
-
+    @Published var messages: [MessageModel] = []
     enum State {
         case error(error: Error)
         case none
@@ -25,9 +26,9 @@ public final class NewMessageViewModel: ObservableObject {
         self.usecase = usecase
         self.user = user
         print("user \(user.email) \(user.uiid)")
+
     }
 
-    @MainActor
     func sendMessage(message: String) async {
 
         let result = await usecase.send(
@@ -38,9 +39,7 @@ public final class NewMessageViewModel: ObservableObject {
         result.assign(to: &$isSendingSucess)
 
     }
-    @Published var messages: [MessageModel]?
 
-    @MainActor
     func fetchMessage() {
         usecase.fetchMessage(toId: user.uiid) { [weak self] result in
             switch result {

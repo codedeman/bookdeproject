@@ -21,7 +21,6 @@ public struct MessageListView: View {
                                 .frame(maxWidth: 50, maxHeight: 50)
                                 .clipShape(Circle())
                                 .shadow(radius: 10)
-                            
                             VStack(alignment: .leading) {
                                 Text(user.email)
                                     .font(.system(size: 16, weight: .bold))
@@ -34,7 +33,6 @@ public struct MessageListView: View {
                     }
                 }
             }.frame(maxHeight: .infinity)
-            
         }
     }
 }

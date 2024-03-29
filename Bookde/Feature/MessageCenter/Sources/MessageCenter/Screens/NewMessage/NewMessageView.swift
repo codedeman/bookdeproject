@@ -19,19 +19,16 @@ public struct NewMessageView: View {
     }
 
     public var body: some View {
-        VStack {
-            messageView
-        }
+        messageView
     }
 
     private var messageView: some View {
-//        NavigationView {
             ScrollView {
                 ForEach(viewModel.messages ?? [] ) { num in
                     HStack {
                         Spacer()
                         HStack {
-                            Text("Hi HI")
+                            Text(num.text)
                                 .foregroundColor(Color.white)
                         }
                         .padding()
@@ -42,16 +39,14 @@ public struct NewMessageView: View {
                     .padding(.top, 8)
                 }
             }
-            .background(Color.yellow) // Move this inside ScrollView if intended.
+            .background(Color.white) // Move this inside ScrollView if intended.
             .navigationBarTitle(viewModel.user.email) // Use navigationBarTitle directly.
             .background(Color(.init(white: 0.95, alpha: 1)))
             .safeAreaInset(edge: .bottom) {
                 inputBottom
                     .background(Color(.systemBackground)
                     .ignoresSafeArea())
-            }
-//        }
-        .onAppear(perform: {
+            }.onAppear(perform: {
             Task {
                 viewModel.fetchMessage()
             }
@@ -79,7 +74,6 @@ public struct NewMessageView: View {
         }
     }
 }
-
 
 #Preview {
     NewMessageView(

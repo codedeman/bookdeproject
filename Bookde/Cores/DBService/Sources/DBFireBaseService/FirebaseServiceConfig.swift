@@ -42,6 +42,7 @@ public extension FireRepository {
 
 public final class ImplFireRepository: FireRepository {
 
+//MARK: Send Message
     public func sendMessage(toId: String,
                             message: String,
                             completion: @escaping (Result<Bool, Error>
@@ -191,8 +192,7 @@ public final class ImplFireRepository: FireRepository {
         }
 
    }
-
-
+ // MARK: Fetch Message Two People 
     public func fetchMessage(toId: String) async -> Result<[MessageDTO], Error> {
         guard let fromId = Auth.auth().currentUser?.uid  else { return .failure(FirbaseError.generic) }
 
