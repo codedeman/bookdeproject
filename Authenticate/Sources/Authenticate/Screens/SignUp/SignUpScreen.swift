@@ -1,6 +1,6 @@
-import SwiftUI
 import DBCore
 import PhotosUI
+import SwiftUI
 import UIKit
 
 public struct SignUpView: View {
@@ -16,16 +16,15 @@ public struct SignUpView: View {
     @State private var avatarImage: Image?
 
     func imageToBinding(_ image: UIImage) -> Binding<Image?> {
-      Binding(
-        get: {
-          avatarImage
-        },
-        set: { newImage in
-          avatarImage = newImage
-        }
-      )
+        Binding(
+            get: {
+                avatarImage
+            },
+            set: { newImage in
+                avatarImage = newImage
+            }
+        )
     }
-
 
     public init(viewModel: SignUpViewModel) {
         self.viewModel = viewModel
@@ -55,22 +54,22 @@ public struct SignUpView: View {
                 .gesture(TapGesture().onEnded {
                     self.isShowPicker = true
                 })
-                
+
                 TextField("Your email @gmail.com", text: self.$email)
                     .padding()
                     .background(Color.themeTextField)
                     .cornerRadius(20.0)
-                
+
                 SecureField("Password", text: self.$password)
                     .padding()
                     .background(Color.themeTextField)
                     .cornerRadius(20.0)
-                
+
                 SecureField("Confirm your Password", text: self.$passworldConfirm)
                     .padding()
                     .background(Color.themeTextField)
                     .cornerRadius(20.0)
-                
+
                 Button(action: {
                     Task {
                         await signUp()
@@ -84,7 +83,7 @@ public struct SignUpView: View {
                         .background(Color.blue)
                         .cornerRadius(15.0)
                 }
-                
+
                 Button("Already have an account?") {
                     viewModel.didTabHaveAccount()
                 }
@@ -104,7 +103,6 @@ public struct SignUpView: View {
             imageProfile: imagedata
         )
     }
-
 }
 
 extension Color {

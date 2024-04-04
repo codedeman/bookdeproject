@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreUI
+import Routers
 
 public struct MessageFeedView: View {
     @State var shouldShowLogOutOptions = false
@@ -14,18 +15,22 @@ public struct MessageFeedView: View {
 
     @State var showNewMessage: Bool = false
     @StateObject var viewModel: MessageNewFeedViewModel
-    
+    @EnvironmentObject private var router: Router
+    let startCreateNewMessage: (UserChat) -> Void
+
     public init(
         _ shouldShowLogOutOptions: Bool = false,
-        viewModel: MessageNewFeedViewModel
+        viewModel: MessageNewFeedViewModel,
+        startCreateNewMessage: @escaping (UserChat) -> Void = {_ in  }
     ) {
         self.shouldShowLogOutOptions = shouldShowLogOutOptions
         _viewModel = .init(wrappedValue: viewModel)
+        self.startCreateNewMessage = startCreateNewMessage
     }
 
     public var body: some View {
-        NavigationView {
-            VStack(spacing: 10) {
+        ZStack {
+            VStack {
                 MessageHeaderSectionView(
                     user: viewModel.user,
                     didTapLogOut: {
@@ -41,29 +46,27 @@ public struct MessageFeedView: View {
                         users: users,
                         loading: true,
                         didSelectUser: { user in
-
+                            self.startCreateNewMessage(user)
                         }
                     )
                 case .body(let users):
                     MessageListView(
-                        users: users, loading: false,
+                        users: users,
+                        loading: false,
                         didSelectUser: { user in
-                            viewModel.createChat(user: user)
+                            self.startCreateNewMessage(user)
                         }
                     )
                 }
-            }
+            }.onAppear(perform: {
+                Task {
+                    await viewModel.fetch()
+                }
+            })
 
-        }.navigationBarBackButtonHidden().onReceive(viewModel.$user, perform: { user in
-            isLoading = user.email.isEmpty
-        }).onAppear(perform: {
-            Task {
-              await viewModel.fetch()
-            }
-        })
+        }.navigationBarHidden(true)
+
     }
-
-
 
     private var newMessageButton: some View {
         Button {
@@ -88,5 +91,3 @@ public struct MessageFeedView: View {
 
     }
 }
-
-

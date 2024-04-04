@@ -5,7 +5,6 @@
 //  Created by Kevin on 8/16/23.
 //
 
-
 import UIKit
 
 final class HomeCoordinator: Coordinator {
@@ -23,4 +22,3 @@ final class HomeCoordinator: Coordinator {
         navigation.present(controller, animated: true)
     }
 }
-

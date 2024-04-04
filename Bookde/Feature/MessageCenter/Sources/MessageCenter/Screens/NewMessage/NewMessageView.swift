@@ -14,50 +14,43 @@ public struct NewMessageView: View {
     @EnvironmentObject var messageState: NewMessageState
     @State var text: String = ""
 
-    public init (viewModel: NewMessageViewModel) {
+    public init(viewModel: NewMessageViewModel) {
         self.viewModel = viewModel
     }
 
     public var body: some View {
-        ZStack {
-            messageView
-            if viewModel.state == .error {
-                ErrorScreenTemplateView()
-            }
-        }.onAppear(perform: {
-            Task {
-               viewModel.fetchMessage(toId: messageState.user?.uiid ?? "")
-            }
-        })
-
-
+        messageView
     }
 
     private var messageView: some View {
-        NavigationView {
             ScrollView {
-                ForEach(viewModel.messages) { num in
+                ForEach(viewModel.messages ?? [] ) { num in
                     HStack {
                         Spacer()
                         HStack {
                             Text(num.text)
                                 .foregroundColor(Color.white)
-                        }.padding()
-                            .background(Color.blue)
-                            .cornerRadius(8)
-                    }.padding(.horizontal)
-                        .padding(.top,8)
+                        }
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(8)
+                    }
+                    .padding(.horizontal)
+                    .padding(.top, 8)
                 }
             }
-            HStack{ Spacer() }
-
-        }.ignoresSafeArea()
-            .navigationTitle($viewModel.user.email)
+            .background(Color.white) // Move this inside ScrollView if intended.
+            .navigationBarTitle(viewModel.user.email) // Use navigationBarTitle directly.
             .background(Color(.init(white: 0.95, alpha: 1)))
             .safeAreaInset(edge: .bottom) {
                 inputBottom
-                    .background(Color(.systemBackground).ignoresSafeArea())
+                    .background(Color(.systemBackground)
+                    .ignoresSafeArea())
+            }.onAppear(perform: {
+            Task {
+                viewModel.fetchMessage()
             }
+        })
     }
 
     private var inputBottom: some View {
@@ -66,13 +59,13 @@ public struct NewMessageView: View {
             TextField("Write a message...", text: $text)
             Button {
                 Task {
-                   await viewModel.sendMessage(toId: messageState.user?.uiid ?? "",message: text)
+                    await viewModel.sendMessage(message: text)
                 }
             }label: {
                 Text("Send").foregroundColor(.white)
             }
             .padding(.horizontal)
-            .padding(.vertical,8)
+            .padding(.vertical, 8 )
             .background(Color.blue)
                 .cornerRadius(8)
 

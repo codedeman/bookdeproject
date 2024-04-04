@@ -17,7 +17,6 @@ final public class MessageNewFeedViewModel: ObservableObject {
     @Published var messageStatus: Status
     @Published var isSignOut: Bool = false
     @Published var user: UserChat = .init(email: "", profileUrl: "", uiid: "")
-    public var state = CurrentValueSubject<MessageState, Error>(.none)
 
     public init(useCase: MessageUseCase) {
         self.useCase = useCase
@@ -42,7 +41,7 @@ final public class MessageNewFeedViewModel: ObservableObject {
     }
 
     enum Status {
-        case loading(_ users:[UserChat])
+        case loading(_ users: [UserChat])
         case body(_ users: [UserChat])
     }
 
@@ -50,10 +49,11 @@ final public class MessageNewFeedViewModel: ObservableObject {
         messageStatus = .loading(loadDefaultUsers())
         await useCase.fetchCurrentUser()
             .receive(on: DispatchQueue.main)
-            .sink(receiveValue: {  [weak self] user in
+            .sink(receiveCompletion: { error in
+
+            }, receiveValue: { [weak self] user in
                 self?.user = user
-            })
-            .store(in: &subscribers)
+            }).store(in: &subscribers)
         await useCase.fetchAllUser()
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: {  [weak self] user in
@@ -70,6 +70,12 @@ final public class MessageNewFeedViewModel: ObservableObject {
             .init(email: "", profileUrl: "", uiid: "1251"),
             .init(email: "", profileUrl: "", uiid: "126"),
             .init(email: "", profileUrl: "", uiid: "127"),
+            .init(email: "", profileUrl: "", uiid: "123"),
+            .init(email: "", profileUrl: "", uiid: "1256"),
+            .init(email: "", profileUrl: "", uiid: "124"),
+            .init(email: "", profileUrl: "", uiid: "1251"),
+            .init(email: "", profileUrl: "", uiid: "126"),
+            .init(email: "", profileUrl: "", uiid: "127")
         ]
         return users
     }
@@ -80,7 +86,6 @@ final public class MessageNewFeedViewModel: ObservableObject {
     }
 
     func createChat(user: UserChat) {
-        self.state.send(.startCreateNewMessage(users: user))
     }
 
 }

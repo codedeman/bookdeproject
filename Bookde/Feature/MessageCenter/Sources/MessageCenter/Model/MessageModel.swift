@@ -5,7 +5,6 @@
 //  Created by Kevin on 10/28/23.
 //
 
-
 import Foundation
 import FirebaseAuth
 enum UserType {
@@ -23,8 +22,4 @@ public struct MessageModel: Identifiable {
     var text: String
     var timesstamp: String
     var documentId: String
-
-
-
 }
-
