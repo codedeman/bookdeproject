@@ -9,5 +9,6 @@ import DBCore
 
 public enum MessageState: StateManager {
     case startCreateNewMessage(users: UserChat)
+    case backToHome
     case none
 }

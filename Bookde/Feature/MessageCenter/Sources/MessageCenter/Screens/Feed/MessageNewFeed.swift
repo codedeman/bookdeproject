@@ -37,8 +37,11 @@ public struct MessageFeedView: View {
                         Task {
                             await viewModel.signOut()
                         }
-                    }).onReceive(viewModel.$isSignOut, perform: { _ in
-                        print("tesing navigation")
+                    }).onReceive(viewModel.$isSignOut, perform: { actiion in
+                        if actiion {
+                            router.navigateBack()
+                        }
+                        print("action ==>", actiion)
                     })
                 switch viewModel.messageStatus {
                 case .loading(let users):

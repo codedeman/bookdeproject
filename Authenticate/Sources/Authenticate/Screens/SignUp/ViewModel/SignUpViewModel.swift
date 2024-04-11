@@ -13,7 +13,7 @@ public final class SignUpViewModel: ObservableObject {
     private var useCase: AuthenticateUseCase!
     @Published var userName: String?
     @Published var passworld: String?
-    @Published public var state: AuthenticateState?
+//    @Published public var state: AuthenticateState?
     @Published var profile: UserProfile?
 
     public init(useCase: AuthenticateUseCase) {
@@ -31,12 +31,15 @@ public final class SignUpViewModel: ObservableObject {
             email: email,
             passworld: password,
             imageData: imageProfile
-        )
+        ).sink { fail in
+
+        } receiveValue: { success in
+            print("success", success)
+        }
 
     }
 
     func didTabHaveAccount() {
-        state = .finished
     }
 
     func didTabOpenPhotos() {

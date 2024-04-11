@@ -27,7 +27,11 @@ public final class ImplAuthenticateUseCase: AuthenticateUseCase {
         self.firebaseRespository = firebaseRespository
     }
 
-    public func signUp(email: String, passworld: String, imageData: Data?) async -> AnyPublisher<Result<UserProfile, AppError>, Never> {
+    public func signUp(
+        email: String,
+        passworld: String,
+        imageData: Data?
+    ) async -> AnyPublisher<Result<UserProfile, AppError>, Never> {
 
         let data = await firebaseRespository
             .signUpWithEmail(
@@ -48,7 +52,6 @@ public final class ImplAuthenticateUseCase: AuthenticateUseCase {
             return Just(Result.failure(AppError.genericError)).eraseToAnyPublisher()
         }
     }
-
 
     public func signIn(email: String, passworld: String) async -> Result<UserProfile, AppError> {
         let data = await firebaseRespository.signInWithEmail(email: email, passworld: passworld)
