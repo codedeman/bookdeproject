@@ -10,8 +10,8 @@ import DBFireBaseService
 import Foundation
 
 public protocol MessageUseCase {
-    func fetchCurrentUser() async -> AnyPublisher<UserChat, Error>
     func signOut() async -> AnyPublisher<Bool, Never>
+    func fetchCurrentUser() async -> AnyPublisher<UserChat, Error>
     func fetchAllUser() async -> AnyPublisher<[UserChat], Never>
     func send(toId: String, message: String) async -> AnyPublisher<Bool, Never>
     func fetchMessage(toId: String) async -> AnyPublisher<[MessageModel], Never>

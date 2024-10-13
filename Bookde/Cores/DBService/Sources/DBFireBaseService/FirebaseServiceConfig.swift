@@ -86,6 +86,7 @@ public final class ImplFireRepository: FireRepository {
 
     public func fetchCurrentUser() async -> Result<DocumentDTO, Error> {
         guard let uiid = Auth.auth().currentUser?.uid  else { return .failure(FirbaseError.generic) }
+        print("uiid", uiid)
 
         do {
             let snapshot = try await Firestore.firestore()
@@ -100,6 +101,14 @@ public final class ImplFireRepository: FireRepository {
             let document = DocumentDTO(dic: data)
             return .success(document)
         } catch {
+
+            if let urlError = error as? URLError {
+                print("Network error: \(urlError)")
+            } else if let decodingError = error as? DecodingError {
+                print("Decoding error: \(decodingError)")
+            } else {
+                print("General error: \(error)")
+            }
             return .failure(error)
         }
     }
