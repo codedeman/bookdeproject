@@ -224,7 +224,6 @@ public final class ImplFireRepository: FireRepository {
                         )
                         return messageDto
                     }
-
                     nillableContinuation?.resume(with: .success(messagesDTO))
                     nillableContinuation = nil
                 }

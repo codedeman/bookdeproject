@@ -14,7 +14,7 @@ public struct DocumentDTO {
     public var profileUrl: String
     public var uiid: String
 
-    init(dic: [String: Any])  {
+    init(dic: [String: Any]) {
         email = dic["email"] as? String ?? ""
         profileUrl = dic["profileUrl"] as? String ?? ""
         uiid = dic["uiid"] as? String ?? ""

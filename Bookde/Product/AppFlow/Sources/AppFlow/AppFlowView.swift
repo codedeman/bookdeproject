@@ -31,12 +31,9 @@ public struct AppView: View {
                 .navigationDestination(for: AuthenticateState.self) { state in
                     switch state {
                     case .startNewFeed:
-                        MessageFeedView(viewModel: appCondinator.messageViewModel())
-                        { user in
-                            router.navigate(to: AuthenticateState.startCreateNewMessage(user: user))
-                        }
-                    case .startCreateNewMessage(user: let user):
-                        NewMessageView(viewModel: appCondinator.newMesageViewModel(user: user))
+                        MessageCondinator(diContainer: appCondinator)
+                    case .startSignUp:
+                        SignUpView(viewModel: appCondinator.signUpViewModel())
                     default:
                         EmptyView().background(.red)
                     }

@@ -9,4 +9,3 @@ import Combine
 import SwiftUI
 
 public protocol StateManager: Hashable { }
-

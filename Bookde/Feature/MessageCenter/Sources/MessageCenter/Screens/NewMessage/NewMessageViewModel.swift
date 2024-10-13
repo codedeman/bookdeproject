@@ -45,7 +45,7 @@ public final class NewMessageViewModel: ObservableObject {
             switch result {
             case .success(let messagesDTO):
                 let message = messagesDTO
-                    .compactMap{$0}
+                    .compactMap{ $0 }
                     .map { MessageModel(
                     toId: $0.toId,
                     fromId: $0.fromId,
