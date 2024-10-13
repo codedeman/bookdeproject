@@ -8,6 +8,8 @@
 import SwiftUI
 import CoreUI
 import Routers
+import Combine
+import DBCore
 
 public struct MessageFeedView: View {
     @State var shouldShowLogOutOptions = false
@@ -15,6 +17,10 @@ public struct MessageFeedView: View {
 
     @State var showNewMessage: Bool = false
     @StateObject var viewModel: MessageNewFeedViewModel
+    @StateObject var output: MessageNewFeedViewModel.Output
+    @StateObject var triggers: Triggers
+    @StateObject var cancelBag: CancelBag
+
     @EnvironmentObject private var router: Router
     let startCreateNewMessage: (UserChat) -> Void
 
@@ -23,16 +29,27 @@ public struct MessageFeedView: View {
         viewModel: MessageNewFeedViewModel,
         startCreateNewMessage: @escaping (UserChat) -> Void = {_ in  }
     ) {
+        let cancelBag = CancelBag()
         self.shouldShowLogOutOptions = shouldShowLogOutOptions
         _viewModel = .init(wrappedValue: viewModel)
         self.startCreateNewMessage = startCreateNewMessage
+        let triggers = Triggers()
+        let input = MessageNewFeedViewModel.Input(
+            loadTrigger: triggers.loadingTriggers.eraseToAnyPublisher()
+        )
+
+        let output = viewModel.transform(input: input, cancelBag: cancelBag)
+        _output = StateObject(wrappedValue: output)
+        _triggers = StateObject(wrappedValue: triggers)
+        _cancelBag = StateObject(wrappedValue: cancelBag)
+        triggers.loadingTriggers.send(())
     }
 
     public var body: some View {
         ZStack {
             VStack {
                 MessageHeaderSectionView(
-                    user: viewModel.user,
+                    user: output.currentUser ?? .init(email: "", profileUrl: "", uiid: ""),
                     didTapLogOut: {
                         Task {
                             await viewModel.signOut()
@@ -43,7 +60,7 @@ public struct MessageFeedView: View {
                         }
                         print("action ==>", actiion)
                     })
-                switch viewModel.messageStatus {
+                switch  output.messageStatus {
                 case .loading(let users):
                     MessageListView(
                         users: users,
@@ -60,11 +77,15 @@ public struct MessageFeedView: View {
                             self.startCreateNewMessage(user)
                         }
                     )
+
+                case .stop:
+                    Text("Opp Something wrong")
+                    Spacer()
+                default:
+                    EmptyView()
                 }
             }.onAppear(perform: {
-                Task {
-                    await viewModel.fetch()
-                }
+                triggers.loadingTriggers.send(())
             })
 
         }.navigationBarHidden(true)
@@ -93,4 +114,9 @@ public struct MessageFeedView: View {
         })
 
     }
+
+    final class Triggers: ObservableObject {
+        var loadingTriggers = PassthroughSubject<Void, Never>()
+    }
+
 }

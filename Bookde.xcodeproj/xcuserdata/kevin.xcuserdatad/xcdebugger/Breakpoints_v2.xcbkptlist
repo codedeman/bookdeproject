@@ -110,13 +110,27 @@
             filePath = "Bookde/Cores/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "203"
-            endingLineNumber = "203"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
             landmarkName = "fetchMessage(toId:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "4517D815-D6F0-4305-BF74-2313183C85C5 - e2f2517ea85628f9"
+                  uuid = "4517D815-D6F0-4305-BF74-2313183C85C5 - ea5f608b47ccc898"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.CheckedContinuation&lt;Swift.Array&lt;DBFireBaseService.MessageDTO&gt;, Swift.Error&gt;) -&gt; () in DBFireBaseService.ImplFireRepository.fetchMessage(toId: Swift.String) async -&gt; Swift.Result&lt;Swift.Array&lt;DBFireBaseService.MessageDTO&gt;, Swift.Error&gt;"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Cores/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "212"
+                  endingLineNumber = "212">
+               </Location>
+               <Location
+                  uuid = "4517D815-D6F0-4305-BF74-2313183C85C5 - e2f2517ea8562922"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -126,11 +140,11 @@
                   urlString = "file:///Users/kevin/project/Bookde/Bookde/Cores/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "205"
-                  endingLineNumber = "205">
+                  startingLineNumber = "214"
+                  endingLineNumber = "214">
                </Location>
                <Location
-                  uuid = "4517D815-D6F0-4305-BF74-2313183C85C5 - c09642e36e8c54a4"
+                  uuid = "4517D815-D6F0-4305-BF74-2313183C85C5 - c09642e36e8c557f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -140,11 +154,11 @@
                   urlString = "file:///Users/kevin/project/Bookde/Bookde/Cores/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "205"
-                  endingLineNumber = "205">
+                  startingLineNumber = "214"
+                  endingLineNumber = "214">
                </Location>
                <Location
-                  uuid = "4517D815-D6F0-4305-BF74-2313183C85C5 - a71c2f73de7d6f0f"
+                  uuid = "4517D815-D6F0-4305-BF74-2313183C85C5 - a71c2f73de7d6c24"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -154,11 +168,11 @@
                   urlString = "file:///Users/kevin/project/Bookde/Bookde/Cores/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "197"
-                  endingLineNumber = "197">
+                  startingLineNumber = "206"
+                  endingLineNumber = "206">
                </Location>
                <Location
-                  uuid = "4517D815-D6F0-4305-BF74-2313183C85C5 - a71c2f73de7d6c07"
+                  uuid = "4517D815-D6F0-4305-BF74-2313183C85C5 - a71c2f73de7d6ddc"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -168,11 +182,11 @@
                   urlString = "file:///Users/kevin/project/Bookde/Bookde/Cores/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "205"
-                  endingLineNumber = "205">
+                  startingLineNumber = "214"
+                  endingLineNumber = "214">
                </Location>
                <Location
-                  uuid = "4517D815-D6F0-4305-BF74-2313183C85C5 - c589047589900d0e"
+                  uuid = "4517D815-D6F0-4305-BF74-2313183C85C5 - c589047589900e25"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -182,11 +196,11 @@
                   urlString = "file:///Users/kevin/project/Bookde/Bookde/Cores/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "197"
-                  endingLineNumber = "197">
+                  startingLineNumber = "206"
+                  endingLineNumber = "206">
                </Location>
                <Location
-                  uuid = "4517D815-D6F0-4305-BF74-2313183C85C5 - c589047589900e06"
+                  uuid = "4517D815-D6F0-4305-BF74-2313183C85C5 - c589047589900fdd"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -196,8 +210,8 @@
                   urlString = "file:///Users/kevin/project/Bookde/Bookde/Cores/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "205"
-                  endingLineNumber = "205">
+                  startingLineNumber = "214"
+                  endingLineNumber = "214">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -212,10 +226,40 @@
             filePath = "Bookde/Cores/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "232"
-            endingLineNumber = "232"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
             landmarkName = "fetchMessage(toId:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B41FAF29-685F-4FB2-95A6-70693E4C88AB - 3a76e246438eac4b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DBFireBaseService.ImplFireRepository.fetchMessage(toId: Swift.String, completion: (Swift.Result&lt;Swift.Array&lt;DBFireBaseService.MessageDTO&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Cores/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "241"
+                  endingLineNumber = "241">
+               </Location>
+               <Location
+                  uuid = "B41FAF29-685F-4FB2-95A6-70693E4C88AB - a71c2f73de7d615b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for DBFireBaseService.ImplFireRepository.fetchMessage(toId: Swift.String) async -&gt; Swift.Result&lt;Swift.Array&lt;DBFireBaseService.MessageDTO&gt;, Swift.Error&gt;"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Cores/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "241"
+                  endingLineNumber = "241">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -228,8 +272,8 @@
             filePath = "Bookde/Feature/MessageCenter/Sources/MessageCenter/Screens/Feed/MessageNewFeed.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -244,24 +288,8 @@
             filePath = "Bookde/Feature/MessageCenter/Sources/MessageCenter/Screens/Feed/MessageNewFeed.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B08B162B-28CC-42F8-80BF-FAD373A67130"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Bookde/Product/AppFlow/Sources/AppFlow/AppFlowView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -276,10 +304,68 @@
             filePath = "Bookde/Cores/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
             landmarkName = "fetchAllUsers()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E0DA068D-A47E-4790-AA71-068787D42548 - e2f2517ea8562bd2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for DBFireBaseService.ImplFireRepository.fetchMessage(toId: Swift.String) async -&gt; Swift.Result&lt;Swift.Array&lt;DBFireBaseService.MessageDTO&gt;, Swift.Error&gt;"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Cores/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "198"
+                  endingLineNumber = "198">
+               </Location>
+               <Location
+                  uuid = "E0DA068D-A47E-4790-AA71-068787D42548 - a71c2f73de7d6f2c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for DBFireBaseService.ImplFireRepository.fetchMessage(toId: Swift.String) async -&gt; Swift.Result&lt;Swift.Array&lt;DBFireBaseService.MessageDTO&gt;, Swift.Error&gt;"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Cores/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "198"
+                  endingLineNumber = "198">
+               </Location>
+               <Location
+                  uuid = "E0DA068D-A47E-4790-AA71-068787D42548 - c589047589900d2d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for DBFireBaseService.ImplFireRepository.fetchMessage(toId: Swift.String) async -&gt; Swift.Result&lt;Swift.Array&lt;DBFireBaseService.MessageDTO&gt;, Swift.Error&gt;"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Cores/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "198"
+                  endingLineNumber = "198">
+               </Location>
+               <Location
+                  uuid = "E0DA068D-A47E-4790-AA71-068787D42548 - d761c073568f67f3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for DBFireBaseService.ImplFireRepository.fetchAllUsers() async -&gt; Swift.Result&lt;Swift.Array&lt;DBFireBaseService.DocumentDTO&gt;, Swift.Error&gt;"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Cores/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "198"
+                  endingLineNumber = "198">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -317,22 +403,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4F0DA85A-FF25-4082-90F4-D4523E2D8C32"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Authenticate/Sources/Authenticate/Screens/SignIn/SignInViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "transform(input:cancelBag:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "C99295D1-3AD3-4195-870E-6B8DAB932297"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -359,6 +429,268 @@
             startingLineNumber = "92"
             endingLineNumber = "92"
             landmarkName = "transform(input:cancelBag:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "584DE3FC-3BBC-4DDA-B7FC-105D3ECAD7A2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bookde/Feature/MessageCenter/Sources/MessageCenter/Screens/Feed/ViewModel/MessageNewFeedViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "transform(input:cancelBag:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D4101541-9C79-4171-B75B-98A680EE08A3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bookde/Feature/MessageCenter/Sources/MessageCenter/Screens/Feed/ViewModel/MessageNewFeedViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "transform(input:cancelBag:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E4FA2E2B-28FC-4B73-9E70-9E8031CDFA93"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bookde/Feature/MessageCenter/Sources/MessageCenter/Screens/Feed/ViewModel/MessageNewFeedViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "transform(input:cancelBag:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0B9989C6-96C1-4774-992A-870320008F52"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bookde/Feature/MessageCenter/Sources/MessageCenter/Screens/Feed/ViewModel/MessageNewFeedViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "transform(input:cancelBag:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0B9989C6-96C1-4774-992A-870320008F52 - 2fcc000540a3bcc3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(8) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 ((Swift.Result&lt;(MessageCenter.UserChat, Swift.Array&lt;MessageCenter.UserChat&gt;), __C.NSError&gt;) -&gt; ()) -&gt; () in closure #2 (()) -&gt; Combine.AnyPublisher&lt;(MessageCenter.UserChat, Swift.Array&lt;MessageCenter.UserChat&gt;), __C.NSError&gt; in MessageCenter.MessageNewFeedViewModel.transform(input: MessageCenter.MessageNewFeedViewModel.Input, cancelBag: DBCore.CancelBag) -&gt; MessageCenter.MessageNewFeedViewModel.Output"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Feature/MessageCenter/Sources/MessageCenter/Screens/Feed/ViewModel/MessageNewFeedViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "135"
+                  endingLineNumber = "135">
+               </Location>
+               <Location
+                  uuid = "0B9989C6-96C1-4774-992A-870320008F52 - 73a57fd159f73ec2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(9) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 ((Swift.Result&lt;(MessageCenter.UserChat, Swift.Array&lt;MessageCenter.UserChat&gt;), __C.NSError&gt;) -&gt; ()) -&gt; () in closure #2 (()) -&gt; Combine.AnyPublisher&lt;(MessageCenter.UserChat, Swift.Array&lt;MessageCenter.UserChat&gt;), __C.NSError&gt; in MessageCenter.MessageNewFeedViewModel.transform(input: MessageCenter.MessageNewFeedViewModel.Input, cancelBag: DBCore.CancelBag) -&gt; MessageCenter.MessageNewFeedViewModel.Output"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Feature/MessageCenter/Sources/MessageCenter/Screens/Feed/ViewModel/MessageNewFeedViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "135"
+                  endingLineNumber = "135">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9FEE968A-29BC-4D5D-B4BF-6A4A82DD98AD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bookde/Feature/MessageCenter/Sources/MessageCenter/Screens/Feed/ViewModel/MessageNewFeedViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "transform(input:cancelBag:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9FEE968A-29BC-4D5D-B4BF-6A4A82DD98AD - 2fcc000540a3bcc3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(8) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 ((Swift.Result&lt;(MessageCenter.UserChat, Swift.Array&lt;MessageCenter.UserChat&gt;), __C.NSError&gt;) -&gt; ()) -&gt; () in closure #2 (()) -&gt; Combine.AnyPublisher&lt;(MessageCenter.UserChat, Swift.Array&lt;MessageCenter.UserChat&gt;), __C.NSError&gt; in MessageCenter.MessageNewFeedViewModel.transform(input: MessageCenter.MessageNewFeedViewModel.Input, cancelBag: DBCore.CancelBag) -&gt; MessageCenter.MessageNewFeedViewModel.Output"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Feature/MessageCenter/Sources/MessageCenter/Screens/Feed/ViewModel/MessageNewFeedViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "135"
+                  endingLineNumber = "135">
+               </Location>
+               <Location
+                  uuid = "9FEE968A-29BC-4D5D-B4BF-6A4A82DD98AD - 73a57fd159f73ec2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(9) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 ((Swift.Result&lt;(MessageCenter.UserChat, Swift.Array&lt;MessageCenter.UserChat&gt;), __C.NSError&gt;) -&gt; ()) -&gt; () in closure #2 (()) -&gt; Combine.AnyPublisher&lt;(MessageCenter.UserChat, Swift.Array&lt;MessageCenter.UserChat&gt;), __C.NSError&gt; in MessageCenter.MessageNewFeedViewModel.transform(input: MessageCenter.MessageNewFeedViewModel.Input, cancelBag: DBCore.CancelBag) -&gt; MessageCenter.MessageNewFeedViewModel.Output"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Feature/MessageCenter/Sources/MessageCenter/Screens/Feed/ViewModel/MessageNewFeedViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "135"
+                  endingLineNumber = "135">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DB646AE7-5ACF-40EC-9BAD-66D8980F2A33"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bookde/Feature/MessageCenter/Sources/MessageCenter/UseCase/MessageUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "fetchCurrentUser()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "25D598CC-42CB-4E40-80AD-DE0C598E0936"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bookde/Cores/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "fetchCurrentUser()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7DEDDC4C-F487-4823-BBD5-A955E678997E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bookde/Cores/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "fetchCurrentUser()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7DEDDC4C-F487-4823-BBD5-A955E678997E - 51186b5d435780d4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for DBFireBaseService.ImplFireRepository.signUpWithEmail(email: Swift.String, passworld: Swift.String, imageProfile: Swift.Optional&lt;Foundation.Data&gt;) async -&gt; Swift.Result&lt;DBFireBaseService.UserDTO, Swift.Error&gt;"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Cores/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115">
+               </Location>
+               <Location
+                  uuid = "7DEDDC4C-F487-4823-BBD5-A955E678997E - a325272d034121b4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for DBFireBaseService.ImplFireRepository.signUpWithEmail(email: Swift.String, passworld: Swift.String, imageProfile: Swift.Optional&lt;Foundation.Data&gt;) async -&gt; Swift.Result&lt;DBFireBaseService.UserDTO, Swift.Error&gt;"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Cores/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115">
+               </Location>
+               <Location
+                  uuid = "7DEDDC4C-F487-4823-BBD5-A955E678997E - fee5adc987efcd6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for DBFireBaseService.ImplFireRepository.signUpWithEmail(email: Swift.String, passworld: Swift.String, imageProfile: Swift.Optional&lt;Foundation.Data&gt;) async -&gt; Swift.Result&lt;DBFireBaseService.UserDTO, Swift.Error&gt;"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Cores/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115">
+               </Location>
+               <Location
+                  uuid = "7DEDDC4C-F487-4823-BBD5-A955E678997E - 2ae9421f4a119ec9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for DBFireBaseService.ImplFireRepository.signUpWithEmail(email: Swift.String, passworld: Swift.String, imageProfile: Swift.Optional&lt;Foundation.Data&gt;) async -&gt; Swift.Result&lt;DBFireBaseService.UserDTO, Swift.Error&gt;"
+                  moduleName = "Bookde"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/project/Bookde/Bookde/Cores/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1D8B51E5-2929-4888-8113-4D97F78F8977"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bookde/Cores/DBService/Sources/DBFireBaseService/FirebaseServiceConfig.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "fetchCurrentUser()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

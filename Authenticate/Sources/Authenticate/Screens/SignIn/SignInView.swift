@@ -12,7 +12,7 @@ import AVFAudio
 import Combine
 
 public struct SignInView: View {
-    //MARK: Property
+    // MARK: Property
     @State private var email = "K@gmail.com"
     @State private var passworld = "02111997"
     @ObservedObject var viewModel: SignInViewModel
@@ -21,6 +21,7 @@ public struct SignInView: View {
     @StateObject var cancelBag: CancelBag
     @StateObject var triggers: Triggers
     @EnvironmentObject private var router: Router
+
     let navigateNewFeed: () -> Void
     public init(viewModel: SignInViewModel, navigateNewFeed: @escaping () -> Void = {}) {
         self.viewModel = viewModel
@@ -94,8 +95,6 @@ public struct SignInView: View {
 
     final class Triggers: ObservableObject {
         var loginTrigger = PassthroughSubject<Void, Never>()
-
     }
-
 
 }
